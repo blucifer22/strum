@@ -1,0 +1,180 @@
+Cycle   9: Wrote 12 into register 1
+Cycle  44: Wrote 13 into register 2
+Cycle  45: Wrote 156 into register 3
+Cycle  46: Wrote 144 into register 4
+Cycle  47: Wrote 144 into register 4
+Cycle  48: Wrote 144 into register 4
+Cycle  49: Wrote 144 into register 4
+Cycle  50: Wrote 144 into register 4
+Cycle  51: Wrote 144 into register 4
+Cycle  52: Wrote 144 into register 4
+Cycle  53: Wrote 144 into register 4
+Cycle  54: Wrote 144 into register 4
+Cycle  55: Wrote 144 into register 4
+Cycle  56: Wrote 144 into register 4
+Cycle  57: Wrote 144 into register 4
+Cycle  58: Wrote 144 into register 4
+Cycle  59: Wrote 144 into register 4
+Cycle  60: Wrote 144 into register 4
+Cycle  61: Wrote 144 into register 4
+Cycle  62: Wrote 144 into register 4
+Cycle  63: Wrote 144 into register 4
+Cycle  64: Wrote 144 into register 4
+Cycle  65: Wrote 144 into register 4
+Cycle  66: Wrote 144 into register 4
+Cycle  67: Wrote 144 into register 4
+Cycle  68: Wrote 144 into register 4
+Cycle  69: Wrote 144 into register 4
+Cycle  70: Wrote 144 into register 4
+Cycle  71: Wrote 144 into register 4
+Cycle  72: Wrote 144 into register 4
+Cycle  73: Wrote 144 into register 4
+Cycle  74: Wrote 144 into register 4
+Cycle  75: Wrote 144 into register 4
+Cycle  76: Wrote 144 into register 4
+Cycle  77: Wrote 144 into register 4
+Cycle  78: Wrote 144 into register 4
+Cycle  79: Wrote 144 into register 4
+Cycle  80: Wrote 144 into register 4
+Cycle  81: Wrote 4 into register 5
+Cycle  82: Wrote 3 into register 6
+Cycle  83: Wrote 8 into register 7
+Cycle  84: Wrote 8 into register 7
+Cycle  85: Wrote 8 into register 7
+Cycle  86: Wrote 8 into register 7
+Cycle  87: Wrote 8 into register 7
+Cycle  88: Wrote 8 into register 7
+Cycle  89: Wrote 8 into register 7
+Cycle  90: Wrote 8 into register 7
+Cycle  91: Wrote 8 into register 7
+Cycle  92: Wrote 8 into register 7
+Cycle  93: Wrote 8 into register 7
+Cycle  94: Wrote 8 into register 7
+Cycle  95: Wrote 8 into register 7
+Cycle  96: Wrote 8 into register 7
+Cycle  97: Wrote 8 into register 7
+Cycle  98: Wrote 8 into register 7
+Cycle  99: Wrote 8 into register 7
+Cycle 100: Wrote 8 into register 7
+Cycle 101: Wrote 8 into register 7
+Cycle 102: Wrote 8 into register 7
+Cycle 103: Wrote 8 into register 7
+Cycle 104: Wrote 8 into register 7
+Cycle 105: Wrote 8 into register 7
+Cycle 106: Wrote 8 into register 7
+Cycle 107: Wrote 8 into register 7
+Cycle 108: Wrote 8 into register 7
+Cycle 109: Wrote 8 into register 7
+Cycle 110: Wrote 8 into register 7
+Cycle 111: Wrote 8 into register 7
+Cycle 112: Wrote 8 into register 7
+Cycle 113: Wrote 8 into register 7
+Cycle 114: Wrote 8 into register 7
+Cycle 115: Wrote 8 into register 7
+Cycle 116: Wrote 8 into register 7
+Cycle 117: Wrote 8 into register 7
+Cycle 118: Wrote 3 into register 8
+Cycle 119: Wrote 24 into register 9
+Cycle 120: Wrote 24 into register 9
+Cycle 121: Wrote 24 into register 9
+Cycle 122: Wrote 24 into register 9
+Cycle 123: Wrote 24 into register 9
+Cycle 124: Wrote 24 into register 9
+Cycle 125: Wrote 24 into register 9
+Cycle 126: Wrote 24 into register 9
+Cycle 127: Wrote 24 into register 9
+Cycle 128: Wrote 24 into register 9
+Cycle 129: Wrote 24 into register 9
+Cycle 130: Wrote 24 into register 9
+Cycle 131: Wrote 24 into register 9
+Cycle 132: Wrote 24 into register 9
+Cycle 133: Wrote 24 into register 9
+Cycle 134: Wrote 24 into register 9
+Cycle 135: Wrote 24 into register 9
+Cycle 136: Wrote 24 into register 9
+Cycle 137: Wrote 24 into register 9
+Cycle 138: Wrote 24 into register 9
+Cycle 139: Wrote 24 into register 9
+Cycle 140: Wrote 24 into register 9
+Cycle 141: Wrote 24 into register 9
+Cycle 142: Wrote 24 into register 9
+Cycle 143: Wrote 24 into register 9
+Cycle 144: Wrote 24 into register 9
+Cycle 145: Wrote 24 into register 9
+Cycle 146: Wrote 24 into register 9
+Cycle 147: Wrote 24 into register 9
+Cycle 148: Wrote 24 into register 9
+Cycle 149: Wrote 24 into register 9
+Cycle 150: Wrote 24 into register 9
+Cycle 151: Wrote 24 into register 9
+Cycle 152: Wrote 24 into register 9
+Cycle 153: Wrote 0 into register 10
+Cycle 154: Wrote 2 into register 10
+Cycle 155: Wrote 2 into register 10
+Cycle 156: Wrote 2 into register 10
+Cycle 157: Wrote 2 into register 10
+Cycle 158: Wrote 2 into register 10
+Cycle 159: Wrote 2 into register 10
+Cycle 160: Wrote 2 into register 10
+Cycle 161: Wrote 2 into register 10
+Cycle 162: Wrote 2 into register 10
+Cycle 163: Wrote 2 into register 10
+Cycle 164: Wrote 2 into register 10
+Cycle 165: Wrote 2 into register 10
+Cycle 166: Wrote 2 into register 10
+Cycle 167: Wrote 2 into register 10
+Cycle 168: Wrote 2 into register 10
+Cycle 169: Wrote 2 into register 10
+Cycle 170: Wrote 2 into register 10
+Cycle 171: Wrote 2 into register 10
+Cycle 172: Wrote 2 into register 10
+Cycle 173: Wrote 2 into register 10
+Cycle 174: Wrote 2 into register 10
+Cycle 175: Wrote 2 into register 10
+Cycle 176: Wrote 2 into register 10
+Cycle 177: Wrote 2 into register 10
+Cycle 178: Wrote 2 into register 10
+Cycle 179: Wrote 2 into register 10
+Cycle 180: Wrote 2 into register 10
+Cycle 181: Wrote 2 into register 10
+Cycle 182: Wrote 2 into register 10
+Cycle 183: Wrote 2 into register 10
+Cycle 184: Wrote 2 into register 10
+Cycle 185: Wrote 2 into register 10
+Cycle 186: Wrote 2 into register 10
+Cycle 187: Wrote 2 into register 10
+Cycle 188: Wrote 0 into register 11
+Cycle 189: Wrote 12 into register 11
+============== Testing Mode ==============
+Reg  0:           0
+Reg  1:          12
+Reg  2:          13
+Reg  3:         156
+Reg  4:         144
+Reg  5:           4
+Reg  6:           3
+Reg  7:           8
+Reg  8:           3
+Reg  9:          24
+Reg 10:           2
+Reg 11:          12
+Reg 12:           0
+Reg 13:           0
+Reg 14:           0
+Reg 15:           0
+Reg 16:           0
+Reg 17:           0
+Reg 18:           0
+Reg 19:           0
+Reg 20:           0
+Reg 21:           0
+Reg 22:           0
+Reg 23:           0
+Reg 24:           0
+Reg 25:           0
+Reg 26:           0
+Reg 27:           0
+Reg 28:           0
+Reg 29:           0
+Reg 30:           0
+Reg 31:           0

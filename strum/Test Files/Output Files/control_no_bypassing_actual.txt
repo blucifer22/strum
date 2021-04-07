@@ -1,0 +1,82 @@
+Cycle  12: Wrote 4 into register 1
+Cycle  13: Wrote 5 into register 2
+Cycle  14: Wrote 4294967292 into register 3
+Cycle  15: Wrote 4294967291 into register 4
+Cycle  21: Wrote 1 into register 10
+Cycle  26: Wrote 2 into register 10
+Cycle  29: Wrote 2 into register 11
+Cycle  30: Wrote 0 into register 21
+Cycle  31: Wrote 0 into register 10
+Cycle  32: Wrote 0 into register 20
+Cycle  38: Wrote 1 into register 10
+Cycle  43: Wrote 2 into register 10
+Cycle  48: Wrote 3 into register 10
+Cycle  53: Wrote 4 into register 10
+Cycle  58: Wrote 5 into register 10
+Cycle  63: Wrote 6 into register 10
+Cycle  66: Wrote 8 into register 11
+Cycle  67: Wrote 0 into register 21
+Cycle  68: Wrote 0 into register 10
+Cycle  69: Wrote 0 into register 20
+Cycle  73: Wrote 1 into register 10
+Cycle  76: Wrote 9 into register 11
+Cycle  77: Wrote 0 into register 21
+Cycle  78: Wrote 0 into register 10
+Cycle  79: Wrote 0 into register 20
+Cycle  82: Wrote 100 into register 31
+Cycle  83: Wrote 97 into register 31
+Cycle  84: Wrote 1 into register 10
+Cycle  86: Wrote 113 into register 31
+Cycle  92: Wrote 2 into register 10
+Cycle  95: Wrote 11 into register 11
+Cycle  96: Wrote 0 into register 21
+Cycle  97: Wrote 0 into register 10
+Cycle  98: Wrote 0 into register 20
+Cycle 101: Wrote 0 into register 30
+Cycle 108: Wrote 1 into register 10
+Cycle 110: Wrote 10 into register 30
+Cycle 115: Wrote 2 into register 10
+Cycle 118: Wrote 13 into register 11
+Cycle 119: Wrote 0 into register 21
+Cycle 120: Wrote 0 into register 10
+Cycle 121: Wrote 0 into register 20
+Cycle 129: Wrote 1 into register 10
+Cycle 141: Wrote 2 into register 10
+Cycle 148: Wrote 185 into register 31
+Cycle 154: Wrote 15 into register 11
+Cycle 155: Wrote 0 into register 21
+Cycle 156: Wrote 0 into register 10
+Cycle 157: Wrote 0 into register 20
+============== Testing Mode ==============
+Reg  0:           0
+Reg  1:           4
+Reg  2:           5
+Reg  3:  4294967292
+Reg  4:  4294967291
+Reg  5:           0
+Reg  6:           0
+Reg  7:           0
+Reg  8:           0
+Reg  9:           0
+Reg 10:           0
+Reg 11:          15
+Reg 12:           0
+Reg 13:           0
+Reg 14:           0
+Reg 15:           0
+Reg 16:           0
+Reg 17:           0
+Reg 18:           0
+Reg 19:           0
+Reg 20:           0
+Reg 21:           0
+Reg 22:           0
+Reg 23:           0
+Reg 24:           0
+Reg 25:           0
+Reg 26:           0
+Reg 27:           0
+Reg 28:           0
+Reg 29:           0
+Reg 30:          10
+Reg 31:         185
