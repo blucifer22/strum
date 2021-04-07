@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Wed Apr  7 01:00:27 2021
+| Date             : Wed Apr  7 13:02:50 2021
 | Host             : DESKTOP-IVKJU52 running 64-bit major release  (build 9200)
 | Command          : report_power -file VGAController_power_routed.rpt -pb VGAController_power_summary_routed.pb -rpx VGAController_power_routed.rpx
 | Design           : VGAController
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 14.579 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 14.529 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 14.236                           |
-| Device Static (W)        | 0.343                            |
+| Dynamic (W)              | 14.188                           |
+| Device Static (W)        | 0.341                            |
 | Effective TJA (C/W)      | 4.6                              |
-| Max Ambient (C)          | 18.5                             |
-| Junction Temperature (C) | 91.5                             |
+| Max Ambient (C)          | 18.7                             |
+| Junction Temperature (C) | 91.3                             |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -49,24 +49,23 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     0.374 |      347 |       --- |             --- |
-|   LUT as Logic          |     0.315 |      201 |     63400 |            0.32 |
-|   CARRY4                |     0.038 |       16 |     15850 |            0.10 |
-|   Register              |     0.012 |       72 |    126800 |            0.06 |
-|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes           |     0.003 |        8 |     63400 |            0.01 |
-|   LUT as Shift Register |    <0.001 |        1 |     19000 |           <0.01 |
-|   Others                |     0.000 |       13 |       --- |             --- |
-| Signals                 |     1.184 |      333 |       --- |             --- |
-| Block RAM               |     1.729 |     80.5 |       135 |           59.63 |
-| DSPs                    |     0.194 |        1 |       240 |            0.42 |
-| I/O                     |    10.756 |       18 |       210 |            8.57 |
-| Static Power            |     0.343 |          |           |                 |
-| Total                   |    14.579 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |     0.357 |      345 |       --- |             --- |
+|   LUT as Logic |     0.302 |      200 |     63400 |            0.32 |
+|   CARRY4       |     0.034 |       16 |     15850 |            0.10 |
+|   Register     |     0.012 |       73 |    126800 |            0.06 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   F7/F8 Muxes  |     0.003 |        8 |     63400 |            0.01 |
+|   Others       |     0.000 |       13 |       --- |             --- |
+| Signals        |     1.153 |      337 |       --- |             --- |
+| Block RAM      |     1.729 |     80.5 |       135 |           59.63 |
+| DSPs           |     0.194 |        1 |       240 |            0.42 |
+| I/O            |    10.756 |       18 |       210 |            8.57 |
+| Static Power   |     0.341 |          |           |                 |
+| Total          |    14.529 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -75,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     3.544 |       3.340 |      0.203 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     3.494 |       3.292 |      0.202 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.435 |       0.394 |      0.041 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     3.045 |       3.041 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -142,11 +141,11 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| VGAController  |    14.236 |
-|   ColorPalette |     0.148 |
-|   Display      |     0.464 |
-|   ImageData    |     1.878 |
-|   myInterface  |     0.069 |
+| VGAController  |    14.188 |
+|   ColorPalette |     0.142 |
+|   Display      |     0.467 |
+|   ImageData    |     1.899 |
+|   myInterface  |     0.086 |
 +----------------+-----------+
 
 

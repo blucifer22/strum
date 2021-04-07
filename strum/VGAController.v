@@ -92,16 +92,23 @@ module VGAController(
 	
 	reg[9:0] xCoord = 0;
     reg[9:0] yCoord = 0;
+    reg [7:0] keyReset;
     
     always @(posedge clk & screenEnd) begin
         if (scan_out == 8'h1d) begin
-            yCoord <= yCoord-1;
+            yCoord <= yCoord-4;
+            keyReset <= 1'b1;
         end else if (scan_out == 8'h1b) begin
-            yCoord <= yCoord+1;
+            yCoord <= yCoord+4;
+            keyReset <= 1'b1;
         end else if (scan_out == 8'h1c) begin
-            xCoord <= xCoord-1;
+            xCoord <= xCoord-4;
+            keyReset <= 1'b1;
         end else if (scan_out == 8'h23) begin
-            xCoord <= xCoord+1;
+            xCoord <= xCoord+4;
+            keyReset <= 1'b1;
+        end else begin
+            keyReset <= 1'b0;
         end
     end
     
@@ -110,9 +117,8 @@ module VGAController(
     ////////
     wire scan_done_tick;
     wire [7:0] scan_out;
-    ps2_rx myInterface(.clk(clk), .reset(1'b0), .rx_en(1'b1), .ps2d(ps2d), .ps2c(ps2c), .rx_done_tick(scan_done_tick), .rx_data(scan_out));
-    
-   
+
+    ps2_rx myInterface(.clk(clk), .reset(keyReset), .rx_en(1'b1), .ps2d(ps2d), .ps2c(ps2c), .rx_done_tick(scan_done_tick), .rx_data(scan_out));
     
     /*
     RAM_image #(

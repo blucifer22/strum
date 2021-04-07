@@ -50,8 +50,8 @@ module ps2_rx
 	always @(posedge clk, posedge reset)
 		if (reset)
 			begin
-			state_reg <= idle;
-			n_reg <= 0;
+			/*state_reg <= idle;
+			n_reg <= 0;*/
 			d_reg <= 0;
 			end
 		else

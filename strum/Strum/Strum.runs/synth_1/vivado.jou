@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Apr  7 00:58:00 2021
-# Process ID: 26372
+# Start of session at: Wed Apr  7 13:00:43 2021
+# Process ID: 8672
 # Current directory: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1
 # Command line: vivado.exe -log VGAController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl
 # Log file: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1/VGAController.vds
