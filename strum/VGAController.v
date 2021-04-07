@@ -2,17 +2,13 @@
 module VGAController(     
 	input clk, 			// 100 MHz System Clock
 	input reset, 		// Reset Signal
-	input down,
-	input up,
-	input left,
-	input right,
 	output hSync, 		// H Sync Signal
 	output vSync, 		// Veritcal Sync Signal
 	output[3:0] VGA_R,  // Red Signal Bits
 	output[3:0] VGA_G,  // Green Signal Bits
 	output[3:0] VGA_B,  // Blue Signal Bits
-	inout ps2_clk,
-	inout ps2_data);
+	inout ps2c,
+	inout ps2d);
 	
 	
 	// Lab Memory Files Location
@@ -98,16 +94,39 @@ module VGAController(
     reg[9:0] yCoord = 0;
     
     always @(posedge clk & screenEnd) begin
-        if (up) begin
+        if (scan_out == 8'h1d) begin
             yCoord <= yCoord-1;
-        end else if (down) begin
+        end else if (scan_out == 8'h1b) begin
             yCoord <= yCoord+1;
-        end else if (left) begin
+        end else if (scan_out == 8'h1c) begin
             xCoord <= xCoord-1;
-        end else if (right) begin
+        end else if (scan_out == 8'h23) begin
             xCoord <= xCoord+1;
         end
     end
+    
+    ////////
+    //PS2 STUFF
+    ////////
+    wire scan_done_tick;
+    wire [7:0] scan_out;
+    ps2_rx myInterface(.clk(clk), .reset(1'b0), .rx_en(1'b1), .ps2d(ps2d), .ps2c(ps2c), .rx_done_tick(scan_done_tick), .rx_data(scan_out));
+    
+   
+    
+    /*
+    RAM_image #(
+		.DEPTH(256),	
+		.DATA_WIDTH(8), 		       
+		.ADDRESS_WIDTH(9),     
+		.MEMFILE({FILES_PATH, "ascii.mem"}))  
+	asciiRAM(
+		.clk(clk), 		
+		.addr(Ps2Register),	
+		.dataOut(asciiOut),
+		.wEn(1'b0)); 
+		*/	
+    
             
 	// Quickly assign the output colors to their channels using concatenation
 	assign {VGA_R, VGA_G, VGA_B} = ((y > yCoord) && (y < (yCoord+50)) && (x > xCoord) && (x < (xCoord+50))) ? 12'hA00 : colorOut;

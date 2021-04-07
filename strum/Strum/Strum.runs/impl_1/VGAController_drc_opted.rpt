@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Tue Apr  6 22:55:10 2021
+| Date         : Wed Apr  7 00:59:29 2021
 | Host         : DESKTOP-IVKJU52 running 64-bit major release  (build 9200)
 | Command      : report_drc -file VGAController_drc_opted.rpt -pb VGAController_drc_opted.pb -rpx VGAController_drc_opted.rpx
 | Design       : VGAController
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 6
+             Violations found: 8
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
@@ -33,6 +33,7 @@ Table of Contents
 | DPOP-1      | Warning  | PREG Output pipelining                                      | 1          |
 | DPOP-2      | Warning  | MREG Output pipelining                                      | 1          |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
+| RPBF-3      | Warning  | IO port buffering is incomplete                             | 2          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -76,6 +77,16 @@ A LUT Display/yCoord[9]_i_3 is driving clock pin of 20 cells. This could lead to
 xCoord_reg[0], xCoord_reg[1], xCoord_reg[2], xCoord_reg[3], xCoord_reg[4],
 xCoord_reg[5], xCoord_reg[6], xCoord_reg[7], xCoord_reg[8], xCoord_reg[9],
 yCoord_reg[0], yCoord_reg[1], yCoord_reg[2], yCoord_reg[3], yCoord_reg[4] (the first 15 of 20 listed)
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port ps2c expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#2 Warning
+IO port buffering is incomplete  
+Device port ps2d expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 

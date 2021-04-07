@@ -72,6 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 1
 set_param synth.incrementalSynthesisCache C:/Users/caryp/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-25632-DESKTOP-IVKJU52/incrSyn
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -97,6 +98,7 @@ read_mem {
 read_verilog -library xil_defaultlib {
   {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v}
   {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGATimingGenerator.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/ps2_rx.v}
   {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v}
 }
 OPTRACE "Adding files" END { }

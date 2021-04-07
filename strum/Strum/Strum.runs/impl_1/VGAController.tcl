@@ -126,6 +126,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 1
   set_param synth.incrementalSynthesisCache C:/Users/caryp/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-25632-DESKTOP-IVKJU52/incrSyn
+  set_param xicom.use_bs_reader 1
   open_checkpoint VGAController_routed.dcp
   set_property webtalk.parent_dir {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.cache/wt} [current_project]
 set_property TOP VGAController [current_fileset]
