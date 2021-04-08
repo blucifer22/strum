@@ -12,7 +12,7 @@ module VGAController(
 	
 	
 	// Lab Memory Files Location
-	//TODO: CHANGE THIS EVERY FUCKING TIME GOD FUCK
+	//TODO: CHANGE THIS FOR EACH DEVICE
 	localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
 
 	// Clock divider 100 MHz -> 25 MHz
@@ -32,6 +32,12 @@ module VGAController(
 	wire active, screenEnd;
 	wire[9:0] x;
 	wire[8:0] y;
+	
+	reg[9:0] xCoord = 0;
+    reg[9:0] yCoord = 0;
+    reg [7:0] keyReset; //not sure why this is 8 bit... hesitant to change and wait 15 mins only to find out it's important
+    wire scan_done_tick;
+    wire [7:0] scan_out;
 	
 	VGATimingGenerator #(
 		.HEIGHT(VIDEO_HEIGHT), // Use the standard VGA Values
@@ -55,10 +61,10 @@ module VGAController(
 		PALETTE_ADDRESS_WIDTH = $clog2(PALETTE_COLOR_COUNT) + 1; // Use built in log2 Command
 
 	wire[PIXEL_ADDRESS_WIDTH-1:0] imgAddress;  	 // Image address for the image data
-	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr; 	 // Color address for the color palette
+	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddrBackground; 	 // Color address for the color palette
 	assign imgAddress = x + 640*y;				 // Address calculated coordinate
 
-
+    //BACKGROUND IMAGE
 	RAM_image #(		
 		.DEPTH(PIXEL_COUNT), 				     // Set RAM depth to contain every pixel
 		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
@@ -67,12 +73,30 @@ module VGAController(
 	ImageData(
 		.clk(clk), 						 // Falling edge of the 100 MHz clk
 		.addr(imgAddress),					 // Image data address
-		.dataOut(colorAddr),				 // Color palette address
+		.dataOut(colorAddrBackground),				 // Color palette address
+		.wEn(1'b0)); 						 // We're always reading
+		
+		//OVERLAY IMAGE
+		wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddrForeground;
+		 RAM_image #(		
+		.DEPTH(50*50), 				     // Set RAM depth to contain every pixel
+		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
+		.ADDRESS_WIDTH(12),     // Set address with according to the pixel count
+		.MEMFILE({FILES_PATH, "Overlay.mem"})) // Memory initialization
+	ImageOverlay(
+		.clk(clk), 						     // Falling edge of the 100 MHz clk
+		.addr((x-xCoord) + (y-yCoord)*51),					 // Image data address
+		.dataOut(colorAddrForeground),				 // Color palette address
 		.wEn(1'b0)); 						 // We're always reading
 
 	// Color Palette to Map Color Address to 12-Bit Color
 	wire[BITS_PER_COLOR-1:0] colorData; // 12-bit color data at current pixel
 
+    //COLOR PICKER
+    wire inBounds = ((y > yCoord) && (y < (yCoord+51)) && (x > xCoord) && (x < (xCoord+51)));
+    wire goodColor = (colorAddrForeground > 'h1); ///Would prefer to check if it's nonzero, but that doesn't work for some reason???
+    wire [PALETTE_ADDRESS_WIDTH-1:0] colorAddrToUse = (inBounds && goodColor) ? colorAddrForeground : colorAddrBackground;
+    
 	RAM_image #(
 		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
 		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
@@ -80,7 +104,7 @@ module VGAController(
 		.MEMFILE({FILES_PATH, "colors.mem"}))  // Memory initialization
 	ColorPalette(
 		.clk(clk), 							   	   // Rising edge of the 100 MHz clk
-		.addr(colorAddr),					       // Address from the ImageData RAM
+		.addr(colorAddrToUse),					       // Address from the ImageData RAM
 		.dataOut(colorData),				       // Color at current pixel
 		.wEn(1'b0)); 						       // We're always reading
 	
@@ -89,10 +113,9 @@ module VGAController(
 	wire[BITS_PER_COLOR-1:0] colorOut; 			  // Output color 
 	assign colorOut = active ? colorData : 12'd0; // When not active, output black
 
-	
-	reg[9:0] xCoord = 0;
-    reg[9:0] yCoord = 0;
-    reg [7:0] keyReset;
+
+    ps2_rx myInterface(.clk(clk), .reset(keyReset), .rx_en(1'b1), .ps2d(ps2d), .ps2c(ps2c), .rx_done_tick(scan_done_tick), .rx_data(scan_out));
+    
     
     always @(posedge clk & screenEnd) begin
         if (scan_out == 8'h1d) begin
@@ -112,28 +135,7 @@ module VGAController(
         end
     end
     
-    ////////
-    //PS2 STUFF
-    ////////
-    wire scan_done_tick;
-    wire [7:0] scan_out;
-
-    ps2_rx myInterface(.clk(clk), .reset(keyReset), .rx_en(1'b1), .ps2d(ps2d), .ps2c(ps2c), .rx_done_tick(scan_done_tick), .rx_data(scan_out));
-    
-    /*
-    RAM_image #(
-		.DEPTH(256),	
-		.DATA_WIDTH(8), 		       
-		.ADDRESS_WIDTH(9),     
-		.MEMFILE({FILES_PATH, "ascii.mem"}))  
-	asciiRAM(
-		.clk(clk), 		
-		.addr(Ps2Register),	
-		.dataOut(asciiOut),
-		.wEn(1'b0)); 
-		*/	
-    
             
 	// Quickly assign the output colors to their channels using concatenation
-	assign {VGA_R, VGA_G, VGA_B} = ((y > yCoord) && (y < (yCoord+50)) && (x > xCoord) && (x < (xCoord+50))) ? 12'hA00 : colorOut;
+	assign {VGA_R, VGA_G, VGA_B} = colorOut;
 endmodule
