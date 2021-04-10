@@ -35,7 +35,9 @@ module VGAController(
 	
 	reg[9:0] xCoord = 0;
     reg[9:0] yCoord = 0;
-    reg [7:0] keyReset; //not sure why this is 8 bit... hesitant to change and wait 15 mins only to find out it's important
+    reg[9:0] xCoord2 = 100;
+    reg[9:0] yCoord2 = 100;
+    reg keyReset; //not sure why this is 8 bit... hesitant to change and wait 15 mins only to find out it's important
     wire scan_done_tick;
     wire [7:0] scan_out;
 	
@@ -85,15 +87,31 @@ module VGAController(
 		.MEMFILE({FILES_PATH, "Overlay.mem"})) // Memory initialization
 	ImageOverlay(
 		.clk(clk), 						     // Falling edge of the 100 MHz clk
-		.addr((x-xCoord) + (y-yCoord)*51),					 // Image data address
+		.addr((x-coordToUseX) + (y-coordToUseY)*51),					 // Image data address
 		.dataOut(colorAddrForeground),				 // Color palette address
 		.wEn(1'b0)); 						 // We're always reading
 
 	// Color Palette to Map Color Address to 12-Bit Color
 	wire[BITS_PER_COLOR-1:0] colorData; // 12-bit color data at current pixel
+	
+	reg[9:0] coordToUseX = 0;
+	reg[9:0] coordToUseY = 0;
+	reg inBounds = 0;
+	always @* begin
+	   if ((y > yCoord) && (y < (yCoord+51)) && (x > xCoord) && (x < (xCoord+51))) begin
+	       coordToUseX <= xCoord;
+	       coordToUseY <= yCoord;
+	       inBounds <= 1;
+	   end else if ((y > yCoord2) && (y < (yCoord2+51)) && (x > xCoord2) && (x < (xCoord2+51))) begin
+	       coordToUseX <= xCoord2;
+	       coordToUseY <= yCoord2;
+	       inBounds <= 1;
+	   end else begin
+	       inBounds <= 0;
+	   end
+	end
 
     //COLOR PICKER
-    wire inBounds = ((y > yCoord) && (y < (yCoord+51)) && (x > xCoord) && (x < (xCoord+51)));
     wire goodColor = (colorAddrForeground > 'h1); ///Would prefer to check if it's nonzero, but that doesn't work for some reason???
     wire [PALETTE_ADDRESS_WIDTH-1:0] colorAddrToUse = (inBounds && goodColor) ? colorAddrForeground : colorAddrBackground;
     
@@ -120,15 +138,19 @@ module VGAController(
     always @(posedge clk & screenEnd) begin
         if (scan_out == 8'h1d) begin
             yCoord <= yCoord-4;
+            yCoord2 <= yCoord2-4;
             keyReset <= 1'b1;
         end else if (scan_out == 8'h1b) begin
             yCoord <= yCoord+4;
+            yCoord2 <= yCoord2+4;
             keyReset <= 1'b1;
         end else if (scan_out == 8'h1c) begin
             xCoord <= xCoord-4;
+            xCoord2 <= xCoord2-4;
             keyReset <= 1'b1;
         end else if (scan_out == 8'h23) begin
             xCoord <= xCoord+4;
+            xCoord2 <= xCoord2+4;
             keyReset <= 1'b1;
         end else begin
             keyReset <= 1'b0;
