@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Apr  9 23:10:35 2021
-| Host         : DESKTOP-IVKJU52 running 64-bit major release  (build 9200)
+| Date         : Sun Apr 11 18:31:54 2021
+| Host         : AERO-15X running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VGAController_utilization_synth.rpt -pb VGAController_utilization_synth.pb
 | Design       : VGAController
 | Device       : 7a100tcsg324-1
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  265 |     0 |     63400 |  0.42 |
-|   LUT as Logic          |  265 |     0 |     63400 |  0.42 |
+| Slice LUTs*             |  308 |     0 |     63400 |  0.49 |
+|   LUT as Logic          |  308 |     0 |     63400 |  0.49 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  104 |     0 |    126800 |  0.08 |
-|   Register as Flip Flop |   86 |     0 |    126800 |  0.07 |
+| Slice Registers         |  113 |     0 |    126800 |  0.09 |
+|   Register as Flip Flop |   95 |     0 |    126800 |  0.07 |
 |   Register as Latch     |   18 |     0 |    126800 |  0.01 |
-| F7 Muxes                |    8 |     0 |     31700 |  0.03 |
+| F7 Muxes                |   15 |     0 |     31700 |  0.05 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 57    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 47    |          Yes |       Reset |            - |
+| 56    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,19 +149,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT5     |   93 |                 LUT |
-| LUT6     |   88 |                 LUT |
+| LUT5     |  119 |                 LUT |
+| LUT6     |   97 |                 LUT |
 | RAMB36E1 |   81 |        Block Memory |
-| FDRE     |   47 |        Flop & Latch |
-| LUT3     |   41 |                 LUT |
+| FDRE     |   56 |        Flop & Latch |
+| CARRY4   |   43 |          CarryLogic |
+| LUT4     |   41 |                 LUT |
 | FDCE     |   39 |        Flop & Latch |
-| LUT4     |   35 |                 LUT |
-| CARRY4   |   35 |          CarryLogic |
-| LUT2     |   31 |                 LUT |
-| LUT1     |   23 |                 LUT |
+| LUT3     |   37 |                 LUT |
+| LUT2     |   35 |                 LUT |
+| LUT1     |   24 |                 LUT |
 | LDCE     |   18 |        Flop & Latch |
+| MUXF7    |   15 |               MuxFx |
 | OBUF     |   14 |                  IO |
-| MUXF7    |    8 |               MuxFx |
 | IBUF     |    4 |                  IO |
 | DSP48E1  |    4 |    Block Arithmetic |
 | BUFG     |    2 |               Clock |

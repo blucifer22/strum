@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1618024183">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1618180256">
   <File Type="BITSTR-BMM" Name="VGAController_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="VGAController_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="VGAController_timing_summary_init.rpt"/>
@@ -379,6 +379,12 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../image.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Overlay.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Fri Apr  9 23:11:53 2021
-| Host             : DESKTOP-IVKJU52 running 64-bit major release  (build 9200)
+| Date             : Sun Apr 11 18:33:17 2021
+| Host             : AERO-15X running 64-bit major release  (build 9200)
 | Command          : report_power -file VGAController_power_routed.rpt -pb VGAController_power_summary_routed.pb -rpx VGAController_power_routed.rpx
 | Design           : VGAController
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 20.565 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 19.289 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 19.851                           |
-| Device Static (W)        | 0.713                            |
+| Dynamic (W)              | 18.677                           |
+| Device Static (W)        | 0.612                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
-| Junction Temperature (C) | 118.8                            |
+| Junction Temperature (C) | 113.0                            |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.611 |      521 |       --- |             --- |
-|   LUT as Logic |     0.572 |      304 |     63400 |            0.48 |
-|   CARRY4       |     0.017 |       35 |     15850 |            0.22 |
-|   Register     |     0.012 |      109 |    126800 |            0.09 |
+| Slice Logic    |     1.089 |      587 |       --- |             --- |
+|   LUT as Logic |     0.974 |      348 |     63400 |            0.55 |
+|   CARRY4       |     0.092 |       43 |     15850 |            0.27 |
+|   Register     |     0.014 |      118 |    126800 |            0.09 |
 |   BUFG         |     0.006 |        2 |        32 |            6.25 |
-|   F7/F8 Muxes  |     0.003 |        8 |     63400 |            0.01 |
+|   F7/F8 Muxes  |     0.004 |       15 |     63400 |            0.02 |
 |   Others       |     0.000 |       16 |       --- |             --- |
-| Signals        |     1.898 |      577 |       --- |             --- |
+| Signals        |     2.055 |      597 |       --- |             --- |
 | Block RAM      |     1.855 |     81.5 |       135 |           60.37 |
-| DSPs           |     1.288 |        4 |       240 |            1.67 |
-| I/O            |    14.199 |       18 |       210 |            8.57 |
-| Static Power   |     0.713 |          |           |                 |
-| Total          |    20.565 |          |           |                 |
+| DSPs           |     1.069 |        4 |       240 |            1.67 |
+| I/O            |    12.610 |       18 |       210 |            8.57 |
+| Static Power   |     0.612 |          |           |                 |
+| Total          |    19.289 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,16 +74,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     5.987 |       5.502 |      0.486 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.599 |       0.520 |      0.079 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     4.020 |       4.016 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     6.325 |       5.917 |      0.408 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.530 |       0.462 |      0.069 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     3.570 |       3.566 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.198 |       0.162 |      0.036 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.193 |       0.162 |      0.030 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -141,12 +141,12 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| VGAController  |    19.851 |
-|   ColorPalette |     0.115 |
-|   Display      |     0.919 |
-|   ImageData    |     1.880 |
-|   ImageOverlay |     0.301 |
-|   myInterface  |     0.055 |
+| VGAController  |    18.677 |
+|   ColorPalette |     0.132 |
+|   Display      |     1.516 |
+|   ImageData    |     1.872 |
+|   ImageOverlay |     0.319 |
+|   myInterface  |     0.126 |
 +----------------+-----------+
 
 

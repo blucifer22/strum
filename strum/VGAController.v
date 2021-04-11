@@ -13,7 +13,8 @@ module VGAController(
 	
 	// Lab Memory Files Location
 	//TODO: CHANGE THIS FOR EACH DEVICE
-	localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
+	//localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
+	localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
 
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock
@@ -35,8 +36,13 @@ module VGAController(
 	
 	reg[9:0] xCoord = 0;
     reg[9:0] yCoord = 0;
-    reg[9:0] xCoord2 = 100;
-    reg[9:0] yCoord2 = 100;
+    reg[9:0] xCoord2 = 80;
+    reg[9:0] yCoord2 = 0;
+    reg[9:0] xCoord3 = 160;
+    reg[9:0] yCoord3 = 0;
+    reg[9:0] xCoord4 = 240;
+    reg[9:0] yCoord4 = 0;
+    
     reg keyReset; //not sure why this is 8 bit... hesitant to change and wait 15 mins only to find out it's important
     wire scan_done_tick;
     wire [7:0] scan_out;
@@ -78,25 +84,27 @@ module VGAController(
 		.dataOut(colorAddrBackground),				 // Color palette address
 		.wEn(1'b0)); 						 // We're always reading
 		
-		//OVERLAY IMAGE
-		wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddrForeground;
-		 RAM_image #(		
-		.DEPTH(50*50), 				     // Set RAM depth to contain every pixel
-		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
-		.ADDRESS_WIDTH(12),     // Set address with according to the pixel count
-		.MEMFILE({FILES_PATH, "Overlay.mem"})) // Memory initialization
-	ImageOverlay(
-		.clk(clk), 						     // Falling edge of the 100 MHz clk
-		.addr((x-coordToUseX) + (y-coordToUseY)*51),					 // Image data address
-		.dataOut(colorAddrForeground),				 // Color palette address
-		.wEn(1'b0)); 						 // We're always reading
+		
+	
+    //OVERLAY IMAGE
+    wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddrForeground;
+     RAM_image #(		
+    .DEPTH(50*50), 				     // Set RAM depth to contain every pixel
+    .DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
+    .ADDRESS_WIDTH(12),     // Set address with according to the pixel count
+    .MEMFILE({FILES_PATH, "Overlay.mem"})) // Memory initialization
+    ImageOverlay(
+        .clk(clk), 						     // Falling edge of the 100 MHz clk
+        .addr((x-coordToUseX) + (y-coordToUseY)*51),					 // Image data address
+        .dataOut(colorAddrForeground),				 // Color palette address
+        .wEn(1'b0)); 						 // We're always reading
 
 	// Color Palette to Map Color Address to 12-Bit Color
 	wire[BITS_PER_COLOR-1:0] colorData; // 12-bit color data at current pixel
 	
+	reg inBounds = 0;
 	reg[9:0] coordToUseX = 0;
 	reg[9:0] coordToUseY = 0;
-	reg inBounds = 0;
 	always @* begin
 	   if ((y > yCoord) && (y < (yCoord+51)) && (x > xCoord) && (x < (xCoord+51))) begin
 	       coordToUseX <= xCoord;
@@ -105,6 +113,14 @@ module VGAController(
 	   end else if ((y > yCoord2) && (y < (yCoord2+51)) && (x > xCoord2) && (x < (xCoord2+51))) begin
 	       coordToUseX <= xCoord2;
 	       coordToUseY <= yCoord2;
+	       inBounds <= 1;
+	   end else if((y > yCoord3) && (y < (yCoord3+51)) && (x > xCoord3) && (x < (xCoord3+51))) begin
+	       coordToUseX <= xCoord3;
+	       coordToUseY <= yCoord3;
+	       inBounds <= 1;
+	   end else if((y > yCoord4) && (y < (yCoord4+51)) && (x > xCoord4) && (x < (xCoord4+51))) begin
+	       coordToUseX <= xCoord4;
+	       coordToUseY <= yCoord4;
 	       inBounds <= 1;
 	   end else begin
 	       inBounds <= 0;
@@ -139,18 +155,26 @@ module VGAController(
         if (scan_out == 8'h1d) begin
             yCoord <= yCoord-4;
             yCoord2 <= yCoord2-4;
+            yCoord3 <= yCoord3-4;
+            yCoord4 <= yCoord4-4;
             keyReset <= 1'b1;
         end else if (scan_out == 8'h1b) begin
             yCoord <= yCoord+4;
             yCoord2 <= yCoord2+4;
+            yCoord3 <= yCoord3+4;
+            yCoord4 <= yCoord4+4;
             keyReset <= 1'b1;
         end else if (scan_out == 8'h1c) begin
             xCoord <= xCoord-4;
             xCoord2 <= xCoord2-4;
+            xCoord3 <= xCoord3-4;
+            xCoord4 <= xCoord4-4;
             keyReset <= 1'b1;
         end else if (scan_out == 8'h23) begin
             xCoord <= xCoord+4;
             xCoord2 <= xCoord2+4;
+            xCoord3 <= xCoord3+4;
+            xCoord4 <= xCoord4+4;
             keyReset <= 1'b1;
         end else begin
             keyReset <= 1'b0;
