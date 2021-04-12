@@ -43,6 +43,11 @@ module VGAController(
     reg[9:0] xCoord4 = 240;
     reg[9:0] yCoord4 = 120;
     
+    reg[1:0] note = 2'b00;
+    reg[1:0] note2 = 2'b01;
+    reg[1:0] note3 = 2'b10;
+    reg[1:0] note4 = 2'b11;
+    
     reg keyReset; //not sure why this is 8 bit... hesitant to change and wait 15 mins only to find out it's important
     wire scan_done_tick;
     wire [7:0] scan_out;
@@ -105,22 +110,27 @@ module VGAController(
 	reg inBounds = 0;
 	reg[9:0] coordToUseX = 0;
 	reg[9:0] coordToUseY = 0;
+	reg[1:0] colorToUse = 0;
 	always @* begin
 	   if ((y > yCoord) && (y < (yCoord+51)) && (x > xCoord) && (x < (xCoord+51))) begin
 	       coordToUseX <= xCoord;
 	       coordToUseY <= yCoord;
+	       colorToUse <= note;
 	       inBounds <= 1;
 	   end else if ((y > yCoord2) && (y < (yCoord2+51)) && (x > xCoord2) && (x < (xCoord2+51))) begin
 	       coordToUseX <= xCoord2;
 	       coordToUseY <= yCoord2;
+	       colorToUse <= note2;
 	       inBounds <= 1;
 	   end else if((y > yCoord3) && (y < (yCoord3+51)) && (x > xCoord3) && (x < (xCoord3+51))) begin
 	       coordToUseX <= xCoord3;
 	       coordToUseY <= yCoord3;
+	       colorToUse <= note3;
 	       inBounds <= 1;
 	   end else if((y > yCoord4) && (y < (yCoord4+51)) && (x > xCoord4) && (x < (xCoord4+51))) begin
 	       coordToUseX <= xCoord4;
 	       coordToUseY <= yCoord4;
+	       colorToUse <= note4;
 	       inBounds <= 1;
 	   end else begin
 	       inBounds <= 0;
@@ -129,7 +139,7 @@ module VGAController(
 
     //COLOR PICKER
     wire goodColor = (colorAddrForeground > 'h1); ///Would prefer to check if it's nonzero, but that doesn't work for some reason???
-    wire [PALETTE_ADDRESS_WIDTH-1:0] colorAddrToUse = (inBounds && goodColor) ? colorAddrForeground : colorAddrBackground;
+    wire [PALETTE_ADDRESS_WIDTH-1:0] colorAddrToUse = (inBounds && goodColor) ? colorToUse : colorAddrBackground;
     
 	RAM_image #(
 		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
@@ -188,18 +198,22 @@ module VGAController(
             yCoord4 <= yCoord4+1;
             if(yCoord >= 480) begin
                 xCoord <= (xCoord + 80) % 320;
+                note <= note + 1;
                 yCoord <= 0;
             end
             if(yCoord2 >= 480) begin
                 xCoord2 <= (xCoord2 + 80) % 320;
+                note2 <= note2 + 1;
                 yCoord2 <= 0;
             end
             if(yCoord3 >= 480) begin
                 xCoord3 <= (xCoord3 + 80) % 320;
+                note3 <= note3 + 1;
                 yCoord3 <= 0;
             end
             if(yCoord4 >= 480) begin
                 xCoord4 <= (xCoord4 + 80) % 320;
+                note4 <= note4 + 1;
                 yCoord4 <= 0;
             end
     end

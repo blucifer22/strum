@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sun Apr 11 20:52:10 2021
+| Date         : Sun Apr 11 21:25:46 2021
 | Host         : AERO-15X running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file VGAController_control_sets_placed.rpt
 | Design       : VGAController
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    12 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    48 |
+| Unused register locations in slices containing registers |    53 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -42,8 +42,8 @@ Table of Contents
 | Total control sets |    12 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     4 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     7 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              28 |           17 |
-| No           | No                    | Yes                    |              10 |            3 |
-| No           | Yes                   | No                     |              40 |           13 |
-| Yes          | No                    | No                     |              32 |            8 |
-| Yes          | No                    | Yes                    |              10 |            3 |
+| No           | No                    | No                     |              27 |           20 |
+| No           | No                    | Yes                    |              10 |            5 |
+| No           | Yes                   | No                     |              40 |           18 |
+| Yes          | No                    | No                     |              28 |           18 |
+| Yes          | No                    | Yes                    |              10 |            4 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,21 +70,21 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------+--------------------+--------------------+------------------+----------------+--------------+
-|   Clock Signal  |    Enable Signal   |  Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------+--------------------+--------------------+------------------+----------------+--------------+
-|  yCoord0_BUFG   | clear              |                    |                2 |              8 |         4.00 |
-|  yCoord0_BUFG   | xCoord2[7]_i_1_n_0 |                    |                2 |              8 |         4.00 |
-|  yCoord0_BUFG   | xCoord4[7]_i_1_n_0 |                    |                2 |              8 |         4.00 |
-|  yCoord0_BUFG   | xCoord[7]_i_1_n_0  |                    |                2 |              8 |         4.00 |
-|  clk25          |                    | reset_IBUF         |                3 |             10 |         3.33 |
-|  clk25          | Display/vPos       | reset_IBUF         |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG  |                    |                    |                8 |             10 |         1.25 |
-|  yCoord0_BUFG   |                    | clear              |                4 |             10 |         2.50 |
-|  yCoord0_BUFG   |                    | xCoord2[7]_i_1_n_0 |                4 |             10 |         2.50 |
-|  yCoord0_BUFG   |                    | xCoord4[7]_i_1_n_0 |                2 |             10 |         5.00 |
-|  yCoord0_BUFG   |                    | xCoord[7]_i_1_n_0  |                3 |             10 |         3.33 |
-|  coordToUseY__0 |                    |                    |                9 |             18 |         2.00 |
-+-----------------+--------------------+--------------------+------------------+----------------+--------------+
++----------------+--------------------+--------------------+------------------+----------------+--------------+
+|  Clock Signal  |    Enable Signal   |  Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+--------------------+--------------------+------------------+----------------+--------------+
+|  yCoord0_BUFG  | clear              |                    |                5 |              7 |         1.40 |
+|  yCoord0_BUFG  | xCoord2[8]_i_1_n_0 |                    |                5 |              7 |         1.40 |
+|  yCoord0_BUFG  | xCoord4[8]_i_1_n_0 |                    |                4 |              7 |         1.75 |
+|  yCoord0_BUFG  | xCoord[8]_i_1_n_0  |                    |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG |                    |                    |                9 |             10 |         1.11 |
+|  clk25         |                    | reset_IBUF         |                5 |             10 |         2.00 |
+|  clk25         | Display/vPos       | reset_IBUF         |                4 |             10 |         2.50 |
+|  yCoord0_BUFG  |                    | clear              |                4 |             10 |         2.50 |
+|  yCoord0_BUFG  |                    | xCoord2[8]_i_1_n_0 |                6 |             10 |         1.67 |
+|  yCoord0_BUFG  |                    | xCoord4[8]_i_1_n_0 |                3 |             10 |         3.33 |
+|  yCoord0_BUFG  |                    | xCoord[8]_i_1_n_0  |                5 |             10 |         2.00 |
+|  colorToUse__0 |                    |                    |               11 |             17 |         1.55 |
++----------------+--------------------+--------------------+------------------+----------------+--------------+
 
 

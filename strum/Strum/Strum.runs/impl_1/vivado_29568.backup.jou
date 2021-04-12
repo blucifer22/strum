@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Apr 11 21:28:04 2021
-# Process ID: 12080
+# Start of session at: Sun Apr 11 21:12:42 2021
+# Process ID: 29568
 # Current directory: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1
 # Command line: vivado.exe -log VGAController.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source VGAController.tcl -notrace
 # Log file: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.vdi
