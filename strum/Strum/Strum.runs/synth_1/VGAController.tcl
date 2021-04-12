@@ -94,6 +94,7 @@ read_mem {
   C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Overlay.mem
 }
 read_verilog -library xil_defaultlib {
+  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/PWMSerializer.v
   C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v
   C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGATimingGenerator.v
   C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/ps2_rx.v

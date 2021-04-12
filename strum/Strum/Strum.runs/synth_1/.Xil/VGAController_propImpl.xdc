@@ -61,3 +61,9 @@ set_property src_info {type:XDC file:1 line:53 export:INPUT save:INPUT read:READ
 set_property IOSTANDARD LVCMOS33 [get_ports down]
 set_property src_info {type:XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS33 [get_ports left]
+set_property src_info {type:XDC file:1 line:56 export:INPUT save:INPUT read:READ} [current_design]
+// Audio Stuff
+set_property src_info {type:XDC file:1 line:59 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN D12 [get_ports audioEn]
+set_property src_info {type:XDC file:1 line:60 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN A11 [get_ports audioOut]

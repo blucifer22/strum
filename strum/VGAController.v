@@ -7,6 +7,8 @@ module VGAController(
 	output[3:0] VGA_R,  // Red Signal Bits
 	output[3:0] VGA_G,  // Green Signal Bits
 	output[3:0] VGA_B,  // Blue Signal Bits
+	output audioOut,
+	output audioEn,
 	inout ps2c,
 	inout ps2d);
 	
@@ -111,6 +113,7 @@ module VGAController(
 	reg[9:0] coordToUseX = 0;
 	reg[9:0] coordToUseY = 0;
 	reg[1:0] colorToUse = 0;
+	reg[1:0] noteToPlay = 0;
 	always @* begin
 	   if ((y > yCoord) && (y < (yCoord+51)) && (x > xCoord) && (x < (xCoord+51))) begin
 	       coordToUseX <= xCoord;
@@ -199,24 +202,49 @@ module VGAController(
             if(yCoord >= 480) begin
                 xCoord <= (xCoord + 80) % 320;
                 note <= note + 1;
+                noteToPlay <= 0;
                 yCoord <= 0;
             end
             if(yCoord2 >= 480) begin
                 xCoord2 <= (xCoord2 + 80) % 320;
                 note2 <= note2 + 1;
+                noteToPlay <= 1;
                 yCoord2 <= 0;
             end
             if(yCoord3 >= 480) begin
                 xCoord3 <= (xCoord3 + 80) % 320;
                 note3 <= note3 + 1;
+                noteToPlay <= 2;
                 yCoord3 <= 0;
             end
             if(yCoord4 >= 480) begin
                 xCoord4 <= (xCoord4 + 80) % 320;
                 note4 <= note4 + 1;
+                noteToPlay <= 3;
                 yCoord4 <= 0;
             end
     end
+    
+	assign audioEn = 1'b1;  // Enable Audio Output    
+    reg [31:0] counter = 0;
+    wire [10:0] cur_freq;
+    assign cur_freq = (noteToPlay + 1) * 100;
+    wire[31:0] counter_limit;
+    assign counter_limit = ((100000000/cur_freq) >> 1) - 1;
+    reg toggle = 0;
+    always @(posedge clk) begin
+        if(counter < counter_limit) begin
+            counter <= counter + 1;
+        end
+        else begin
+            toggle <= ~toggle;
+            counter <= 0;
+        end
+    end
+    wire[6:0] duty_cycle;
+    assign duty_cycle = toggle ? 7'd60 : 7'd40;
+    PWMSerializer serializer(.clk(clk), .reset(1'b0), .duty_cycle(duty_cycle), .signal(audioOut));
+
     
             
 	// Quickly assign the output colors to their channels using concatenation
