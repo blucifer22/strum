@@ -37,11 +37,11 @@ module VGAController(
 	reg[9:0] xCoord = 0;
     reg[9:0] yCoord = 0;
     reg[9:0] xCoord2 = 80;
-    reg[9:0] yCoord2 = 0;
+    reg[9:0] yCoord2 = 40;
     reg[9:0] xCoord3 = 160;
-    reg[9:0] yCoord3 = 0;
+    reg[9:0] yCoord3 = 80;
     reg[9:0] xCoord4 = 240;
-    reg[9:0] yCoord4 = 0;
+    reg[9:0] yCoord4 = 120;
     
     reg keyReset; //not sure why this is 8 bit... hesitant to change and wait 15 mins only to find out it's important
     wire scan_done_tick;
@@ -187,15 +187,19 @@ module VGAController(
             yCoord3 <= yCoord3+1;
             yCoord4 <= yCoord4+1;
             if(yCoord >= 480) begin
+                xCoord <= (xCoord + 80) % 320;
                 yCoord <= 0;
             end
             if(yCoord2 >= 480) begin
+                xCoord2 <= (xCoord2 + 80) % 320;
                 yCoord2 <= 0;
             end
             if(yCoord3 >= 480) begin
+                xCoord3 <= (xCoord3 + 80) % 320;
                 yCoord3 <= 0;
             end
             if(yCoord4 >= 480) begin
+                xCoord4 <= (xCoord4 + 80) % 320;
                 yCoord4 <= 0;
             end
     end
