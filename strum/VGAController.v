@@ -151,34 +151,53 @@ module VGAController(
     ps2_rx myInterface(.clk(clk), .reset(keyReset), .rx_en(1'b1), .ps2d(ps2d), .ps2c(ps2c), .rx_done_tick(scan_done_tick), .rx_data(scan_out));
     
     
+//    always @(posedge clk & screenEnd) begin
+//        if (scan_out == 8'h1d) begin
+//            yCoord <= yCoord-4;
+//            yCoord2 <= yCoord2-4;
+//            yCoord3 <= yCoord3-4;
+//            yCoord4 <= yCoord4-4;
+//            keyReset <= 1'b1;
+//        end else if (scan_out == 8'h1b) begin
+//            yCoord <= yCoord+4;
+//            yCoord2 <= yCoord2+4;
+//            yCoord3 <= yCoord3+4;
+//            yCoord4 <= yCoord4+4;
+//            keyReset <= 1'b1;
+//        end else if (scan_out == 8'h1c) begin
+//            xCoord <= xCoord-4;
+//            xCoord2 <= xCoord2-4;
+//            xCoord3 <= xCoord3-4;
+//            xCoord4 <= xCoord4-4;
+//            keyReset <= 1'b1;
+//        end else if (scan_out == 8'h23) begin
+//            xCoord <= xCoord+4;
+//            xCoord2 <= xCoord2+4;
+//            xCoord3 <= xCoord3+4;
+//            xCoord4 <= xCoord4+4;
+//            keyReset <= 1'b1;
+//        end else begin
+//            keyReset <= 1'b0;
+//        end
+//    end
+
     always @(posedge clk & screenEnd) begin
-        if (scan_out == 8'h1d) begin
-            yCoord <= yCoord-4;
-            yCoord2 <= yCoord2-4;
-            yCoord3 <= yCoord3-4;
-            yCoord4 <= yCoord4-4;
-            keyReset <= 1'b1;
-        end else if (scan_out == 8'h1b) begin
-            yCoord <= yCoord+4;
-            yCoord2 <= yCoord2+4;
-            yCoord3 <= yCoord3+4;
-            yCoord4 <= yCoord4+4;
-            keyReset <= 1'b1;
-        end else if (scan_out == 8'h1c) begin
-            xCoord <= xCoord-4;
-            xCoord2 <= xCoord2-4;
-            xCoord3 <= xCoord3-4;
-            xCoord4 <= xCoord4-4;
-            keyReset <= 1'b1;
-        end else if (scan_out == 8'h23) begin
-            xCoord <= xCoord+4;
-            xCoord2 <= xCoord2+4;
-            xCoord3 <= xCoord3+4;
-            xCoord4 <= xCoord4+4;
-            keyReset <= 1'b1;
-        end else begin
-            keyReset <= 1'b0;
-        end
+            yCoord <= yCoord+1;
+            yCoord2 <= yCoord2+1;
+            yCoord3 <= yCoord3+1;
+            yCoord4 <= yCoord4+1;
+            if(yCoord >= 480) begin
+                yCoord <= 0;
+            end
+            if(yCoord2 >= 480) begin
+                yCoord2 <= 0;
+            end
+            if(yCoord3 >= 480) begin
+                yCoord3 <= 0;
+            end
+            if(yCoord4 >= 480) begin
+                yCoord4 <= 0;
+            end
     end
     
             

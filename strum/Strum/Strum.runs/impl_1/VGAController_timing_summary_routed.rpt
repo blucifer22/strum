@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sun Apr 11 18:33:17 2021
+| Date         : Sun Apr 11 20:27:34 2021
 | Host         : AERO-15X running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file VGAController_timing_summary_routed.rpt -pb VGAController_timing_summary_routed.pb -rpx VGAController_timing_summary_routed.rpx -warn_on_violation
 | Design       : VGAController
@@ -39,11 +39,11 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (2272)
+1. checking no_clock (1304)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (1606)
-5. checking no_input_delay (3)
+4. checking unconstrained_internal_endpoints (1514)
+5. checking no_input_delay (1)
 6. checking no_output_delay (14)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
@@ -52,141 +52,115 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (2272)
+1. checking no_clock (1304)
 ---------------------------
- There are 162 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 124 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[0]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[0]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[1]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[1]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[2]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[2]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[3]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[3]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[4]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[4]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[5]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[5]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[6]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[6]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[7]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[7]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[8]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[8]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[9]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[9]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[0]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[0]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[1]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[1]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[2]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[2]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[3]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[3]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[4]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[4]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[5]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[5]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[6]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[6]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[7]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[7]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[8]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[8]/Q (HIGH)
 
- There are 64 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[9]/Q (HIGH)
+ There are 42 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[9]/Q (HIGH)
 
  There are 20 register/latch pins with no clock driven by root clock pin: pixCounter_reg[1]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[1]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord2_reg[2]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[2]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord2_reg[3]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[3]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord2_reg[4]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[4]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord2_reg[5]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[5]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord2_reg[6]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[6]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord2_reg[7]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[7]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord2_reg[8]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[8]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord2_reg[9]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord2_reg[9]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord3_reg[2]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[1]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord3_reg[3]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[2]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord3_reg[4]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[3]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord3_reg[5]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[4]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord3_reg[6]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[5]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord3_reg[7]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[6]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord3_reg[8]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[7]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord3_reg[9]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[8]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord4_reg[2]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord3_reg[9]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord4_reg[3]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[1]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord4_reg[4]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[2]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord4_reg[5]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[3]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord4_reg[6]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[4]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord4_reg[7]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[5]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord4_reg[8]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[6]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord4_reg[9]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[7]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord_reg[2]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[8]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord_reg[3]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord4_reg[9]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord_reg[4]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[1]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord_reg[5]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[2]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord_reg[6]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[3]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord_reg[7]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[4]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord_reg[8]/Q (HIGH)
 
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[5]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[6]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[7]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[8]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: xCoord_reg[9]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[1]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[2]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[3]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[4]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[5]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[6]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[7]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[8]/Q (HIGH)
-
- There are 18 register/latch pins with no clock driven by root clock pin: yCoord_reg[9]/Q (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: yCoord_reg[9]/Q (HIGH)
 
 
 2. checking constant_clock (0)
@@ -199,16 +173,16 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (1606)
+4. checking unconstrained_internal_endpoints (1514)
 ---------------------------------------------------
- There are 1606 pins that are not constrained for maximum delay. (HIGH)
+ There are 1514 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (3)
+5. checking no_input_delay (1)
 ------------------------------
- There are 3 input ports with no input delay specified. (HIGH)
+ There is 1 input port with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

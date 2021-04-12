@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sun Apr 11 18:31:54 2021
+| Date         : Sun Apr 11 20:24:28 2021
 | Host         : AERO-15X running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VGAController_utilization_synth.rpt -pb VGAController_utilization_synth.pb
 | Design       : VGAController
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  308 |     0 |     63400 |  0.49 |
-|   LUT as Logic          |  308 |     0 |     63400 |  0.49 |
+| Slice LUTs*             |  245 |     0 |     63400 |  0.39 |
+|   LUT as Logic          |  245 |     0 |     63400 |  0.39 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  113 |     0 |    126800 |  0.09 |
-|   Register as Flip Flop |   95 |     0 |    126800 |  0.07 |
-|   Register as Latch     |   18 |     0 |    126800 |  0.01 |
-| F7 Muxes                |   15 |     0 |     31700 |  0.05 |
+| Slice Registers         |   67 |     0 |    126800 |  0.05 |
+|   Register as Flip Flop |   57 |     0 |    126800 |  0.04 |
+|   Register as Latch     |   10 |     0 |    126800 | <0.01 |
+| F7 Muxes                |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 57    |          Yes |           - |        Reset |
+| 30    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 56    |          Yes |       Reset |            - |
+| 37    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -93,7 +93,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   18 |     0 |       210 |  8.57 |
+| Bonded IOB                  |   16 |     0 |       210 |  7.62 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -149,21 +149,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT5     |  119 |                 LUT |
-| LUT6     |   97 |                 LUT |
+| LUT5     |   97 |                 LUT |
 | RAMB36E1 |   81 |        Block Memory |
-| FDRE     |   56 |        Flop & Latch |
-| CARRY4   |   43 |          CarryLogic |
-| LUT4     |   41 |                 LUT |
-| FDCE     |   39 |        Flop & Latch |
-| LUT3     |   37 |                 LUT |
-| LUT2     |   35 |                 LUT |
-| LUT1     |   24 |                 LUT |
-| LDCE     |   18 |        Flop & Latch |
-| MUXF7    |   15 |               MuxFx |
+| LUT6     |   75 |                 LUT |
+| LUT2     |   50 |                 LUT |
+| LUT3     |   43 |                 LUT |
+| FDRE     |   37 |        Flop & Latch |
+| LUT4     |   30 |                 LUT |
+| CARRY4   |   23 |          CarryLogic |
+| FDCE     |   20 |        Flop & Latch |
 | OBUF     |   14 |                  IO |
-| IBUF     |    4 |                  IO |
+| LUT1     |   14 |                 LUT |
+| LDCE     |   10 |        Flop & Latch |
 | DSP48E1  |    4 |    Block Arithmetic |
+| IBUF     |    2 |                  IO |
 | BUFG     |    2 |               Clock |
 | RAMB18E1 |    1 |        Block Memory |
 +----------+------+---------------------+
