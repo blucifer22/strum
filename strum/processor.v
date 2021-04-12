@@ -169,6 +169,7 @@ module processor(
     wire execute_bne = !DX_out[31] & !DX_out[30] & !DX_out[29] & DX_out[28] & !DX_out[27];
     wire execute_blt = !DX_out[31] & !DX_out[30] & DX_out[29] & DX_out[28] & !DX_out[27];
     assign execute_setx = DX_out[31] & !DX_out[30] & DX_out[29] & !DX_out[28] & DX_out[27];
+    wire execute_close_enough = (DX_out[6:2] == 5'b11111) && execute_r_type;
 
     // ALU Bypassing
 
@@ -227,14 +228,14 @@ module processor(
     wire [31:0] ALU_out;
     wire ALU_NE, ALU_GT, ALU_overflow;
     // Also kind of a hack (peep that nested ternary!) but it handles the branching cases fairly cleanly.
-    wire [4:0] ALU_opcode = (execute_blt || execute_bne) ? 5'b00001 : (execute_r_type ? DX_out[6:2] : 5'b00000);
+    wire [4:0] ALU_opcode = (execute_blt || execute_bne || execute_close_enough) ? 5'b00001 : (execute_r_type ? DX_out[6:2] : 5'b00000);
     wire [31:0] final_ALU_operand_B;
     wire [31:0] signed_immediate;
     assign signed_immediate[16:0] = DX_out[16:0]; // Grab the immediate value from the DX latch
     assign signed_immediate[31:17] = {15{DX_out[16]}}; // Sign extend it to fit the full 32-bits
     assign final_ALU_operand_B[31:0] = (execute_addi | execute_lw | execute_sw) ? signed_immediate : ALU_operand_B;
     alu alu(ALU_operand_A, final_ALU_operand_B, ALU_opcode, DX_out[11:7], ALU_out, ALU_NE, ALU_GT, ALU_overflow);
-    
+    wire is_close_enough = ((ALU_out[31:5] == 27'b0) || (ALU_out[31:5] == 27'd134217727));
     // Determine if we need to flush out bad instructions as a result of a branching operation
     // It's basically what it looks like.
     assign needs_flush = (execute_blt && !ALU_GT && ALU_NE) || (execute_bne && ALU_NE);
@@ -253,7 +254,7 @@ module processor(
 
     // If we've completed a multdiv operation, recover from the stall and take that output, otherwise default 
     // to the ALU output!
-    wire [31:0] execute_stage_output = (multdiv_complete && multdiv_in_progress) ? multdiv_out : ALU_out;
+    wire [31:0] execute_stage_output = (multdiv_complete && multdiv_in_progress) ? multdiv_out : ( execute_close_enough ? is_close_enough : ALU_out);
 
     // X/M Pipeline Stage
     wire [127:0] XM_out;
