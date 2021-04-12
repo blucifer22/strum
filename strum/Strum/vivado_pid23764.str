@@ -2147,3 +2147,50 @@ selectCodeEditor("processor.v", 871, 217); // bP (w, cs)
 selectCodeEditor("processor.v", 805, 208); // bP (w, cs)
 selectCodeEditor("processor.v", 285, 179); // bP (w, cs)
 selectCodeEditor("processor.v", 255, 198); // bP (w, cs)
+// Elapsed time: 65 seconds
+typeControlKey((HResource) null, "processor.v", 'c'); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("processor.v", 696, 108); // bP (w, cs)
+// Elapsed time: 64 seconds
+selectCodeEditor("processor.v", 298, 307); // bP (w, cs)
+selectCodeEditor("processor.v", 316, 345); // bP (w, cs)
+selectCodeEditor("processor.v", 300, 359); // bP (w, cs)
+selectCodeEditor("processor.v", 341, 309); // bP (w, cs)
+typeControlKey((HResource) null, "processor.v", 'c'); // bP (w, cs)
+selectCodeEditor("processor.v", 527, 5); // bP (w, cs)
+// WARNING: HEventQueue.dispatchEvent() is taking  1352 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,690 MB. GUI used memory: 154 MB. Current time: 4/11/21, 10:29:37 PM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1311 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,690 MB. GUI used memory: 153 MB. Current time: 4/11/21, 10:59:37 PM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1537 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,690 MB. GUI used memory: 153 MB. Current time: 4/11/21, 11:29:38 PM EDT
+// Elapsed time: 3760 seconds
+selectCodeEditor("processor.v", 394, 205); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 38 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // E (g, c)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ai (ao, c)
+setFileChooser("C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/rng.v");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+dismissFileChooser();
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 16 seconds
+dismissDialog("Add Sources"); // c (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/rng.v 
+// bz (cs):  Add Sources  : addNotify
+dismissDialog("Add Sources"); // bz (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 1427 seconds
+selectCodeEditor("processor.v", 432, 350); // bP (w, cs)
+typeControlKey((HResource) null, "processor.v", 'v'); // bP (w, cs)

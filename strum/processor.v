@@ -69,7 +69,7 @@ module processor(
     wire multdiv_in_progress, multdiv_complete;
 
     // Detect pipeline hazards!!!
-    // Identify potentiall hazardous instructions!
+    // Identify potentially hazardous instructions!
     wire potential_hazard = (decode_r_type | decode_addi | decode_lw | decode_sw | decode_jr);
     wire [4:0] haz1, haz2;
     wire rs_zero = &(!FD_out[21:17]); // Check for zeroed rs (you can't actually write to zero, so not a hazard!!!)
@@ -90,6 +90,7 @@ module processor(
     wire fetch_jump = (q_imem[31:27] == 5'b00001);
     wire fetch_jal = (q_imem[31:27] == 5'b00011);
     wire fetch_jr = (q_imem[31:27] == 5'b00100);
+    wire fetch_rng = (q_imem[31:27] == 5'b11111);
     wire[31:0] jump_address = decode_jr ? data_readRegB : q_imem[26:0]; // jr? Comes out of data_readRegB! Otherwise just pull the next instruction...
     wire[31:0] bex_data = execute_setx ? DX_out[26:0] : (memory_setx ? XM_out[26:0] : (write_setx ? MW_out[26:0] : data_readRegB)); // Just does what a bex does
     wire [31:0] final_address = (decode_bex && !(bex_data == 32'b0)) ? FD_out[26:0] : jump_address; // Decode bex and bex_data nonzero? Grab the bex address. Otherwise just keep on rolling.
@@ -118,13 +119,17 @@ module processor(
     assign jal_replacement[31:27] = 5'b00011; // Populate the top 5 with the JAL opcode as a placeholder
     assign jal_replacement [26:0] = program_counter; // Set the return address (and hope that some 310 student hasn't gotten to the stack smash lab yet...)
 
+    wire [31:0] rng_replacement;
+    assign rng_replacement[31:22] = q_imem[31:22];
+    assign rng_replacement[21:0] = 22'b0;
+
     // F/D Pipeline Stage (64-bit register, PC [63:32], Instruction[31:0])
     wire [63:0] FD_in, FD_out;
     wire [31:0] check_fetch_jal;
     wire unused_FD_q_not;
     
     assign FD_in[63:32] = read_and_write_haz ? 32'b0 : address_imem;
-    assign check_fetch_jal = fetch_jal ? jal_replacement : q_imem;
+    assign check_fetch_jal = fetch_jal ? jal_replacement : (fetch_rng ? rng_replacement : q_imem);
     assign FD_in[31:0] = read_and_write_haz ? 32'b0 : check_fetch_jal;
     dffe_ref FD[63:0](FD_out, unused_FD_q_not, (decode_jr | needs_flush | (decode_bex && !(bex_data == 32'b0))) ? 64'b0 : FD_in, !clock, !stall & !multdiv_in_progress, reset);
 
@@ -170,14 +175,15 @@ module processor(
     wire execute_blt = !DX_out[31] & !DX_out[30] & DX_out[29] & DX_out[28] & !DX_out[27];
     assign execute_setx = DX_out[31] & !DX_out[30] & DX_out[29] & !DX_out[28] & DX_out[27];
     wire execute_close_enough = (DX_out[6:2] == 5'b11111) && execute_r_type;
+    wire execute_rng = &(DX_out[31:27]);
 
     // ALU Bypassing
 
     // General utilization/dependency logic
     // Basically isomorphic to the above bypassing case. Set high if we have an instruction that could be hazardous.
-    wire XM_utilizes_rd = memory_r_type || memory_addi || memory_lw || memory_setx;
+    wire XM_utilizes_rd = memory_r_type || memory_addi || memory_lw || memory_setx || memory_rng;
     wire DX_utilizes_rs = execute_r_type || execute_addi || execute_lw || execute_sw || execute_bne || execute_blt;
-    wire MW_utilizes_rd = write_r_type || write_addi || write_lw || write_setx;
+    wire MW_utilizes_rd = write_r_type || write_addi || write_lw || write_setx || write_rng;
 
     // Input A bypassing logic
     wire [4:0] XM_rd_equals_DX_rs; // Check for concurrent use bypass
@@ -252,9 +258,13 @@ module processor(
     dffe_ref multdiv_status_latch(multdiv_in_progress, unused_multdiv_q_not, ctrl_MULT | ctrl_DIV, clock, ctrl_MULT | ctrl_DIV | multdiv_complete, reset);
     multdiv multdiv(ALU_operand_A, ALU_operand_B, ctrl_MULT, ctrl_DIV, clock, multdiv_out, multdiv_overflow, multdiv_complete);
 
+    // RNG
+    wire[1:0] rng_out;
+    rng random_number_generator(rng_out, clock);
+
     // If we've completed a multdiv operation, recover from the stall and take that output, otherwise default 
     // to the ALU output!
-    wire [31:0] execute_stage_output = (multdiv_complete && multdiv_in_progress) ? multdiv_out : ( execute_close_enough ? is_close_enough : ALU_out);
+    wire [31:0] execute_stage_output = (multdiv_complete && multdiv_in_progress) ? multdiv_out : (execute_close_enough ? is_close_enough : (execute_rng ? rng_out : ALU_out));
 
     // X/M Pipeline Stage
     wire [127:0] XM_out;
@@ -279,6 +289,7 @@ module processor(
     wire memory_sw = !XM_out[31] & !XM_out[30] & XM_out[29] & XM_out[28] & XM_out[27];
     wire memory_setx = XM_out[31] & !XM_out[30] & XM_out[29] & !XM_out[28] & XM_out[27];
     wire memory_jal = !XM_out[31] & !XM_out[30] & !XM_out[29] & XM_out[28] & XM_out[27];
+    wire memory_rng = &(XM_out[31:27]);
 
     // We only enable writes for store-word instructions
     assign wren = memory_sw ? 1'b1 : 1'b0;
@@ -314,7 +325,8 @@ module processor(
     wire write_jal = !MW_out[31] & !MW_out[30] & !MW_out[29] & MW_out[28] & MW_out[27];
     wire write_setx = MW_out[31] & !MW_out[30] & MW_out[29] & !MW_out[28] & MW_out[27];
     wire write_lw = !MW_out[31] & MW_out[30] & !MW_out[29] & !MW_out[28] & !MW_out[27];
-    or write_enable(ctrl_writeEnable, write_r_type, write_addi, write_jal, write_setx, write_lw);
+    wire write_rng = &(MW_out[31:27]);
+    or write_enable(ctrl_writeEnable, write_r_type, write_addi, write_jal, write_setx, write_lw, write_rng);
 
     // ctrl_writeReg for r-type, addi, and LW is rd
     // ctrl_writeReg for jal is r31
@@ -325,11 +337,11 @@ module processor(
     // 00: lw ==> q_dmem
     // 01: setx ==> T
     // 10: jal ==> PC + 1
-    // 11: r-type/addi ==> ALU_out
+    // 11: r-type/addi ==> Execute Stage Out
 
     wire[1:0] ctrl_WR_mux;
-    assign ctrl_WR_mux[1] = write_r_type | write_addi | write_jal;
-    assign ctrl_WR_mux[0] = ctrl_WR_mux[1] ? (write_r_type | write_addi) : write_setx;
+    assign ctrl_WR_mux[1] = write_r_type | write_addi | write_jal | write_rng;
+    assign ctrl_WR_mux[0] = ctrl_WR_mux[1] ? (write_r_type | write_addi | write_rng) : write_setx;
     mux_4 WR_mux(data_writeReg, ctrl_WR_mux, MW_out[63:32], MW_out[26:0], MW_out[26:0], MW_out[95:64]);
 
 endmodule
