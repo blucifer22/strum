@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc rfile:../../../../constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/constraints.xdc} rfile:../../../../constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 // Clock on E3
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

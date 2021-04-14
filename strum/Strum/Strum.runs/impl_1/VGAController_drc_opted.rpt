@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sun Apr 11 22:07:11 2021
-| Host         : AERO-15X running 64-bit major release  (build 9200)
+| Date         : Wed Apr 14 16:58:30 2021
+| Host         : DESKTOP-IVKJU52 running 64-bit major release  (build 9200)
 | Command      : report_drc -file VGAController_drc_opted.rpt -pb VGAController_drc_opted.pb -rpx VGAController_drc_opted.rpx
 | Design       : VGAController
 | Device       : xc7a100tcsg324-1

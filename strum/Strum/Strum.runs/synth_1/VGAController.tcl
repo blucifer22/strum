@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/VGAController.tcl"
+  variable script "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1/VGAController.tcl"
   variable category "vivado_synth"
 }
 
@@ -78,27 +78,54 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.cache/wt [current_project]
-set_property parent.project_path C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem {
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/ascii.mem
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/colors.mem
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/sprites.mem
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/image.mem
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Overlay.mem
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/ascii.mem}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/colors.mem}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/sprites.mem}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/image.mem}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Overlay.mem}
 }
 read_verilog -library xil_defaultlib {
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/PWMSerializer.v
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGATimingGenerator.v
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/ps2_rx.v
-  C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/PWMSerializer.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGATimingGenerator.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Wrapper.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/bitwise_AND.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/bitwise_OR.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/dffe_ref.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/eight_bit_cla.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/gp.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/left_barrel_shifter.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mult_control.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/multdiv.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_2.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_4.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_8.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/one_hot_decoder.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/ps2_rx.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_32.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_64.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_65.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/regfile.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/restoring_div.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/right_barrel_shifter.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/rng.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/six_bit_counter.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/tsb_32.v}
+  {C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,8 +136,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc]
+read_xdc {{C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/constraints.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/constraints.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

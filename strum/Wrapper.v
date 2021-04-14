@@ -24,19 +24,23 @@
  *
  **/
 
-module Wrapper (clock, reset);
-	input clock, reset;
+module Wrapper (regVal, clock, reset, insnToUse, activeInsn, regToRead, reading);
+	input clock, reset, activeInsn;
+	input [31:0] insnToUse;
+	input [4:0] regToRead;
+	input reading;
+	output [31:0] regVal;
+	
+	assign regVal = regA;
 
 	wire rwe, mwe;
 	wire[4:0] rd, rs1, rs2;
 	wire[31:0] instAddr, instData, 
 		rData, regA, regB,
 		memAddr, memDataIn, memDataOut;
-
-
-	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "";
 	
+	assign instData = activeInsn ? insnToUse : 32'b0;
+		
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 
 								
@@ -52,17 +56,11 @@ module Wrapper (clock, reset);
 		.wren(mwe), .address_dmem(memAddr), 
 		.data(memDataIn), .q_dmem(memDataOut)); 
 	
-	// Instruction Memory (ROM)
-	ROM #(.MEMFILE({INSTR_FILE, ".mem"}))
-	InstMem(.clk(clock), 
-		.addr(instAddr[11:0]), 
-		.dataOut(instData));
-	
 	// Register File
 	regfile RegisterFile(.clock(clock), 
 		.ctrl_writeEnable(rwe), .ctrl_reset(reset), 
 		.ctrl_writeReg(rd),
-		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
+		.ctrl_readRegA(reading ? regToRead : rs1), .ctrl_readRegB(rs2), 
 		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB));
 						
 	// Processor Memory (RAM)

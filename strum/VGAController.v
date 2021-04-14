@@ -15,8 +15,8 @@ module VGAController(
 	
 	// Lab Memory Files Location
 	//TODO: CHANGE THIS FOR EACH DEVICE
-	//localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
-	localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
+	localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
+	//localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
 
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock
@@ -36,14 +36,14 @@ module VGAController(
 	wire[9:0] x;
 	wire[8:0] y;
 	
-	reg[9:0] xCoord = 0;
+	reg[9:0] xCoord = 160;
     reg[9:0] yCoord = 0;
-    reg[9:0] xCoord2 = 80;
-    reg[9:0] yCoord2 = 40;
-    reg[9:0] xCoord3 = 160;
-    reg[9:0] yCoord3 = 80;
-    reg[9:0] xCoord4 = 240;
-    reg[9:0] yCoord4 = 120;
+    reg[9:0] xCoord2 = 240;
+    reg[9:0] yCoord2 = 80;
+    reg[9:0] xCoord3 = 320;
+    reg[9:0] yCoord3 = 160;
+    reg[9:0] xCoord4 = 400;
+    reg[9:0] yCoord4 = 240;
     
     reg[1:0] note = 2'b00;
     reg[1:0] note2 = 2'b01;
@@ -194,35 +194,87 @@ module VGAController(
 //        end
 //    end
 
-    always @(posedge clk & screenEnd) begin
+    reg needsNewNote;
+    wire [31:0] insnToUse = 32'b11111000010000000000000000000000;
+    wire activeInsn = needsNewNote;
+    reg CPUDone;
+    reg[4:0] cyclesLeftCPU;
+    wire [31:0] regVal;
+    wire [4:0] regToRead = 5'b00001;
+    wire reading = CPUDone;
+    Wrapper myCPU(regVal, clk, 1'b0, insnToUse, activeInsn, regToRead, reading);
+    
+    
+    reg [2:0] noteToReset;
+
+    always @(posedge clk) begin
+        if (screenEnd) begin
             yCoord <= yCoord+1;
             yCoord2 <= yCoord2+1;
             yCoord3 <= yCoord3+1;
             yCoord4 <= yCoord4+1;
             if(yCoord >= 480) begin
-                xCoord <= (xCoord + 80) % 320;
-                note <= note + 1;
-                noteToPlay <= 0;
-                yCoord <= 0;
+                noteToPlay <= note;
+                needsNewNote <= 1;
+                cyclesLeftCPU <= 6;
+                CPUDone <= 0;
+                noteToReset <= 0;
+            end else if(yCoord2 >= 480) begin
+                noteToPlay <= note2;
+                needsNewNote <= 1;
+                cyclesLeftCPU <= 6;
+                CPUDone <= 0;
+                noteToReset <= 1;
+            end else if(yCoord3 >= 480) begin
+                noteToPlay <= note3;
+                needsNewNote<=1;
+                cyclesLeftCPU <= 6;
+                CPUDone <= 0;
+                noteToReset <= 2;
+            end else if(yCoord4 >= 480) begin
+                noteToPlay <= note4;
+                needsNewNote<=1;
+                cyclesLeftCPU <= 6;
+                CPUDone <= 0;
+                noteToReset <= 3;
             end
-            if(yCoord2 >= 480) begin
-                xCoord2 <= (xCoord2 + 80) % 320;
-                note2 <= note2 + 1;
-                noteToPlay <= 1;
-                yCoord2 <= 0;
+        end else begin
+            if (cyclesLeftCPU > 1) begin
+                needsNewNote <= 0;
+                cyclesLeftCPU <= cyclesLeftCPU -1;
+            end else if (cyclesLeftCPU > 0) begin
+                CPUDone <= 1;
+                needsNewNote <= 0;
+                cyclesLeftCPU <= cyclesLeftCPU -1;
+            end else if (!needsNewNote) begin
+                CPUDone <=1;
+                if (noteToReset == 0) begin
+                    note <= regVal;
+                    //xCoord <= note * 80;
+                    xCoord <= (regVal[1:0])*80 + 160;
+                    yCoord <= 0;
+                    noteToReset <= 5;
+                end else if (noteToReset == 1) begin
+                    note2 <= regVal;
+                    //xCoord2 <= note2*80;
+                    xCoord2 <= (regVal[1:0])*80 + 160;
+                    yCoord2 <= 0;
+                    noteToReset <= 5;
+                end else if (noteToReset == 2) begin
+                    note3 <= regVal;
+                    //xCoord3 <= note3*80;
+                    xCoord3 <= (regVal[1:0])*80 + 160;
+                    yCoord3 <= 0;
+                    noteToReset <= 5;
+                end else if (noteToReset == 3) begin
+                    note4 <= regVal;
+                    //xCoord4 <= note4*80;
+                    xCoord4 <= (regVal[1:0])*80 + 160;
+                    yCoord4 <= 0;
+                    noteToReset <= 5;
+                end
             end
-            if(yCoord3 >= 480) begin
-                xCoord3 <= (xCoord3 + 80) % 320;
-                note3 <= note3 + 1;
-                noteToPlay <= 2;
-                yCoord3 <= 0;
-            end
-            if(yCoord4 >= 480) begin
-                xCoord4 <= (xCoord4 + 80) % 320;
-                note4 <= note4 + 1;
-                noteToPlay <= 3;
-                yCoord4 <= 0;
-            end
+        end
     end
     
 	assign audioEn = 1'b1;  // Enable Audio Output    
