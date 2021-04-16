@@ -15,8 +15,8 @@ module VGAController(
 	
 	// Lab Memory Files Location
 	//TODO: CHANGE THIS FOR EACH DEVICE
-	localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
-	//localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
+	//localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
+	localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
 
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock
@@ -39,16 +39,18 @@ module VGAController(
 	reg[9:0] xCoord = 160;
     reg[9:0] yCoord = 0;
     reg[9:0] xCoord2 = 240;
-    reg[9:0] yCoord2 = 80;
+    reg[9:0] yCoord2 = 120;
     reg[9:0] xCoord3 = 320;
-    reg[9:0] yCoord3 = 160;
+    reg[9:0] yCoord3 = 240;
     reg[9:0] xCoord4 = 400;
-    reg[9:0] yCoord4 = 240;
+    reg[9:0] yCoord4 = 360;
     
-    reg[1:0] note = 2'b00;
-    reg[1:0] note2 = 2'b01;
-    reg[1:0] note3 = 2'b10;
-    reg[1:0] note4 = 2'b11;
+    reg[2:0] note = 3'b000;
+    reg[2:0] note2 = 3'b001;
+    reg[2:0] note3 = 3'b010;
+    reg[2:0] note4 = 3'b011;
+    reg[2:0] noteMissed = 3'b100;
+    
     
     reg keyReset; //not sure why this is 8 bit... hesitant to change and wait 15 mins only to find out it's important
     wire scan_done_tick;
@@ -113,7 +115,7 @@ module VGAController(
 	reg[9:0] coordToUseX = 0;
 	reg[9:0] coordToUseY = 0;
 	reg[1:0] colorToUse = 0;
-	reg[1:0] noteToPlay = 0;
+	reg[2:0] noteToPlay = 0;
 	always @* begin
 	   if ((y > yCoord) && (y < (yCoord+51)) && (x > xCoord) && (x < (xCoord+51))) begin
 	       coordToUseX <= xCoord;
@@ -162,91 +164,127 @@ module VGAController(
 
 
     ps2_rx myInterface(.clk(clk), .reset(keyReset), .rx_en(1'b1), .ps2d(ps2d), .ps2c(ps2c), .rx_done_tick(scan_done_tick), .rx_data(scan_out));
-    
-    
-//    always @(posedge clk & screenEnd) begin
-//        if (scan_out == 8'h1d) begin
-//            yCoord <= yCoord-4;
-//            yCoord2 <= yCoord2-4;
-//            yCoord3 <= yCoord3-4;
-//            yCoord4 <= yCoord4-4;
-//            keyReset <= 1'b1;
-//        end else if (scan_out == 8'h1b) begin
-//            yCoord <= yCoord+4;
-//            yCoord2 <= yCoord2+4;
-//            yCoord3 <= yCoord3+4;
-//            yCoord4 <= yCoord4+4;
-//            keyReset <= 1'b1;
-//        end else if (scan_out == 8'h1c) begin
-//            xCoord <= xCoord-4;
-//            xCoord2 <= xCoord2-4;
-//            xCoord3 <= xCoord3-4;
-//            xCoord4 <= xCoord4-4;
-//            keyReset <= 1'b1;
-//        end else if (scan_out == 8'h23) begin
-//            xCoord <= xCoord+4;
-//            xCoord2 <= xCoord2+4;
-//            xCoord3 <= xCoord3+4;
-//            xCoord4 <= xCoord4+4;
-//            keyReset <= 1'b1;
-//        end else begin
-//            keyReset <= 1'b0;
-//        end
-//    end
+
+    reg [9:0] lowestCoord = 0;
+    reg [1:0] lowestNote = 0;
+    always @* begin
+        if(yCoord >= yCoord2 && yCoord >= yCoord3 && yCoord >= yCoord4) begin
+            lowestCoord <= yCoord;
+            lowestNote <= (xCoord - 160) / 80;
+        end
+        else if (yCoord2 >= yCoord && yCoord2 >= yCoord3 && yCoord2 >= yCoord4) begin
+            lowestCoord <= yCoord2;
+            lowestNote <= (xCoord2 - 160) / 80;
+        end
+        else if (yCoord3 >= yCoord && yCoord3 >= yCoord2 && yCoord3 >= yCoord4) begin
+            lowestCoord <= yCoord3;
+            lowestNote <= (xCoord3 - 160) / 80;
+        end
+        else begin
+            lowestCoord <= yCoord4;
+            lowestNote <= (xCoord4 - 160) / 80;
+        end
+    end
 
     reg needsNewNote;
-    wire [31:0] insnToUse = 32'b11111000010000000000000000000000;
-    wire activeInsn = needsNewNote;
+    reg needsCheckClose;
+    reg lastInstruction; // 0 for needsNewNote; 1 for needsCheckClose
+    wire [31:0] closeEnoughWire;
+    assign closeEnoughWire[31:22] = 10'b1111000010;
+    assign closeEnoughWire[21:0] = lowestCoord;
+    wire [31:0] insnToUse = needsNewNote ? 32'b11111000010000000000000000000000 : closeEnoughWire;
+    wire activeInsn = needsNewNote || needsCheckClose;
     reg CPUDone;
     reg[4:0] cyclesLeftCPU;
     wire [31:0] regVal;
-    wire [4:0] regToRead = 5'b00001;
+    wire [4:0] regToRead = lastInstruction ? 5'b00010 : 5'b00001;
     wire reading = CPUDone;
     Wrapper myCPU(regVal, clk, 1'b0, insnToUse, activeInsn, regToRead, reading);
     
     
     reg [2:0] noteToReset;
-
+    reg [7:0] lastNotePushed;
+    reg rightKeyPressed;
+    reg noteCorrect = 1;
     always @(posedge clk) begin
+        lastNotePushed <= scan_out;
         if (screenEnd) begin
             yCoord <= yCoord+1;
             yCoord2 <= yCoord2+1;
             yCoord3 <= yCoord3+1;
             yCoord4 <= yCoord4+1;
             if(yCoord >= 480) begin
-                noteToPlay <= note;
                 needsNewNote <= 1;
+                lastInstruction <= 0;
                 cyclesLeftCPU <= 6;
                 CPUDone <= 0;
                 noteToReset <= 0;
             end else if(yCoord2 >= 480) begin
-                noteToPlay <= note2;
                 needsNewNote <= 1;
+                lastInstruction <= 0;
                 cyclesLeftCPU <= 6;
                 CPUDone <= 0;
                 noteToReset <= 1;
             end else if(yCoord3 >= 480) begin
-                noteToPlay <= note3;
                 needsNewNote<=1;
+                lastInstruction <= 0;
                 cyclesLeftCPU <= 6;
                 CPUDone <= 0;
                 noteToReset <= 2;
             end else if(yCoord4 >= 480) begin
-                noteToPlay <= note4;
                 needsNewNote<=1;
+                lastInstruction <= 0;
                 cyclesLeftCPU <= 6;
                 CPUDone <= 0;
                 noteToReset <= 3;
             end
-        end else begin
+        end 
+        
+        else if (lastNotePushed == 8'h1c) begin // A
+            needsCheckClose <= 1;
+            lastInstruction <= 1;
+            cyclesLeftCPU <= 6;
+            CPUDone <= 0;
+            noteToPlay <= note;
+            rightKeyPressed <= (lowestNote == 2'b00);
+            keyReset <= 1'b1;
+        end else if (lastNotePushed == 8'h1b) begin // S
+            needsCheckClose <= 1;
+            lastInstruction <= 1;
+            cyclesLeftCPU <= 6;
+            CPUDone <= 0;
+            noteToPlay <= note2;
+            rightKeyPressed <= (lowestNote == 2'b01);
+            keyReset <= 1'b1;
+        end else if (lastNotePushed == 8'h23) begin // D
+            needsCheckClose <= 1;
+            lastInstruction <= 1;
+            cyclesLeftCPU <= 6;
+            CPUDone <= 0;
+            noteToPlay <= note3;
+            rightKeyPressed <= (lowestNote == 2'b10);
+            keyReset <= 1'b1;
+        end else if (lastNotePushed == 8'h2b) begin // F
+            needsCheckClose <= 1;
+            lastInstruction <= 1;
+            cyclesLeftCPU <= 6;
+            CPUDone <= 0;
+            noteToPlay <= note4;
+            rightKeyPressed <= (lowestNote == 2'b11);
+            keyReset <= 1'b1;
+        end
+        else begin
+            keyReset <= 1'b0;
             if (cyclesLeftCPU > 1) begin
                 needsNewNote <= 0;
+                needsCheckClose <= 0;
                 cyclesLeftCPU <= cyclesLeftCPU -1;
             end else if (cyclesLeftCPU > 0) begin
                 CPUDone <= 1;
                 needsNewNote <= 0;
+                needsCheckClose <= 0;
                 cyclesLeftCPU <= cyclesLeftCPU -1;
-            end else if (!needsNewNote) begin
+            end else if (!needsNewNote && !needsCheckClose && !lastInstruction) begin
                 CPUDone <=1;
                 if (noteToReset == 0) begin
                     note <= regVal;
@@ -273,6 +311,9 @@ module VGAController(
                     yCoord4 <= 0;
                     noteToReset <= 5;
                 end
+            end else if (!needsNewNote && !needsCheckClose && lastInstruction) begin
+                CPUDone <=1;
+                noteCorrect <= regVal;
             end
         end
     end
@@ -280,7 +321,7 @@ module VGAController(
 	assign audioEn = 1'b1;  // Enable Audio Output    
     reg [31:0] counter = 0;
     wire [10:0] cur_freq;
-    assign cur_freq = (noteToPlay + 1) * 100;
+    assign cur_freq = (noteCorrect && rightKeyPressed) ? ((noteToPlay + 1) * 100) : 2000;
     wire[31:0] counter_limit;
     assign counter_limit = ((100000000/cur_freq) >> 1) - 1;
     reg toggle = 0;

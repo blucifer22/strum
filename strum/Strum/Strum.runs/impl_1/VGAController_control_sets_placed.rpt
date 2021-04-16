@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Apr 14 16:58:39 2021
-| Host         : DESKTOP-IVKJU52 running 64-bit major release  (build 9200)
+| Date         : Fri Apr 16 18:43:31 2021
+| Host         : AERO-15X running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file VGAController_control_sets_placed.rpt
 | Design       : VGAController
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    19 |
-|    Minimum number of control sets                        |    19 |
+| Total control sets                                       |    36 |
+|    Minimum number of control sets                        |    36 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    56 |
+| Unused register locations in slices containing registers |   160 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    19 |
-| >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     7 |
-| >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     6 |
+| Total control sets |    36 |
+| >= 0 to < 4        |    11 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     7 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     5 |
+| >= 16              |    10 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,40 +58,57 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             322 |          102 |
-| No           | No                    | Yes                    |              10 |            4 |
+| No           | No                    | No                     |              63 |           35 |
+| No           | No                    | Yes                    |             160 |          102 |
 | No           | Yes                   | No                     |              32 |            8 |
-| Yes          | No                    | No                     |              77 |           45 |
-| Yes          | No                    | Yes                    |              10 |            4 |
-| Yes          | Yes                   | No                     |              45 |           17 |
+| Yes          | No                    | No                     |             456 |          208 |
+| Yes          | No                    | Yes                    |              20 |            9 |
+| Yes          | Yes                   | No                     |              45 |           15 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+------------------------------------------------+---------------------------------+------------------+----------------+--------------+
-|  Clock Signal  |                  Enable Signal                 |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+------------------------------------------------+---------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | Display/E[0]                                   | Display/SS[0]                   |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG | Display/SR[0]                                  |                                 |                5 |              6 |         1.20 |
-|  clk_IBUF_BUFG | Display/noteToReset_reg[1]_0[0]                |                                 |                4 |              6 |         1.50 |
-|  clk_IBUF_BUFG | Display/noteToReset_reg[1]_1[0]                |                                 |                5 |              6 |         1.20 |
-|  clk_IBUF_BUFG | Display/noteToReset_reg[0]_0[0]                |                                 |                4 |              6 |         1.50 |
-| ~clk_IBUF_BUFG | myCPU/CPU/PC[6]/w72                            |                                 |                4 |              7 |         1.75 |
-| ~clk_IBUF_BUFG | myCPU/CPU/PC[6]/select                         |                                 |                3 |              7 |         2.33 |
-| ~clk_IBUF_BUFG | myCPU/CPU/PC[6]/q_reg_4                        |                                 |                3 |              7 |         2.33 |
-|  clk25         |                                                | reset_IBUF                      |                4 |             10 |         2.50 |
-|  clk25         | Display/vPos                                   | reset_IBUF                      |                4 |             10 |         2.50 |
-|  clk_IBUF_BUFG | Display/vPos_reg[6]_0                          | Display/SR[0]                   |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG | Display/vPos_reg[6]_0                          | Display/noteToReset_reg[1]_0[0] |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG | Display/vPos_reg[6]_0                          | Display/noteToReset_reg[1]_1[0] |                4 |             10 |         2.50 |
-|  clk_IBUF_BUFG | Display/vPos_reg[6]_0                          | Display/noteToReset_reg[0]_0[0] |                5 |             10 |         2.00 |
-|  colorToUse__0 |                                                |                                 |                8 |             16 |         2.00 |
-|  clk_IBUF_BUFG |                                                | clear                           |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG | myCPU/RegisterFile/write_enable_and_decoder[1] |                                 |               17 |             32 |         1.88 |
-|  clk_IBUF_BUFG |                                                |                                 |               18 |             33 |         1.83 |
-| ~clk_IBUF_BUFG |                                                |                                 |               76 |            274 |         3.61 |
-+----------------+------------------------------------------------+---------------------------------+------------------+----------------+--------------+
++--------------------------------------------------------+------------------------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|                      Clock Signal                      |                     Enable Signal                    |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------------------+------------------------------------------------------+-----------------------------------+------------------+----------------+--------------+
+| ~myCPU/CPU/multdiv/mult/control/counter/d_2/q_reg_0    |                                                      | myCPU/CPU/DX[3]/ctrl_MULT         |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/div/counter/d_3/q_reg_0[0]          |                                                      | myCPU/CPU/DX[3]/ctrl_DIV          |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/div/counter/d_2/q_reg_0[0]          |                                                      | myCPU/CPU/DX[3]/ctrl_DIV          |                1 |              1 |         1.00 |
+| ~clk_IBUF_BUFG                                         |                                                      |                                   |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/div/counter/d_0/q_reg_0[0]          |                                                      | myCPU/CPU/DX[3]/ctrl_DIV          |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/div/counter/d_1/q_reg_0[0]          |                                                      | myCPU/CPU/DX[3]/ctrl_DIV          |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/div/counter/d_4/q_reg_0[0]          |                                                      | myCPU/CPU/DX[3]/ctrl_DIV          |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/mult/control/counter/d_1/q_reg_0    |                                                      | myCPU/CPU/DX[3]/ctrl_MULT         |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/mult/control/counter/d_0/q_reg_0[0] |                                                      | myCPU/CPU/DX[3]/ctrl_MULT         |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/mult/control/counter/d_4/q_reg_0    |                                                      | myCPU/CPU/DX[3]/ctrl_MULT         |                1 |              1 |         1.00 |
+| ~myCPU/CPU/multdiv/mult/control/counter/d_3/q_reg_0    |                                                      | myCPU/CPU/DX[3]/ctrl_MULT         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                         | Display/E[0]                                         |                                   |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG                                         | myInterface/n_reg                                    |                                   |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                                         | Display/cyclesLeftCPU_reg[4][0]                      | Display/cyclesLeftCPU[4]_i_4_0[0] |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                         | Display/SR[0]                                        |                                   |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG                                         | Display/noteToReset_reg[1]_0[0]                      |                                   |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG                                         | Display/noteToReset_reg[1]_1[0]                      |                                   |                1 |              7 |         7.00 |
+|  clk_IBUF_BUFG                                         | Display/noteToReset_reg[1]_2[0]                      |                                   |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                                         |                                                      | keyReset                          |                5 |              9 |         1.80 |
+|  clk25                                                 |                                                      | reset_IBUF                        |                3 |             10 |         3.33 |
+|  clk25                                                 | Display/vPos                                         | reset_IBUF                        |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG                                         | Display/screenEnd                                    | Display/SR[0]                     |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                                         | Display/screenEnd                                    | Display/noteToReset_reg[1]_0[0]   |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                                         | Display/screenEnd                                    | Display/noteToReset_reg[1]_1[0]   |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                                         | Display/screenEnd                                    | Display/noteToReset_reg[1]_2[0]   |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                                         | myInterface/d_reg[10]_i_1_n_0                        | keyReset                          |                4 |             10 |         2.50 |
+|  Display/yCoord4_reg[9][0]                             |                                                      |                                   |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG                                         |                                                      | clear                             |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                                         | myCPU/RegisterFile/write_enable_and_decoder[1]       |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                                         | myCPU/RegisterFile/write_enable_and_decoder[2]       |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG                                         | myCPU/RegisterFile/write_enable_and_decoder[3]       |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG                                         |                                                      |                                   |               25 |             47 |         1.88 |
+|  clk_IBUF_BUFG                                         |                                                      | myCPU/CPU/DX[3]/ctrl_MULT         |               41 |             65 |         1.59 |
+|  clk_IBUF_BUFG                                         |                                                      | myCPU/CPU/DX[3]/ctrl_DIV          |               43 |             66 |         1.53 |
+| ~clk_IBUF_BUFG                                         | myCPU/CPU/multdiv_status_latch/en16_in               |                                   |               24 |             76 |         3.17 |
+| ~clk_IBUF_BUFG                                         | myCPU/CPU/multdiv/mult/control/counter/d_2/en012_out |                                   |              116 |            248 |         2.14 |
++--------------------------------------------------------+------------------------------------------------------+-----------------------------------+------------------+----------------+--------------+
 
 

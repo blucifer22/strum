@@ -1,0 +1,541 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 17544
+License: Customer
+
+Current time: 	Fri Apr 16 15:50:47 EDT 2021
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	water
+User home directory: C:/Users/water
+User working directory: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.1
+RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/water/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/water/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/water/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/vivado.log
+Vivado journal file location: 	C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/vivado.jou
+Engine tmp dir: 	C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/.Xil/Vivado-17544-AERO-15X
+
+Xilinx Environment Variables
+----------------------------
+ALTERAOCLSDKROOT: C:\altera\14.1\hld
+XILINX: C:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,005 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\water\OneDrive\Documents\ECE-350\strum\strum\Strum\Strum.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 82 MB (+83846kb) [00:00:16]
+// [Engine Memory]: 1,005 MB (+902236kb) [00:00:16]
+// [GUI Memory]: 102 MB (+16724kb) [00:00:16]
+// [GUI Memory]: 113 MB (+5515kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  5874 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,005 MB. GUI used memory: 60 MB. Current time: 4/16/21, 3:50:54 PM EDT
+// Tcl Message: open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:09 . Memory (MB): peak = 1013.133 ; gain = 0.000 
+// Project name: Strum; location: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 135 MB (+17647kb) [00:00:29]
+// Elapsed time: 48 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (J, cs) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bz (cs):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  3177 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// 'Q' command handler elapsed time: 4 seconds
+dismissDialog("Open Hardware Manager"); // bz (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bz (cs):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2020.1   **** Build date : May 27 2020 at 20:24:38     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ****** Xilinx cs_server v2020.1.0   **** Build date : May 13 2020-21:10:29     ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 1013.133 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B065BFA 
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  12437 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,779 MB. GUI used memory: 82 MB. Current time: 4/16/21, 3:52:23 PM EDT
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2128.496 ; gain = 1115.363 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [Engine Memory]: 1,791 MB (+772050kb) [00:01:49]
+// Elapsed time: 32 seconds
+dismissDialog("Auto Connect"); // bz (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cs)
+// PAPropertyPanels.initPanels (xc7a100t_0) elapsed time: 0.3s
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bz (cs):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cs)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bz (cs)
+// Elapsed time: 77 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (J, cs) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// WARNING: HEventQueue.dispatchEvent() is taking  1784 ms.
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (J, cs) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true, false, false, false, false, true); // u (J, cs) - Double Click - Node
+// Elapsed time: 29 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1); // B (F, cs)
+// PAPropertyPanels.initPanels (VGAController.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,866 MB. GUI used memory: 86 MB. Current time: 4/16/21, 3:54:29 PM EDT
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N (aI, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("VGAController.v", 271, 575); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("VGAController.v", 110, 144); // bP (w, cs)
+selectCodeEditor("VGAController.v", 293, 120); // bP (w, cs)
+selectCodeEditor("VGAController.v", 356, 106); // bP (w, cs)
+selectCodeEditor("VGAController.v", 241, 115); // bP (w, cs)
+selectCodeEditor("VGAController.v", 198, 110); // bP (w, cs)
+selectCodeEditor("VGAController.v", 266, 117); // bP (w, cs)
+selectCodeEditor("VGAController.v", 249, 109); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("VGAController.v", 145, 100); // bP (w, cs)
+selectCodeEditor("VGAController.v", 145, 100, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 94 seconds
+selectCodeEditor("VGAController.v", 254, 116); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("VGAController.v", 691, 110); // bP (w, cs)
+selectCodeEditor("VGAController.v", 306, 115); // bP (w, cs)
+selectCodeEditor("VGAController.v", 290, 111); // bP (w, cs)
+selectCodeEditor("VGAController.v", 323, 120); // bP (w, cs)
+selectCodeEditor("VGAController.v", 323, 120, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("VGAController.v", 708, 110); // bP (w, cs)
+// Elapsed time: 73 seconds
+selectCodeEditor("VGAController.v", 386, 117); // bP (w, cs)
+selectCodeEditor("VGAController.v", 648, 295); // bP (w, cs)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B065BFA 
+// n (cs): Close Hardware Target: addNotify
+// Elapsed time: 131 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (cs)
+// [GUI Memory]: 145 MB (+2555kb) [00:20:08]
+// Elapsed time: 1123 seconds
+selectCodeEditor("VGAController.v", 381, 232); // bP (w, cs)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v)]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), myCPU : Wrapper (Wrapper.v)]", 7); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), myCPU : Wrapper (Wrapper.v), CPU : processor (processor.v)]", 8, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, VGAController (VGAController.v), myCPU : Wrapper (Wrapper.v), CPU : processor (processor.v), random_number_generator : rng (rng.v)]", 16, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+selectCodeEditor("processor.v", 195, 77); // bP (w, cs)
+typeControlKey((HResource) null, "processor.v", 'v'); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 52 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "VGAController.v", 1); // m (l, cs)
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 88 seconds
+selectCodeEditor("VGAController.v", 385, 207); // bP (w, cs)
+selectCodeEditor("VGAController.v", 245, 114); // bP (w, cs)
+selectCodeEditor("VGAController.v", 258, 254); // bP (w, cs)
+selectCodeEditor("VGAController.v", 258, 238); // bP (w, cs)
+selectCodeEditor("VGAController.v", 246, 234); // bP (w, cs)
+selectCodeEditor("VGAController.v", 248, 231); // bP (w, cs)
+selectCodeEditor("VGAController.v", 711, 247); // bP (w, cs)
+selectCodeEditor("VGAController.v", 713, 242); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'c'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 737, 250); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 544, 276); // bP (w, cs)
+selectCodeEditor("VGAController.v", 578, 238); // bP (w, cs)
+selectCodeEditor("VGAController.v", 810, 239); // bP (w, cs)
+selectCodeEditor("VGAController.v", 548, 282); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("VGAController.v", 590, 431); // bP (w, cs)
+selectCodeEditor("VGAController.v", 364, 420); // bP (w, cs)
+selectCodeEditor("VGAController.v", 217, 415); // bP (w, cs)
+// Elapsed time: 44 seconds
+selectCodeEditor("VGAController.v", 104, 456); // bP (w, cs)
+selectCodeEditor("VGAController.v", 100, 451); // bP (w, cs)
+selectCodeEditor("VGAController.v", 390, 456); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("VGAController.v", 291, 451); // bP (w, cs)
+selectCodeEditor("VGAController.v", 422, 454); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,873 MB. GUI used memory: 88 MB. Current time: 4/16/21, 4:24:30 PM EDT
+// Elapsed time: 26 seconds
+selectCodeEditor("VGAController.v", 334, 446); // bP (w, cs)
+selectCodeEditor("VGAController.v", 554, 453); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("VGAController.v", 372, 474); // bP (w, cs)
+// Elapsed time: 39 seconds
+selectCodeEditor("VGAController.v", 472, 512); // bP (w, cs)
+selectCodeEditor("VGAController.v", 152, 457); // bP (w, cs)
+// Elapsed time: 36 seconds
+selectCodeEditor("VGAController.v", 207, 360); // bP (w, cs)
+// Elapsed time: 22 seconds
+selectCodeEditor("VGAController.v", 230, 402); // bP (w, cs)
+selectCodeEditor("VGAController.v", 101, 386); // bP (w, cs)
+// Elapsed time: 52 seconds
+selectCodeEditor("VGAController.v", 639, 639); // bP (w, cs)
+selectCodeEditor("VGAController.v", 762, 643); // bP (w, cs)
+// Elapsed time: 36 seconds
+selectCodeEditor("VGAController.v", 70, 401); // bP (w, cs)
+selectCodeEditor("VGAController.v", 213, 442); // bP (w, cs)
+selectCodeEditor("VGAController.v", 305, 454); // bP (w, cs)
+selectCodeEditor("VGAController.v", 178, 492); // bP (w, cs)
+selectCodeEditor("VGAController.v", 108, 494); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'c'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 145, 513); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 75, 510); // bP (w, cs)
+selectCodeEditor("VGAController.v", 164, 556); // bP (w, cs)
+selectCodeEditor("VGAController.v", 164, 556); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'c'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 109, 556); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("VGAController.v", 459, 621); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 355, 553); // bP (w, cs)
+selectCodeEditor("VGAController.v", 205, 492); // bP (w, cs)
+selectCodeEditor("VGAController.v", 149, 615); // bP (w, cs)
+selectCodeEditor("VGAController.v", 147, 618); // bP (w, cs)
+selectCodeEditor("VGAController.v", 699, 615); // bP (w, cs)
+selectCodeEditor("VGAController.v", 289, 645); // bP (w, cs)
+selectCodeEditor("VGAController.v", 292, 582); // bP (w, cs)
+selectCodeEditor("VGAController.v", 301, 571); // bP (w, cs)
+selectCodeEditor("VGAController.v", 290, 582); // bP (w, cs)
+selectCodeEditor("VGAController.v", 206, 428); // bP (w, cs)
+selectCodeEditor("VGAController.v", 313, 433); // bP (w, cs)
+// Elapsed time: 43 seconds
+selectCodeEditor("VGAController.v", 340, 462); // bP (w, cs)
+selectCodeEditor("VGAController.v", 741, 499); // bP (w, cs)
+selectCodeEditor("VGAController.v", 588, 566); // bP (w, cs)
+selectCodeEditor("VGAController.v", 254, 275); // bP (w, cs)
+selectCodeEditor("VGAController.v", 243, 302); // bP (w, cs)
+selectCodeEditor("VGAController.v", 311, 366); // bP (w, cs)
+selectCodeEditor("VGAController.v", 273, 335); // bP (w, cs)
+selectCodeEditor("VGAController.v", 239, 335); // bP (w, cs)
+selectCodeEditor("VGAController.v", 253, 338); // bP (w, cs)
+selectCodeEditor("VGAController.v", 290, 359); // bP (w, cs)
+selectCodeEditor("VGAController.v", 273, 348); // bP (w, cs)
+selectCodeEditor("VGAController.v", 249, 339); // bP (w, cs)
+selectCodeEditor("VGAController.v", 123, 277); // bP (w, cs)
+// Elapsed time: 38 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // l (au, cs)
+selectCodeEditor("VGAController.v", 343, 395); // bP (w, cs)
+selectCodeEditor("VGAController.v", 258, 337); // bP (w, cs)
+selectCodeEditor("VGAController.v", 157, 55); // bP (w, cs)
+selectCodeEditor("VGAController.v", 157, 55, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("VGAController.v", 289, 202); // bP (w, cs)
+selectCodeEditor("VGAController.v", 240, 250); // bP (w, cs)
+selectCodeEditor("VGAController.v", 215, 261); // bP (w, cs)
+selectCodeEditor("VGAController.v", 2, 267); // bP (w, cs)
+selectCodeEditor("VGAController.v", 200, 345); // bP (w, cs)
+// Elapsed time: 22 seconds
+selectCodeEditor("VGAController.v", 741, 15); // bP (w, cs)
+selectCodeEditor("VGAController.v", 741, 15, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("VGAController.v", 210, 275); // bP (w, cs)
+selectCodeEditor("VGAController.v", 167, 251); // bP (w, cs)
+selectCodeEditor("VGAController.v", 202, 438); // bP (w, cs)
+selectCodeEditor("VGAController.v", 152, 158); // bP (w, cs)
+selectCodeEditor("VGAController.v", 98, 164); // bP (w, cs)
+selectCodeEditor("VGAController.v", 260, 391); // bP (w, cs)
+selectCodeEditor("VGAController.v", 249, 424); // bP (w, cs)
+selectCodeEditor("VGAController.v", 307, 311); // bP (w, cs)
+selectCodeEditor("VGAController.v", 41, 290); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("VGAController.v", 95, 326); // bP (w, cs)
+selectCodeEditor("VGAController.v", 206, 323); // bP (w, cs)
+selectCodeEditor("VGAController.v", 419, 247); // bP (w, cs)
+selectCodeEditor("VGAController.v", 344, 54); // bP (w, cs)
+selectCodeEditor("VGAController.v", 339, 78); // bP (w, cs)
+// Elapsed time: 47 seconds
+selectCodeEditor("VGAController.v", 336, 69); // bP (w, cs)
+selectCodeEditor("VGAController.v", 205, 62); // bP (w, cs)
+selectCodeEditor("VGAController.v", 109, 204); // bP (w, cs)
+// Elapsed time: 20 seconds
+selectCodeEditor("VGAController.v", 161, 93); // bP (w, cs)
+selectCodeEditor("VGAController.v", 142, 98); // bP (w, cs)
+selectCodeEditor("VGAController.v", 148, 91); // bP (w, cs)
+selectCodeEditor("VGAController.v", 152, 96); // bP (w, cs)
+selectCodeEditor("VGAController.v", 125, 84); // bP (w, cs)
+selectCodeEditor("VGAController.v", 61, 428); // bP (w, cs)
+selectCodeEditor("VGAController.v", 335, 374); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 150, 436); // bP (w, cs)
+// Elapsed time: 47 seconds
+selectCodeEditor("VGAController.v", 455, 496); // bP (w, cs)
+// Elapsed time: 26 seconds
+selectCodeEditor("VGAController.v", 89, 96); // bP (w, cs)
+selectCodeEditor("VGAController.v", 377, 456); // bP (w, cs)
+selectCodeEditor("VGAController.v", 4, 94); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'c'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 175, 386); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 165, 620); // bP (w, cs)
+selectCodeEditor("VGAController.v", 266, 106); // bP (w, cs)
+selectCodeEditor("VGAController.v", 179, 79); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("VGAController.v", 68, 77); // bP (w, cs)
+selectCodeEditor("VGAController.v", 433, 219); // bP (w, cs)
+selectCodeEditor("VGAController.v", 280, 45); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("VGAController.v", 300, 51); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("VGAController.v", 400, 44); // bP (w, cs)
+selectCodeEditor("VGAController.v", 496, 185); // bP (w, cs)
+selectCodeEditor("VGAController.v", 486, 314); // bP (w, cs)
+selectCodeEditor("VGAController.v", 523, 184); // bP (w, cs)
+selectCodeEditor("VGAController.v", 516, 309); // bP (w, cs)
+selectCodeEditor("VGAController.v", 470, 433); // bP (w, cs)
+selectCodeEditor("VGAController.v", 294, 55); // bP (w, cs)
+selectCodeEditor("VGAController.v", 589, 277); // bP (w, cs)
+selectCodeEditor("VGAController.v", 361, 168); // bP (w, cs)
+selectCodeEditor("VGAController.v", 491, 182); // bP (w, cs)
+// Elapsed time: 54 seconds
+selectCodeEditor("VGAController.v", 420, 203); // bP (w, cs)
+selectCodeEditor("VGAController.v", 374, 158); // bP (w, cs)
+selectCodeEditor("VGAController.v", 300, 151); // bP (w, cs)
+selectCodeEditor("VGAController.v", 307, 203); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("VGAController.v", 357, 135); // bP (w, cs)
+selectCodeEditor("VGAController.v", 345, 195); // bP (w, cs)
+selectCodeEditor("VGAController.v", 332, 263); // bP (w, cs)
+selectCodeEditor("VGAController.v", 337, 330); // bP (w, cs)
+// Elapsed time: 25 seconds
+selectCodeEditor("VGAController.v", 303, 225); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("VGAController.v", 194, 131); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("VGAController.v", 291, 98); // bP (w, cs)
+selectCodeEditor("VGAController.v", 291, 98); // bP (w, cs)
+selectCodeEditor("VGAController.v", 325, 97); // bP (w, cs)
+// Elapsed time: 42 seconds
+selectCodeEditor("VGAController.v", 636, 220); // bP (w, cs)
+selectCodeEditor("VGAController.v", 145, 245); // bP (w, cs)
+selectCodeEditor("VGAController.v", 322, 321); // bP (w, cs)
+selectCodeEditor("VGAController.v", 225, 305); // bP (w, cs)
+selectCodeEditor("VGAController.v", 155, 298); // bP (w, cs)
+selectCodeEditor("VGAController.v", 295, 214); // bP (w, cs)
+selectCodeEditor("VGAController.v", 735, 221); // bP (w, cs)
+selectCodeEditor("VGAController.v", 148, 530); // bP (w, cs)
+selectCodeEditor("VGAController.v", 114, 476); // bP (w, cs)
+selectCodeEditor("VGAController.v", 173, 498); // bP (w, cs)
+selectCodeEditor("VGAController.v", 145, 497); // bP (w, cs)
+selectCodeEditor("VGAController.v", 141, 534); // bP (w, cs)
+selectCodeEditor("VGAController.v", 192, 479); // bP (w, cs)
+selectCodeEditor("VGAController.v", 144, 499); // bP (w, cs)
+selectCodeEditor("VGAController.v", 140, 499); // bP (w, cs)
+selectCodeEditor("VGAController.v", 139, 211); // bP (w, cs)
+selectCodeEditor("VGAController.v", 246, 263); // bP (w, cs)
+selectCodeEditor("VGAController.v", 268, 233); // bP (w, cs)
+selectCodeEditor("VGAController.v", 174, 240); // bP (w, cs)
+selectCodeEditor("VGAController.v", 177, 238, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("VGAController.v", 74, 298); // bP (w, cs)
+selectCodeEditor("VGAController.v", 269, 371); // bP (w, cs)
+selectCodeEditor("VGAController.v", 401, 310); // bP (w, cs)
+selectCodeEditor("VGAController.v", 401, 310); // bP (w, cs)
+selectCodeEditor("VGAController.v", 401, 310, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("VGAController.v", 76, 367); // bP (w, cs)
+selectCodeEditor("VGAController.v", 71, 569); // bP (w, cs)
+selectCodeEditor("VGAController.v", 265, 307); // bP (w, cs)
+selectCodeEditor("VGAController.v", 260, 372); // bP (w, cs)
+selectCodeEditor("VGAController.v", 262, 432); // bP (w, cs)
+selectCodeEditor("VGAController.v", 311, 491); // bP (w, cs)
+selectCodeEditor("VGAController.v", 266, 530); // bP (w, cs)
+selectCodeEditor("VGAController.v", 107, 433); // bP (w, cs)
+selectCodeEditor("VGAController.v", 149, 376); // bP (w, cs)
+selectCodeEditor("VGAController.v", 107, 107); // bP (w, cs)
+selectCodeEditor("VGAController.v", 103, 155); // bP (w, cs)
+selectCodeEditor("VGAController.v", 253, 87); // bP (w, cs)
+selectCodeEditor("VGAController.v", 260, 71); // bP (w, cs)
+selectCodeEditor("VGAController.v", 258, 73); // bP (w, cs)
+selectCodeEditor("VGAController.v", 262, 69); // bP (w, cs)
+selectCodeEditor("VGAController.v", 177, 123); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 67, 138); // bP (w, cs)
+selectCodeEditor("VGAController.v", 118, 88); // bP (w, cs)
+selectCodeEditor("VGAController.v", 228, 134); // bP (w, cs)
+// Elapsed time: 49 seconds
+selectCodeEditor("VGAController.v", 154, 137); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 50 seconds
+selectCodeEditor("VGAController.v", 240, 392); // bP (w, cs)
+selectCodeEditor("VGAController.v", 173, 459); // bP (w, cs)
+selectCodeEditor("VGAController.v", 158, 517); // bP (w, cs)
+selectCodeEditor("VGAController.v", 329, 138); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("VGAController.v", 245, 392); // bP (w, cs)
+selectCodeEditor("VGAController.v", 261, 392); // bP (w, cs)
+selectCodeEditor("VGAController.v", 261, 392, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("VGAController.v", 177, 394); // bP (w, cs)
+selectCodeEditor("VGAController.v", 238, 390); // bP (w, cs)
+selectCodeEditor("VGAController.v", 317, 203); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("VGAController.v", 313, 197); // bP (w, cs)
+selectCodeEditor("VGAController.v", 315, 203); // bP (w, cs)
+selectCodeEditor("VGAController.v", 305, 140); // bP (w, cs)
+selectCodeEditor("VGAController.v", 260, 320); // bP (w, cs)
+selectCodeEditor("VGAController.v", 271, 263); // bP (w, cs)
+selectCodeEditor("VGAController.v", 80, 197); // bP (w, cs)

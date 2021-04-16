@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Apr 14 16:59:20 2021
-| Host         : DESKTOP-IVKJU52 running 64-bit major release  (build 9200)
+| Date         : Fri Apr 16 18:44:57 2021
+| Host         : AERO-15X running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file VGAController_timing_summary_routed.rpt -pb VGAController_timing_summary_routed.pb -rpx VGAController_timing_summary_routed.rpx -warn_on_violation
 | Design       : VGAController
 | Device       : 7a100t-csg324
@@ -39,11 +39,11 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (1847)
+1. checking no_clock (2127)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (2185)
-5. checking no_input_delay (1)
+4. checking unconstrained_internal_endpoints (3014)
+5. checking no_input_delay (3)
 6. checking no_output_delay (15)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
@@ -52,9 +52,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (1847)
+1. checking no_clock (2127)
 ---------------------------
- There are 547 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 817 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
  There are 16 register/latch pins with no clock driven by root clock pin: Display/hPos_reg[0]/Q (HIGH)
 
@@ -95,6 +95,26 @@ Table of Contents
  There are 16 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[8]/Q (HIGH)
 
  There are 16 register/latch pins with no clock driven by root clock pin: Display/vPos_reg[9]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/div/counter/d_0/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/div/counter/d_1/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/div/counter/d_2/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/div/counter/d_3/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/div/counter/d_4/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/mult/control/counter/d_0/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/mult/control/counter/d_1/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/mult/control/counter/d_2/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/mult/control/counter/d_3/q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: myCPU/CPU/multdiv/mult/control/counter/d_4/q_reg/Q (HIGH)
 
  There are 20 register/latch pins with no clock driven by root clock pin: pixCounter_reg[1]/Q (HIGH)
 
@@ -229,16 +249,16 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (2185)
+4. checking unconstrained_internal_endpoints (3014)
 ---------------------------------------------------
- There are 2185 pins that are not constrained for maximum delay. (HIGH)
+ There are 3014 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (1)
+5. checking no_input_delay (3)
 ------------------------------
- There is 1 input port with no input delay specified. (HIGH)
+ There are 3 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

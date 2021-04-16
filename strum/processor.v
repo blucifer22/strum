@@ -174,7 +174,7 @@ module processor(
     wire execute_bne = !DX_out[31] & !DX_out[30] & !DX_out[29] & DX_out[28] & !DX_out[27];
     wire execute_blt = !DX_out[31] & !DX_out[30] & DX_out[29] & DX_out[28] & !DX_out[27];
     assign execute_setx = DX_out[31] & !DX_out[30] & DX_out[29] & !DX_out[28] & DX_out[27];
-    wire execute_close_enough = (DX_out[6:2] == 5'b11111) && execute_r_type;
+    wire execute_close_enough = (DX_out[31:27] == 5'b11110);
     wire execute_rng = &(DX_out[31:27]);
 
     // ALU Bypassing
@@ -239,9 +239,9 @@ module processor(
     wire [31:0] signed_immediate;
     assign signed_immediate[16:0] = DX_out[16:0]; // Grab the immediate value from the DX latch
     assign signed_immediate[31:17] = {15{DX_out[16]}}; // Sign extend it to fit the full 32-bits
-    assign final_ALU_operand_B[31:0] = (execute_addi | execute_lw | execute_sw) ? signed_immediate : ALU_operand_B;
-    alu alu(ALU_operand_A, final_ALU_operand_B, ALU_opcode, DX_out[11:7], ALU_out, ALU_NE, ALU_GT, ALU_overflow);
-    wire is_close_enough = ((ALU_out[31:5] == 27'b0) || (ALU_out[31:5] == 27'd134217727));
+    assign final_ALU_operand_B[31:0] = (execute_addi | execute_lw | execute_sw | execute_close_enough) ? signed_immediate : ALU_operand_B;
+    alu alu(execute_close_enough ? 32'd335 : ALU_operand_A, final_ALU_operand_B, ALU_opcode, DX_out[11:7], ALU_out, ALU_NE, ALU_GT, ALU_overflow);
+    wire is_close_enough = ((ALU_out[31:6] == 26'b0) || (ALU_out[31:6] == 26'd67108863));
     // Determine if we need to flush out bad instructions as a result of a branching operation
     // It's basically what it looks like.
     assign needs_flush = (execute_blt && !ALU_GT && ALU_NE) || (execute_bne && ALU_NE);
@@ -326,7 +326,8 @@ module processor(
     wire write_setx = MW_out[31] & !MW_out[30] & MW_out[29] & !MW_out[28] & MW_out[27];
     wire write_lw = !MW_out[31] & MW_out[30] & !MW_out[29] & !MW_out[28] & !MW_out[27];
     wire write_rng = &(MW_out[31:27]);
-    or write_enable(ctrl_writeEnable, write_r_type, write_addi, write_jal, write_setx, write_lw, write_rng);
+    wire write_close_enough = (MW_out[31:27] == 5'b11110);
+    or write_enable(ctrl_writeEnable, write_r_type, write_addi, write_jal, write_setx, write_lw, write_rng, write_close_enough);
 
     // ctrl_writeReg for r-type, addi, and LW is rd
     // ctrl_writeReg for jal is r31
@@ -340,8 +341,8 @@ module processor(
     // 11: r-type/addi ==> Execute Stage Out
 
     wire[1:0] ctrl_WR_mux;
-    assign ctrl_WR_mux[1] = write_r_type | write_addi | write_jal | write_rng;
-    assign ctrl_WR_mux[0] = ctrl_WR_mux[1] ? (write_r_type | write_addi | write_rng) : write_setx;
+    assign ctrl_WR_mux[1] = write_r_type | write_addi | write_jal | write_rng | write_close_enough;
+    assign ctrl_WR_mux[0] = ctrl_WR_mux[1] ? (write_r_type | write_addi | write_rng | write_close_enough) : write_setx;
     mux_4 WR_mux(data_writeReg, ctrl_WR_mux, MW_out[63:32], MW_out[26:0], MW_out[26:0], MW_out[95:64]);
 
 endmodule
