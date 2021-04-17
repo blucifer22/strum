@@ -240,8 +240,8 @@ module processor(
     assign signed_immediate[16:0] = DX_out[16:0]; // Grab the immediate value from the DX latch
     assign signed_immediate[31:17] = {15{DX_out[16]}}; // Sign extend it to fit the full 32-bits
     assign final_ALU_operand_B[31:0] = (execute_addi | execute_lw | execute_sw | execute_close_enough) ? signed_immediate : ALU_operand_B;
-    alu alu(execute_close_enough ? 32'd335 : ALU_operand_A, final_ALU_operand_B, ALU_opcode, DX_out[11:7], ALU_out, ALU_NE, ALU_GT, ALU_overflow);
-    wire is_close_enough = ((ALU_out[31:6] == 26'b0) || (ALU_out[31:6] == 26'd67108863));
+    alu alu(execute_close_enough ? 32'd450 : ALU_operand_A, final_ALU_operand_B, ALU_opcode, DX_out[11:7], ALU_out, ALU_NE, ALU_GT, ALU_overflow);
+    wire is_close_enough = ((ALU_out[31:7] == 25'b0) || (ALU_out[31:7] == 25'd33554431));
     // Determine if we need to flush out bad instructions as a result of a branching operation
     // It's basically what it looks like.
     assign needs_flush = (execute_blt && !ALU_GT && ALU_NE) || (execute_bne && ALU_NE);

@@ -10,13 +10,24 @@ module VGAController(
 	output audioOut,
 	output audioEn,
 	inout ps2c,
-	inout ps2d);
+	inout ps2d,
+	output CPUDoneLight,
+	output a,
+	output s,
+	output d,
+	output f);
+	
+	assign CPUDoneLight = CPUDone;
+	assign a = (lastNotePushed == 8'h1c);
+	assign s = (lastNotePushed == 8'h1b);
+	assign d = (lastNotePushed == 8'h23);
+	assign f = (lastNotePushed == 8'h2b);
 	
 	
 	// Lab Memory Files Location
 	//TODO: CHANGE THIS FOR EACH DEVICE
-	//localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
-	localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
+	localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
+	//localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
 
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock
@@ -52,7 +63,7 @@ module VGAController(
     reg[2:0] noteMissed = 3'b100;
     
     
-    reg keyReset; //not sure why this is 8 bit... hesitant to change and wait 15 mins only to find out it's important
+    reg keyReset;
     wire scan_done_tick;
     wire [7:0] scan_out;
 	
@@ -191,7 +202,8 @@ module VGAController(
     reg lastInstruction; // 0 for needsNewNote; 1 for needsCheckClose
     wire [31:0] closeEnoughWire;
     assign closeEnoughWire[31:22] = 10'b1111000010;
-    assign closeEnoughWire[21:0] = lowestCoord;
+    assign closeEnoughWire[21:10] = 12'b0;
+    assign closeEnoughWire[9:0] = lowestCoord;
     wire [31:0] insnToUse = needsNewNote ? 32'b11111000010000000000000000000000 : closeEnoughWire;
     wire activeInsn = needsNewNote || needsCheckClose;
     reg CPUDone;
@@ -204,7 +216,7 @@ module VGAController(
     
     reg [2:0] noteToReset;
     reg [7:0] lastNotePushed;
-    reg rightKeyPressed;
+    reg rightKeyPressed = 1;
     reg noteCorrect = 1;
     always @(posedge clk) begin
         lastNotePushed <= scan_out;
@@ -245,7 +257,7 @@ module VGAController(
             lastInstruction <= 1;
             cyclesLeftCPU <= 6;
             CPUDone <= 0;
-            noteToPlay <= note;
+            noteToPlay <= 3'b00;
             rightKeyPressed <= (lowestNote == 2'b00);
             keyReset <= 1'b1;
         end else if (lastNotePushed == 8'h1b) begin // S
@@ -253,7 +265,7 @@ module VGAController(
             lastInstruction <= 1;
             cyclesLeftCPU <= 6;
             CPUDone <= 0;
-            noteToPlay <= note2;
+            noteToPlay <= 3'b01;
             rightKeyPressed <= (lowestNote == 2'b01);
             keyReset <= 1'b1;
         end else if (lastNotePushed == 8'h23) begin // D
@@ -261,7 +273,7 @@ module VGAController(
             lastInstruction <= 1;
             cyclesLeftCPU <= 6;
             CPUDone <= 0;
-            noteToPlay <= note3;
+            noteToPlay <= 3'b10;
             rightKeyPressed <= (lowestNote == 2'b10);
             keyReset <= 1'b1;
         end else if (lastNotePushed == 8'h2b) begin // F
@@ -269,7 +281,7 @@ module VGAController(
             lastInstruction <= 1;
             cyclesLeftCPU <= 6;
             CPUDone <= 0;
-            noteToPlay <= note4;
+            noteToPlay <= 3'b11;
             rightKeyPressed <= (lowestNote == 2'b11);
             keyReset <= 1'b1;
         end
@@ -285,7 +297,6 @@ module VGAController(
                 needsCheckClose <= 0;
                 cyclesLeftCPU <= cyclesLeftCPU -1;
             end else if (!needsNewNote && !needsCheckClose && !lastInstruction) begin
-                CPUDone <=1;
                 if (noteToReset == 0) begin
                     note <= regVal;
                     //xCoord <= note * 80;
@@ -312,7 +323,6 @@ module VGAController(
                     noteToReset <= 5;
                 end
             end else if (!needsNewNote && !needsCheckClose && lastInstruction) begin
-                CPUDone <=1;
                 noteCorrect <= regVal;
             end
         end
@@ -335,7 +345,7 @@ module VGAController(
         end
     end
     wire[6:0] duty_cycle;
-    assign duty_cycle = toggle ? 7'd60 : 7'd40;
+    assign duty_cycle = toggle ? 7'd55 : 7'd45;
     PWMSerializer serializer(.clk(clk), .reset(1'b0), .duty_cycle(duty_cycle), .signal(audioOut));
 
     
