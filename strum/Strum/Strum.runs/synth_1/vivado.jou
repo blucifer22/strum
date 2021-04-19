@@ -2,20 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-<<<<<<< HEAD
-# Start of session at: Mon Apr 19 00:31:14 2021
-# Process ID: 22064
+# Start of session at: Mon Apr 19 13:08:41 2021
+# Process ID: 27496
 # Current directory: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1
 # Command line: vivado.exe -log VGAController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl
 # Log file: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/VGAController.vds
 # Journal file: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1\vivado.jou
-=======
-# Start of session at: Fri Apr 16 21:05:18 2021
-# Process ID: 5012
-# Current directory: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1
-# Command line: vivado.exe -log VGAController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl
-# Log file: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1/VGAController.vds
-# Journal file: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1\vivado.jou
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 #-----------------------------------------------------------
 source VGAController.tcl -notrace

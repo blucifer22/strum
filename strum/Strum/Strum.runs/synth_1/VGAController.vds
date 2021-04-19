@@ -2,21 +2,12 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-<<<<<<< HEAD
-# Start of session at: Mon Apr 19 00:31:14 2021
-# Process ID: 22064
+# Start of session at: Mon Apr 19 13:08:41 2021
+# Process ID: 27496
 # Current directory: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1
 # Command line: vivado.exe -log VGAController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl
 # Log file: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/VGAController.vds
 # Journal file: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1\vivado.jou
-=======
-# Start of session at: Fri Apr 16 21:05:18 2021
-# Process ID: 5012
-# Current directory: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1
-# Command line: vivado.exe -log VGAController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl
-# Log file: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1/VGAController.vds
-# Journal file: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1\vivado.jou
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 #-----------------------------------------------------------
 source VGAController.tcl -notrace
 Command: synth_design -top VGAController -part xc7a100tcsg324-1
@@ -26,8 +17,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-<<<<<<< HEAD
-INFO: [Synth 8-7075] Helper process launched with PID 17160
+INFO: [Synth 8-7075] Helper process launched with PID 28960
 WARNING: [Synth 8-6901] identifier 'regA' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Wrapper.v:34]
 WARNING: [Synth 8-2254] instance name 'not_B' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:13]
 WARNING: [Synth 8-2254] instance name 'A_B_same_sign' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:22]
@@ -111,105 +101,10 @@ WARNING: [Synth 8-6901] identifier 'q_9' is used before its declaration [C:/User
 WARNING: [Synth 8-992] coordToUseX is already implicitly declared earlier [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:130]
 WARNING: [Synth 8-992] coordToUseY is already implicitly declared earlier [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:131]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1013.125 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.625 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:2]
 	Parameter FILES_PATH bound to: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/ - type: string 
-=======
-INFO: [Synth 8-7075] Helper process launched with PID 34500
-WARNING: [Synth 8-6901] identifier 'regA' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Wrapper.v:34]
-WARNING: [Synth 8-2254] instance name 'not_B' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:13]
-WARNING: [Synth 8-2254] instance name 'A_B_same_sign' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:22]
-WARNING: [Synth 8-2254] instance name 'A_B_match_out' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:23]
-WARNING: [Synth 8-2254] instance name 'B_pos' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:32]
-WARNING: [Synth 8-2254] instance name 'less_than_0' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:33]
-WARNING: [Synth 8-2254] instance name 'less_than_1' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:34]
-WARNING: [Synth 8-2254] instance name 'less_than_2' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:35]
-WARNING: [Synth 8-2254] instance name 'overflow_pos' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:33]
-WARNING: [Synth 8-2254] instance name 'overflow_neg' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:40]
-WARNING: [Synth 8-2254] instance name 'pos_pos' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:42]
-WARNING: [Synth 8-2254] instance name 'neg_neg' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:43]
-WARNING: [Synth 8-2254] instance name 'pos_neg' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:46]
-WARNING: [Synth 8-2254] instance name 'neg_pos' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:47]
-WARNING: [Synth 8-2254] instance name 'overflow' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:50]
-WARNING: [Synth 8-2254] instance name 'q_not' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/dffe_ref.v:32]
-WARNING: [Synth 8-2254] instance name 'inverted_multiplicand' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mult_control.v:14]
-WARNING: [Synth 8-2254] instance name 'carry_in' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mult_control.v:17]
-WARNING: [Synth 8-2254] instance name 'initial_cycle' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mult_control.v:24]
-WARNING: [Synth 8-2254] instance name 'mult_ready' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/multdiv.v:27]
-WARNING: [Synth 8-2254] instance name 'div_ready' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/multdiv.v:28]
-WARNING: [Synth 8-2254] instance name 'not_in' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/one_hot_decoder.v:8]
-WARNING: [Synth 8-2254] instance name 'XM_rd_equals_DX_rs' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:191]
-WARNING: [Synth 8-2254] instance name 'MW_rd_equals_DX_rs' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:192]
-WARNING: [Synth 8-2254] instance name 'XM_rd_equals_DX_rt' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:216]
-WARNING: [Synth 8-2254] instance name 'MW_rd_equals_DX_rt' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:217]
-WARNING: [Synth 8-2254] instance name 'XM_rd_equals_MW_rd' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:300]
-WARNING: [Synth 8-2254] instance name 'XM_rd_equals_MW_rs' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:301]
-WARNING: [Synth 8-6901] identifier 'decode_r_type' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:73]
-WARNING: [Synth 8-6901] identifier 'decode_addi' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:73]
-WARNING: [Synth 8-6901] identifier 'decode_lw' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:73]
-WARNING: [Synth 8-6901] identifier 'decode_sw' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:73]
-WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:75]
-WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:76]
-WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'DX_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:78]
-WARNING: [Synth 8-6901] identifier 'DX_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:78]
-WARNING: [Synth 8-6901] identifier 'decode_r_type' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:81]
-WARNING: [Synth 8-6901] identifier 'execute_lw' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:83]
-WARNING: [Synth 8-6901] identifier 'DX_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:95]
-WARNING: [Synth 8-6901] identifier 'memory_setx' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:95]
-WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:95]
-WARNING: [Synth 8-6901] identifier 'write_setx' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:95]
-WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:95]
-WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:96]
-WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:102]
-WARNING: [Synth 8-6901] identifier 'DX_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:102]
-WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:102]
-WARNING: [Synth 8-6901] identifier 'memory_jal' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:102]
-WARNING: [Synth 8-6901] identifier 'memory_r_type' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:184]
-WARNING: [Synth 8-6901] identifier 'memory_addi' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:184]
-WARNING: [Synth 8-6901] identifier 'memory_lw' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:184]
-WARNING: [Synth 8-6901] identifier 'memory_setx' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:184]
-WARNING: [Synth 8-6901] identifier 'memory_rng' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:184]
-WARNING: [Synth 8-6901] identifier 'write_r_type' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:186]
-WARNING: [Synth 8-6901] identifier 'write_addi' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:186]
-WARNING: [Synth 8-6901] identifier 'write_lw' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:186]
-WARNING: [Synth 8-6901] identifier 'write_setx' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:186]
-WARNING: [Synth 8-6901] identifier 'write_rng' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:186]
-WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:191]
-WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:192]
-WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:196]
-WARNING: [Synth 8-6901] identifier 'write_jal' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:196]
-WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:197]
-WARNING: [Synth 8-6901] identifier 'memory_jal' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:197]
-WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:216]
-WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:217]
-WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:220]
-WARNING: [Synth 8-6901] identifier 'write_jal' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:220]
-WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:221]
-WARNING: [Synth 8-6901] identifier 'memory_jal' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:221]
-WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:300]
-WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:301]
-WARNING: [Synth 8-6901] identifier 'write_lw' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:302]
-WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:302]
-WARNING: [Synth 8-2254] instance name 'write_enable_and_decoder' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/regfile.v:25]
-WARNING: [Synth 8-2254] instance name 'output_sign' matches net/port name [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/restoring_div.v:52]
-WARNING: [Synth 8-6901] identifier 'q_8' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/rng.v:11]
-WARNING: [Synth 8-6901] identifier 'q_9' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/rng.v:11]
-WARNING: [Synth 8-992] coordToUseX is already implicitly declared earlier [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:126]
-WARNING: [Synth 8-992] coordToUseY is already implicitly declared earlier [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:127]
-WARNING: [Synth 8-6901] identifier 'CPUDone' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:20]
-WARNING: [Synth 8-6901] identifier 'lastNotePushed' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:21]
-WARNING: [Synth 8-6901] identifier 'lastNotePushed' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:22]
-WARNING: [Synth 8-6901] identifier 'lastNotePushed' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:23]
-WARNING: [Synth 8-6901] identifier 'lastNotePushed' is used before its declaration [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:24]
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1013.426 ; gain = 0.000
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:2]
-	Parameter FILES_PATH bound to: C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/ - type: string 
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 	Parameter VIDEO_WIDTH bound to: 640 - type: integer 
 	Parameter VIDEO_HEIGHT bound to: 480 - type: integer 
 	Parameter PIXEL_COUNT bound to: 307200 - type: integer 
@@ -217,11 +112,7 @@ INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/caryp/Desktop
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
 	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
 	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
-<<<<<<< HEAD
 INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGATimingGenerator.v:2]
-=======
-INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGATimingGenerator.v:2]
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 	Parameter HEIGHT bound to: 480 - type: integer 
 	Parameter WIDTH bound to: 640 - type: integer 
 	Parameter H_FRONT_PORCH bound to: 16 - type: integer 
@@ -236,7 +127,6 @@ INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/caryp/De
 	Parameter V_SYNC_START bound to: 491 - type: integer 
 	Parameter V_SYNC_END bound to: 493 - type: integer 
 	Parameter V_LINE bound to: 524 - type: integer 
-<<<<<<< HEAD
 INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (1#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGATimingGenerator.v:2]
 INFO: [Synth 8-6157] synthesizing module 'RAM_image' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
@@ -339,197 +229,56 @@ INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/water/OneDrive/Document
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (29#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (30#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Wrapper.v:27]
 INFO: [Synth 8-6157] synthesizing module 'PWMSerializer' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/PWMSerializer.v:8]
-=======
-INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (1#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGATimingGenerator.v:2]
-INFO: [Synth 8-6157] synthesizing module 'RAM_image' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:2]
-	Parameter DATA_WIDTH bound to: 9 - type: integer 
-	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
-	Parameter DEPTH bound to: 307200 - type: integer 
-	Parameter MEMFILE bound to: 640'b0100001100111010001011110101010101110011011001010111001001110011001011110110001101100001011100100111100101110000001011110100010001100101011100110110101101110100011011110111000000101111010010010110110101110000011011110111001001110100011000010110111001110100001000000101001101101000011010010111010000101111010001010100001101000101001100110011010100110000001011110100011001101001011011100110000101101100001000000101000001110010011011110110101001100101011000110111010000101111011100110111010001110010011101010110110100101111011100110111010001110010011101010110110100101111011010010110110101100001011001110110010100101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/image.mem' is read successfully [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'RAM_image' (2#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_image' is unconnected for instance 'ImageData' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:101]
-WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAM_image' has 5 connections declared, but only 4 given [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:101]
-INFO: [Synth 8-6157] synthesizing module 'RAM_image__parameterized0' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:2]
-	Parameter DATA_WIDTH bound to: 9 - type: integer 
-	Parameter ADDRESS_WIDTH bound to: 12 - type: integer 
-	Parameter DEPTH bound to: 2500 - type: integer 
-	Parameter MEMFILE bound to: 656'b01000011001110100010111101010101011100110110010101110010011100110010111101100011011000010111001001111001011100000010111101000100011001010111001101101011011101000110111101110000001011110100100101101101011100000110111101110010011101000110000101101110011101000010000001010011011010000110100101110100001011110100010101000011010001010011001100110101001100000010111101000110011010010110111001100001011011000010000001010000011100100110111101101010011001010110001101110100001011110111001101110100011100100111010101101101001011110111001101110100011100100111010101101101001011110100111101110110011001010111001001101100011000010111100100101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Overlay.mem' is read successfully [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'RAM_image__parameterized0' (2#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:2]
-WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (12) of module 'RAM_image__parameterized0' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:118]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_image' is unconnected for instance 'ImageOverlay' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:116]
-WARNING: [Synth 8-7023] instance 'ImageOverlay' of module 'RAM_image' has 5 connections declared, but only 4 given [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:116]
-INFO: [Synth 8-6157] synthesizing module 'RAM_image__parameterized1' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:2]
-	Parameter DATA_WIDTH bound to: 12 - type: integer 
-	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
-	Parameter DEPTH bound to: 256 - type: integer 
-	Parameter MEMFILE bound to: 648'b010000110011101000101111010101010111001101100101011100100111001100101111011000110110000101110010011110010111000000101111010001000110010101110011011010110111010001101111011100000010111101001001011011010111000001101111011100100111010001100001011011100111010000100000010100110110100001101001011101000010111101000101010000110100010100110011001101010011000000101111010001100110100101101110011000010110110000100000010100000111001001101111011010100110010101100011011101000010111101110011011101000111001001110101011011010010111101110011011101000111001001110101011011010010111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/colors.mem' is read successfully [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'RAM_image__parameterized1' (2#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM_image.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_image' is unconnected for instance 'ColorPalette' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:165]
-WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'RAM_image' has 5 connections declared, but only 4 given [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:165]
-INFO: [Synth 8-6157] synthesizing module 'ps2_rx' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/ps2_rx.v:2]
-	Parameter idle bound to: 1'b0 
-	Parameter rx bound to: 1'b1 
-INFO: [Synth 8-6155] done synthesizing module 'ps2_rx' (3#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/ps2_rx.v:2]
-INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Wrapper.v:27]
-INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:20]
-INFO: [Synth 8-6157] synthesizing module 'csa_32_bit' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v:1]
-INFO: [Synth 8-6157] synthesizing module 'eight_bit_CLA' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/eight_bit_cla.v:1]
-INFO: [Synth 8-6157] synthesizing module 'gp' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/gp.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'gp' (4#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/gp.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'eight_bit_CLA' (5#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/eight_bit_cla.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_2.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_2' (6#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_2.v:1]
-WARNING: [Synth 8-689] width (8) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v:17]
-WARNING: [Synth 8-689] width (1) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v:18]
-WARNING: [Synth 8-689] width (8) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v:22]
-WARNING: [Synth 8-689] width (1) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v:23]
-WARNING: [Synth 8-689] width (8) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v:27]
-WARNING: [Synth 8-689] width (1) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'csa_32_bit' (7#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/csa_32_bit.v:1]
-INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/dffe_ref.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (8#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/dffe_ref.v:1]
-WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'PC' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:115]
-WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'FD' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:134]
-WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'DX' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:163]
-INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_4.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_4' (9#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_4.v:1]
-INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bitwise_AND' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/bitwise_AND.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bitwise_AND' (10#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/bitwise_AND.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bitwise_OR' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/bitwise_OR.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bitwise_OR' (11#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/bitwise_OR.v:1]
-INFO: [Synth 8-6157] synthesizing module 'left_barrel_shifter' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/left_barrel_shifter.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'left_barrel_shifter' (12#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/left_barrel_shifter.v:1]
-INFO: [Synth 8-6157] synthesizing module 'right_barrel_shifter' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/right_barrel_shifter.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'right_barrel_shifter' (13#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/right_barrel_shifter.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_8' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_8.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_8' (14#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mux_8.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (15#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/alu.v:1]
-INFO: [Synth 8-6157] synthesizing module 'multdiv' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/multdiv.v:1]
-INFO: [Synth 8-6157] synthesizing module 'booth_mult' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mult_control' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mult_control.v:1]
-INFO: [Synth 8-6157] synthesizing module 'six_bit_counter' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/six_bit_counter.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'six_bit_counter' (16#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/six_bit_counter.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mult_control' (17#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/mult_control.v:1]
-INFO: [Synth 8-6157] synthesizing module 'reg_65' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_65.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'reg_65' (18#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_65.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'booth_mult' (19#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/booth_mult.v:1]
-INFO: [Synth 8-6157] synthesizing module 'restoring_div' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/restoring_div.v:1]
-INFO: [Synth 8-6157] synthesizing module 'reg_64' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_64.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'reg_64' (20#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_64.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'restoring_div' (21#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/restoring_div.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'multdiv' (22#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/multdiv.v:1]
-INFO: [Synth 8-6157] synthesizing module 'rng' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/rng.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'rng' (23#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/rng.v:1]
-WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'XM' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:280]
-WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'MW' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:317]
-INFO: [Synth 8-6155] done synthesizing module 'processor' (24#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/processor.v:20]
-INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/regfile.v:1]
-INFO: [Synth 8-6157] synthesizing module 'reg_32' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'reg_32' (25#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/reg_32.v:1]
-INFO: [Synth 8-6157] synthesizing module 'one_hot_decoder' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/one_hot_decoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'one_hot_decoder' (26#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/one_hot_decoder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'tsb_32' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/tsb_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'tsb_32' (27#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/tsb_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'regfile' (28#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/regfile.v:1]
-INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM.v:2]
-	Parameter DATA_WIDTH bound to: 32 - type: integer 
-	Parameter ADDRESS_WIDTH bound to: 12 - type: integer 
-	Parameter DEPTH bound to: 4096 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'RAM' (29#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/RAM.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (30#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Wrapper.v:27]
-INFO: [Synth 8-6157] synthesizing module 'PWMSerializer' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/PWMSerializer.v:8]
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 	Parameter PULSE_FREQ bound to: 1 - type: integer 
 	Parameter SYS_FREQ bound to: 100 - type: integer 
 	Parameter PULSE_WINDOW bound to: 100 - type: integer 
 	Parameter PULSE_HALF bound to: 50 - type: integer 
 	Parameter PULSE_BITS bound to: 7 - type: integer 
-<<<<<<< HEAD
 INFO: [Synth 8-6155] done synthesizing module 'PWMSerializer' (31#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/PWMSerializer.v:8]
 INFO: [Synth 8-6155] done synthesizing module 'VGAController' (32#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1037.605 ; gain = 24.480
-=======
-INFO: [Synth 8-6155] done synthesizing module 'PWMSerializer' (31#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/PWMSerializer.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'VGAController' (32#1) [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:2]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1033.781 ; gain = 20.355
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1037.453 ; gain = 23.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1037.605 ; gain = 24.480
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1037.453 ; gain = 23.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1037.605 ; gain = 24.480
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1037.453 ; gain = 23.828
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.449 . Memory (MB): peak = 1037.605 ; gain = 0.000
-=======
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1033.781 ; gain = 20.355
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1033.781 ; gain = 20.355
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.216 . Memory (MB): peak = 1033.781 ; gain = 0.000
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.236 . Memory (MB): peak = 1037.453 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-<<<<<<< HEAD
 Parsing XDC File [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc]
 Finished Parsing XDC File [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGAController_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/VGAController_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1102.367 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1098.660 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.146 . Memory (MB): peak = 1102.367 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1098.660 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.367 ; gain = 89.242
-=======
-Parsing XDC File [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/constraints.xdc]
-Finished Parsing XDC File [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGAController_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/VGAController_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1097.418 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1097.418 ; gain = 0.000
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1097.418 ; gain = 83.992
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.660 ; gain = 85.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.367 ; gain = 89.242
-=======
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1097.418 ; gain = 83.992
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.660 ; gain = 85.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.367 ; gain = 89.242
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.660 ; gain = 85.035
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'lastDigitUpdated_reg' in module 'VGAController'
 ---------------------------------------------------------------------------------------------------
@@ -546,16 +295,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'colorToUse_reg' [C:/Users/w
 WARNING: [Synth 8-327] inferring latch for variable 'coordToUseX_reg' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:122]
 WARNING: [Synth 8-327] inferring latch for variable 'coordToUseY_reg' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:122]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 1102.367 ; gain = 89.242
-=======
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1097.418 ; gain = 83.992
----------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'colorToUse_reg' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:134]
-WARNING: [Synth 8-327] inferring latch for variable 'coordToUseX_reg' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:118]
-WARNING: [Synth 8-327] inferring latch for variable 'coordToUseY_reg' [C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/VGAController.v:118]
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1097.418 ; gain = 83.992
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1098.660 ; gain = 85.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -566,11 +306,7 @@ Detailed RTL Component Info :
 	   3 Input   32 Bit       Adders := 1     
 	   4 Input   32 Bit       Adders := 1     
 	   3 Input   12 Bit       Adders := 8     
-<<<<<<< HEAD
 	   2 Input   10 Bit       Adders := 7     
-=======
-	   2 Input   10 Bit       Adders := 6     
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    5 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 1     
@@ -583,26 +319,15 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 	               12 Bit    Registers := 1     
 	               11 Bit    Registers := 1     
-<<<<<<< HEAD
-	               10 Bit    Registers := 11    
-=======
-	               10 Bit    Registers := 10    
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+	               10 Bit    Registers := 12    
 	                9 Bit    Registers := 2     
 	                8 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
-<<<<<<< HEAD
-	                4 Bit    Registers := 4     
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 5     
-	                1 Bit    Registers := 1684  
-=======
-	                4 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 5     
-	                1 Bit    Registers := 1671  
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+	                1 Bit    Registers := 1684  
 +---Multipliers : 
 	               6x32  Multipliers := 1     
 +---RAMs : 
@@ -623,8 +348,7 @@ Detailed RTL Component Info :
 	   2 Input    6 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 8     
 	   2 Input    4 Bit        Muxes := 1     
-<<<<<<< HEAD
-	   4 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 3     
@@ -633,16 +357,6 @@ Detailed RTL Component Info :
 	   2 Input    1 Bit        Muxes := 56    
 	   4 Input    1 Bit        Muxes := 6     
 	   5 Input    1 Bit        Muxes := 9     
-=======
-	   2 Input    3 Bit        Muxes := 1     
-	   3 Input    2 Bit        Muxes := 1     
-	   4 Input    2 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 8     
-	   3 Input    1 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 48    
-	   4 Input    1 Bit        Muxes := 5     
-	   5 Input    1 Bit        Muxes := 7     
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -658,28 +372,17 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
 DSP Report: Generating DSP imgAddress, operation Mode is: C+(A:0x280)*B.
 DSP Report: operator imgAddress is absorbed into DSP imgAddress.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
-=======
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 DSP Report: Generating DSP addr1, operation Mode is: A*(B:0x33).
 DSP Report: operator addr1 is absorbed into DSP addr1.
 DSP Report: Generating DSP addr0, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
 DSP Report: operator addr0 is absorbed into DSP addr0.
 DSP Report: Generating DSP addr0, operation Mode is: PCIN+(A:0x0):B.
 DSP Report: operator addr0 is absorbed into DSP addr0.
-<<<<<<< HEAD
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:09 . Memory (MB): peak = 1157.445 ; gain = 144.320
-=======
-DSP Report: Generating DSP imgAddress, operation Mode is: C+(A:0x280)*B.
-DSP Report: operator imgAddress is absorbed into DSP imgAddress.
-DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:05 . Memory (MB): peak = 1159.121 ; gain = 145.695
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:01:37 . Memory (MB): peak = 1159.582 ; gain = 145.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -701,17 +404,10 @@ DSP: Preliminary Mapping	Report (see note below)
 +--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name   | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-<<<<<<< HEAD
 |VGAController | C+(A:0x280)*B          | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |VGAController | A*(B:0x33)             | 12     | 6      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |VGAController | PCIN+(A:0x0):B+(C:0x1) | 30     | 12     | 1      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |VGAController | PCIN+(A:0x0):B         | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-=======
-|VGAController | A*(B:0x33)             | 12     | 6      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|VGAController | PCIN+(A:0x0):B+(C:0x1) | 30     | 12     | 1      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|VGAController | PCIN+(A:0x0):B         | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|VGAController | C+(A:0x280)*B          | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
 +--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -722,21 +418,13 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:18 ; elapsed = 00:02:25 . Memory (MB): peak = 1157.445 ; gain = 144.320
-=======
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 1159.121 ; gain = 145.695
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:52 ; elapsed = 00:01:55 . Memory (MB): peak = 1159.582 ; gain = 145.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Timing Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:02:28 . Memory (MB): peak = 1157.445 ; gain = 144.320
-=======
-Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1159.121 ; gain = 145.695
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Timing Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:01:58 . Memory (MB): peak = 1159.582 ; gain = 145.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -805,11 +493,7 @@ INFO: [Synth 8-7052] The timing for the instance myCPU/ProcMem/MemoryArray_reg_1
 INFO: [Synth 8-7052] The timing for the instance myCPU/ProcMem/MemoryArray_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance myCPU/ProcMem/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Technology Mapping : Time (s): cpu = 00:02:29 ; elapsed = 00:02:37 . Memory (MB): peak = 1184.863 ; gain = 171.738
-=======
-Finished Technology Mapping : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1182.406 ; gain = 168.980
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Technology Mapping : Time (s): cpu = 00:02:03 ; elapsed = 00:02:07 . Memory (MB): peak = 1230.297 ; gain = 216.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -827,61 +511,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished IO Insertion : Time (s): cpu = 00:02:39 ; elapsed = 00:02:47 . Memory (MB): peak = 1190.066 ; gain = 176.941
-=======
-Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 1187.527 ; gain = 174.102
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished IO Insertion : Time (s): cpu = 00:02:13 ; elapsed = 00:02:16 . Memory (MB): peak = 1236.418 ; gain = 222.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:39 ; elapsed = 00:02:47 . Memory (MB): peak = 1190.066 ; gain = 176.941
-=======
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 1187.527 ; gain = 174.102
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 1236.418 ; gain = 222.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:39 ; elapsed = 00:02:47 . Memory (MB): peak = 1190.066 ; gain = 176.941
-=======
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 1187.527 ; gain = 174.102
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 1236.418 ; gain = 222.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:40 ; elapsed = 00:02:47 . Memory (MB): peak = 1190.066 ; gain = 176.941
-=======
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 1187.527 ; gain = 174.102
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 1236.418 ; gain = 222.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1190.270 ; gain = 177.145
-=======
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 1187.684 ; gain = 174.258
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 1236.504 ; gain = 222.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-<<<<<<< HEAD
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1190.270 ; gain = 177.145
-=======
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 1187.684 ; gain = 174.258
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 1236.504 ; gain = 222.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -911,91 +571,48 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG     |     1|
-<<<<<<< HEAD
-|2     |CARRY4   |   407|
+|1     |BUFG     |     2|
+|2     |CARRY4   |   392|
 |3     |DSP48E1  |     4|
-|7     |LUT1     |   194|
-|8     |LUT2     |   467|
-|9     |LUT3     |   436|
-|10    |LUT4     |   852|
-|11    |LUT5     |   821|
-|12    |LUT6     |   950|
-=======
-|2     |CARRY4   |   387|
-|3     |DSP48E1  |     4|
-|7     |LUT1     |   187|
-|8     |LUT2     |   424|
-|9     |LUT3     |   421|
-|10    |LUT4     |   814|
-|11    |LUT5     |   799|
-|12    |LUT6     |   937|
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
-|13    |MUXF7    |    21|
-|14    |RAMB18E1 |     1|
-|15    |RAMB36E1 |    85|
-|24    |SRL16E   |     1|
-|25    |FDCE     |   180|
-<<<<<<< HEAD
-|26    |FDRE     |   730|
-|27    |FDSE     |     5|
-|28    |LD       |    15|
-|29    |IBUF     |     4|
-|30    |OBUF     |    31|
+|7     |LUT1     |   110|
+|8     |LUT2     |   465|
+|9     |LUT3     |   500|
+|10    |LUT4     |   925|
+|11    |LUT5     |   765|
+|12    |LUT6     |   969|
+|13    |MUXF7    |    25|
+|14    |MUXF8    |     2|
+|15    |RAMB18E1 |     1|
+|16    |RAMB36E1 |    85|
+|25    |SRL16E   |     1|
+|26    |FDCE     |   180|
+|27    |FDRE     |   755|
+|28    |FDSE     |     4|
+|29    |LD       |    16|
+|30    |IBUF     |     4|
+|31    |OBUF     |    31|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1190.270 ; gain = 177.145
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 1236.504 ; gain = 222.879
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:07 ; elapsed = 00:02:38 . Memory (MB): peak = 1190.270 ; gain = 112.383
-Synthesis Optimization Complete : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1190.270 ; gain = 177.145
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:00 ; elapsed = 00:02:13 . Memory (MB): peak = 1236.504 ; gain = 161.672
+Synthesis Optimization Complete : Time (s): cpu = 00:02:14 ; elapsed = 00:02:18 . Memory (MB): peak = 1236.504 ; gain = 222.879
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1193.980 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 533 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.142 . Memory (MB): peak = 1236.504 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 525 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1193.980 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 15 instances were transformed.
-  LD => LDCE: 15 instances
-
-INFO: [Common 17-83] Releasing license: Synthesis
-134 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:54 ; elapsed = 00:03:06 . Memory (MB): peak = 1193.980 ; gain = 180.855
-INFO: [Common 17-1381] The checkpoint 'C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/VGAController.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file VGAController_utilization_synth.rpt -pb VGAController_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 19 00:34:31 2021...
-=======
-|26    |FDRE     |   697|
-|27    |FDSE     |     2|
-|28    |LD       |    16|
-|29    |IBUF     |     4|
-|30    |OBUF     |    21|
-+------+---------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 1187.684 ; gain = 174.258
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 1187.684 ; gain = 110.621
-Synthesis Optimization Complete : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 1187.684 ; gain = 174.258
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1200.812 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 514 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1200.812 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1236.504 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 16 instances were transformed.
   LD => LDCE: 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-132 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+134 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:37 ; elapsed = 00:01:40 . Memory (MB): peak = 1200.812 ; gain = 187.387
-INFO: [Common 17-1381] The checkpoint 'C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/Strum/Strum.runs/synth_1/VGAController.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:23 ; elapsed = 00:02:28 . Memory (MB): peak = 1236.504 ; gain = 222.879
+INFO: [Common 17-1381] The checkpoint 'C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/VGAController.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file VGAController_utilization_synth.rpt -pb VGAController_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 16 21:07:02 2021...
->>>>>>> c694999c00d53a84aa77172f9347b5a15af2c0ea
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 19 13:11:13 2021...
