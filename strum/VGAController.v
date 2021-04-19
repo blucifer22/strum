@@ -356,11 +356,11 @@ module VGAController(
     
     reg [1:0] ssCounter;
     
-    reg [19:0] clockDivider;
-    reg ssClock;
+    reg [19:0] clockDivider = 0;
+    reg ssClock = 0;
     
     always @(posedge clk) begin
-        if(clockDivider < 50000000) begin
+        if(clockDivider < 10000) begin
             clockDivider <= clockDivider + 1;
         end
         else begin
@@ -369,16 +369,18 @@ module VGAController(
         end
     end
     
-    always @(posedge clk) begin
-        digit <= (curStreak % 20) / 2;
-        digit1 <= curStreak / 20;
-        digit2 <= curStreak / 200;
-        digit3 <= curStreak / 2000;
+    reg [9:0] curStreakReduced = 0;
+    always @(posedge ssClock) begin
+        curStreakReduced <= curStreak / 2;
+        digit <= curStreakReduced % 10;
+        digit1 <= (curStreakReduced / 10) % 10;
+        digit2 <= (curStreakReduced / 100) % 10;
+        digit3 <= (curStreakReduced / 1000) % 10;
         if(lastDigitUpdated == 0) begin
             digitToUse <= digit1;
             lastDigitUpdated <= 2'b01; //lastDigitUpdate <= 2'b01;
-            AN0Reg <= 1'b1;
-            AN1Reg <= 1'b0;
+            AN0Reg <= 1'b0;
+            AN1Reg <= 1'b1;
             AN2Reg <= 1'b1;
             AN3Reg <= 1'b1;
         end
@@ -386,8 +388,8 @@ module VGAController(
             digitToUse <= digit2;
             lastDigitUpdated <= 2'b10;
             AN0Reg <= 1'b1;
-            AN1Reg <= 1'b1;
-            AN2Reg <= 1'b0;
+            AN1Reg <= 1'b0;
+            AN2Reg <= 1'b1;
             AN3Reg <= 1'b1;
         end
         else if(lastDigitUpdated == 2) begin
@@ -395,16 +397,16 @@ module VGAController(
             lastDigitUpdated <= 2'b11;
             AN0Reg <= 1'b1;
             AN1Reg <= 1'b1;
-            AN2Reg <= 1'b1;
-            AN3Reg <= 1'b0;
+            AN2Reg <= 1'b0;
+            AN3Reg <= 1'b1;
         end
         else begin
             digitToUse <= digit;
             lastDigitUpdated <= 2'b00;
-            AN0Reg <= 1'b0;
+            AN0Reg <= 1'b1;
             AN1Reg <= 1'b1;
             AN2Reg <= 1'b1;
-            AN3Reg <= 1'b1;
+            AN3Reg <= 1'b0;
         end
 
 //        digitToUse <= ssCounter;

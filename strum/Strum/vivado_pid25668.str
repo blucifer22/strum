@@ -1347,3 +1347,10 @@ selectButton(PAResourceCommand.PACommandNames_PROJECT_SUMMARY, "project_summary"
 selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, "Table", 1); // f (E, cs)
 selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_GRAPH, "Graph", 0); // f (E, cs)
 // HMemoryUtils.trashcanNow. Engine heap size: 2,982 MB. GUI used memory: 124 MB. Current time: 4/19/21, 2:14:01 PM EDT
+// Elapsed time: 1311 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (J, cs) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// Elapsed time: 70 seconds
+selectCodeEditor("VGAController.v", 323, 166); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'c'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 277, 189); // bP (w, cs)
