@@ -407,3 +407,943 @@ selectCodeEditor("VGAController.v", 236, 274); // bP (w, cs)
 selectCodeEditor("VGAController.v", 233, 289); // bP (w, cs)
 // Elapsed time: 18 seconds
 selectCodeEditor("VGAController.v", 236, 184); // bP (w, cs)
+// Elapsed time: 316 seconds
+selectCodeEditor("VGAController.v", 236, 223); // bP (w, cs)
+selectCodeEditor("VGAController.v", 234, 246); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("VGAController.v", 560, 229); // bP (w, cs)
+selectCodeEditor("VGAController.v", 233, 242); // bP (w, cs)
+selectCodeEditor("VGAController.v", 659, 222); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 15 seconds
+selectCodeEditor("VGAController.v", 237, 192); // bP (w, cs)
+selectCodeEditor("VGAController.v", 233, 180); // bP (w, cs)
+selectCodeEditor("VGAController.v", 234, 239); // bP (w, cs)
+selectCodeEditor("VGAController.v", 523, 325); // bP (w, cs)
+selectCodeEditor("VGAController.v", 234, 221); // bP (w, cs)
+selectCodeEditor("VGAController.v", 234, 287); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// [GUI Memory]: 198 MB (+2078kb) [00:41:18]
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Apr 19 11:59:45 2021] Launched synth_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/runme.log [Mon Apr 19 11:59:45 2021] Launched impl_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 316 seconds
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cs)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bz (cs)
+// Elapsed time: 434 seconds
+selectCodeEditor("VGAController.v", 306, 224); // bP (w, cs)
+selectCodeEditor("VGAController.v", 286, 211); // bP (w, cs)
+// Elapsed time: 37 seconds
+selectCodeEditor("VGAController.v", 954, 280); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("VGAController.v", 279, 205); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("VGAController.v", 341, 139); // bP (w, cs)
+selectCodeEditor("VGAController.v", 332, 133); // bP (w, cs)
+selectCodeEditor("VGAController.v", 168, 136); // bP (w, cs)
+selectCodeEditor("VGAController.v", 272, 156); // bP (w, cs)
+selectCodeEditor("VGAController.v", 277, 184); // bP (w, cs)
+selectCodeEditor("VGAController.v", 278, 193); // bP (w, cs)
+selectCodeEditor("VGAController.v", 232, 135); // bP (w, cs)
+selectCodeEditor("VGAController.v", 155, 136); // bP (w, cs)
+selectCodeEditor("VGAController.v", 241, 160); // bP (w, cs)
+selectCodeEditor("VGAController.v", 245, 179); // bP (w, cs)
+selectCodeEditor("VGAController.v", 243, 199); // bP (w, cs)
+selectCodeEditor("VGAController.v", 325, 112); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,982 MB. GUI used memory: 124 MB. Current time: 4/19/21, 12:13:59 PM EDT
+// Elapsed time: 19 seconds
+selectCodeEditor("VGAController.v", 686, 349); // bP (w, cs)
+selectCodeEditor("VGAController.v", 498, 263); // bP (w, cs)
+selectCodeEditor("VGAController.v", 498, 263, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("VGAController.v", 479, 245); // bP (w, cs)
+selectCodeEditor("VGAController.v", 455, 262); // bP (w, cs)
+selectCodeEditor("VGAController.v", 64, 228); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 96, 201); // bP (w, cs)
+selectCodeEditor("VGAController.v", 96, 201); // bP (w, cs)
+selectCodeEditor("VGAController.v", 97, 290); // bP (w, cs)
+selectCodeEditor("VGAController.v", 272, 247); // bP (w, cs)
+selectCodeEditor("VGAController.v", 68, 248); // bP (w, cs)
+selectCodeEditor("VGAController.v", 427, 227); // bP (w, cs)
+selectCodeEditor("VGAController.v", 287, 174); // bP (w, cs)
+selectCodeEditor("VGAController.v", 275, 180); // bP (w, cs)
+selectCodeEditor("VGAController.v", 423, 178); // bP (w, cs)
+selectCodeEditor("VGAController.v", 340, 209); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 72, 220); // bP (w, cs)
+selectCodeEditor("VGAController.v", 402, 287); // bP (w, cs)
+selectCodeEditor("VGAController.v", 449, 180); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (bC)
+dismissDialog("Program Device"); // bC (cs)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Mon Apr 19 12:15:32 2021] Launched synth_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/runme.log [Mon Apr 19 12:15:32 2021] Launched impl_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 330 seconds
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cs)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz (cs)
+// Elapsed time: 283 seconds
+selectCodeEditor("VGAController.v", 969, 242); // bP (w, cs)
+selectCodeEditor("VGAController.v", 866, 254); // bP (w, cs)
+// Elapsed time: 132 seconds
+selectCodeEditor("VGAController.v", 166, 71); // bP (w, cs)
+selectCodeEditor("VGAController.v", 357, 73); // bP (w, cs)
+selectCodeEditor("VGAController.v", 161, 97); // bP (w, cs)
+selectCodeEditor("VGAController.v", 366, 94); // bP (w, cs)
+selectCodeEditor("VGAController.v", 160, 117); // bP (w, cs)
+selectCodeEditor("VGAController.v", 377, 108); // bP (w, cs)
+// Elapsed time: 18 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // am (cs)
+// TclEventType: FILE_SET_CHANGE
+// f (cs): Launch Runs: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+// TclEventType: RUN_MODIFY
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Mon Apr 19 12:28:52 2021] Launched impl_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, cs)
+// bz (cs):  Reset to Previous Step : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Reset to Previous Step"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, cs)
+// bz (cs):  Reset to Previous Step : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+dismissDialog("Reset to Previous Step"); // bz (cs)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+// Elapsed time: 12 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+// 'cD' command handler elapsed time: 14 seconds
+dismissDialog("Launch Runs"); // f (cs)
+selectCodeEditor("VGAController.v", 374, 71); // bP (w, cs)
+selectCodeEditor("VGAController.v", 362, 78); // bP (w, cs)
+// Elapsed time: 26 seconds
+selectCodeEditor("VGAController.v", 422, 75); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("VGAController.v", 523, 188); // bP (w, cs)
+selectCodeEditor("VGAController.v", 558, 79); // bP (w, cs)
+// Elapsed time: 29 seconds
+selectCodeEditor("VGAController.v", 402, 89); // bP (w, cs)
+selectCodeEditor("VGAController.v", 333, 84); // bP (w, cs)
+selectCodeEditor("VGAController.v", 367, 91); // bP (w, cs)
+selectCodeEditor("VGAController.v", 431, 88); // bP (w, cs)
+// Elapsed time: 46 seconds
+selectCodeEditor("VGAController.v", 290, 139); // bP (w, cs)
+selectCodeEditor("VGAController.v", 337, 112); // bP (w, cs)
+selectCodeEditor("VGAController.v", 377, 88); // bP (w, cs)
+selectCodeEditor("VGAController.v", 407, 117); // bP (w, cs)
+selectCodeEditor("VGAController.v", 429, 97); // bP (w, cs)
+selectCodeEditor("VGAController.v", 347, 60); // bP (w, cs)
+selectCodeEditor("VGAController.v", 395, 30); // bP (w, cs)
+// Elapsed time: 29 seconds
+selectCodeEditor("VGAController.v", 376, 110); // bP (w, cs)
+selectCodeEditor("VGAController.v", 612, 78); // bP (w, cs)
+selectCodeEditor("VGAController.v", 448, 139); // bP (w, cs)
+selectCodeEditor("VGAController.v", 454, 120); // bP (w, cs)
+// Elapsed time: 54 seconds
+selectCodeEditor("VGAController.v", 585, 229); // bP (w, cs)
+selectCodeEditor("VGAController.v", 447, 119); // bP (w, cs)
+selectCodeEditor("VGAController.v", 378, 49); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("VGAController.v", 402, 103); // bP (w, cs)
+selectCodeEditor("VGAController.v", 396, 120); // bP (w, cs)
+selectCodeEditor("VGAController.v", 501, 92); // bP (w, cs)
+selectCodeEditor("VGAController.v", 281, 176); // bP (w, cs)
+selectCodeEditor("VGAController.v", 151, 138); // bP (w, cs)
+// Elapsed time: 32 seconds
+selectCodeEditor("VGAController.v", 274, 164); // bP (w, cs)
+selectCodeEditor("VGAController.v", 304, 185); // bP (w, cs)
+selectCodeEditor("VGAController.v", 292, 156); // bP (w, cs)
+selectCodeEditor("VGAController.v", 298, 160); // bP (w, cs)
+selectCodeEditor("VGAController.v", 358, 161); // bP (w, cs)
+selectCodeEditor("VGAController.v", 369, 196); // bP (w, cs)
+selectCodeEditor("VGAController.v", 388, 209); // bP (w, cs)
+selectCodeEditor("VGAController.v", 384, 242); // bP (w, cs)
+selectCodeEditor("VGAController.v", 307, 255); // bP (w, cs)
+selectCodeEditor("VGAController.v", 271, 241); // bP (w, cs)
+selectCodeEditor("VGAController.v", 440, 284); // bP (w, cs)
+selectCodeEditor("VGAController.v", 448, 159); // bP (w, cs)
+selectCodeEditor("VGAController.v", 298, 96); // bP (w, cs)
+selectCodeEditor("VGAController.v", 217, 77); // bP (w, cs)
+selectCodeEditor("VGAController.v", 277, 130); // bP (w, cs)
+selectCodeEditor("VGAController.v", 244, 96); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// f (cs): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Apr 19 12:35:28 2021] Launched synth_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/runme.log [Mon Apr 19 12:35:28 2021] Launched impl_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 276 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 33, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a100t_0"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cs)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz (cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("VGAController.v", 539, 78); // bP (w, cs)
+selectCodeEditor("VGAController.v", 344, 209); // bP (w, cs)
+selectCodeEditor("VGAController.v", 346, 248); // bP (w, cs)
+selectCodeEditor("VGAController.v", 334, 257); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("VGAController.v", 126, 190); // bP (w, cs)
+selectCodeEditor("VGAController.v", 385, 233); // bP (w, cs)
+selectCodeEditor("VGAController.v", 305, 203); // bP (w, cs)
+selectCodeEditor("VGAController.v", 210, 226); // bP (w, cs)
+selectCodeEditor("VGAController.v", 242, 201); // bP (w, cs)
+selectCodeEditor("VGAController.v", 376, 218); // bP (w, cs)
+selectCodeEditor("VGAController.v", 417, 214); // bP (w, cs)
+selectCodeEditor("VGAController.v", 435, 217); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'c'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 198, 202); // bP (w, cs)
+typeControlKey((HResource) null, "VGAController.v", 'v'); // bP (w, cs)
+selectCodeEditor("VGAController.v", 375, 197); // bP (w, cs)
+selectCodeEditor("VGAController.v", 270, 176); // bP (w, cs)
+selectCodeEditor("VGAController.v", 318, 133); // bP (w, cs)
+selectCodeEditor("VGAController.v", 421, 173); // bP (w, cs)
+selectCodeEditor("VGAController.v", 260, 133); // bP (w, cs)
+selectCodeEditor("VGAController.v", 439, 195); // bP (w, cs)
+selectCodeEditor("VGAController.v", 358, 125); // bP (w, cs)
+selectCodeEditor("VGAController.v", 254, 152); // bP (w, cs)
+selectCodeEditor("VGAController.v", 259, 133); // bP (w, cs)
+selectCodeEditor("VGAController.v", 174, 71); // bP (w, cs)
+selectCodeEditor("VGAController.v", 191, 110); // bP (w, cs)
+selectCodeEditor("VGAController.v", 205, 82, true, false, false, false, false); // bP (w, cs) - Shift Key
+selectCodeEditor("VGAController.v", 205, 82, true, false, false, false, true); // bP (w, cs) - Shift Key - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("VGAController.v", 177, 115); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("VGAController.v", 456, 178); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("VGAController.v", 421, 185); // bP (w, cs)
+selectCodeEditor("VGAController.v", 362, 146); // bP (w, cs)
+selectCodeEditor("VGAController.v", 390, 142); // bP (w, cs)
+selectCodeEditor("VGAController.v", 360, 140); // bP (w, cs)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Apr 19 12:42:36 2021] Launched synth_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/runme.log [Mon Apr 19 12:42:36 2021] Launched impl_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+selectCodeEditor("VGAController.v", 435, 263); // bP (w, cs)
+dismissDialog("Generate Bitstream"); // bz (cs)
+selectCodeEditor("VGAController.v", 439, 210); // bP (w, cs)
+selectCodeEditor("VGAController.v", 390, 165); // bP (w, cs)
+selectCodeEditor("VGAController.v", 338, 142); // bP (w, cs)
+selectCodeEditor("VGAController.v", 397, 178); // bP (w, cs)
+selectCodeEditor("VGAController.v", 445, 100); // bP (w, cs)
+selectCodeEditor("VGAController.v", 397, 127); // bP (w, cs)
+selectCodeEditor("VGAController.v", 450, 142); // bP (w, cs)
+selectCodeEditor("VGAController.v", 460, 170); // bP (w, cs)
+selectCodeEditor("VGAController.v", 442, 201); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,982 MB. GUI used memory: 122 MB. Current time: 4/19/21, 12:43:59 PM EDT
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 342 seconds
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cs)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bz (cs)
+// Elapsed time: 26 seconds
+selectCodeEditor("VGAController.v", 423, 135); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("VGAController.v", 440, 185); // bP (w, cs)
+selectCodeEditor("VGAController.v", 556, 91); // bP (w, cs)
+selectCodeEditor("VGAController.v", 581, 188); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon Apr 19 12:49:27 2021] Launched synth_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/runme.log [Mon Apr 19 12:49:27 2021] Launched impl_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 297 seconds
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cs)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz (cs)
+// Elapsed time: 19 seconds
+selectCodeEditor("VGAController.v", 370, 142); // bP (w, cs)
+selectCodeEditor("VGAController.v", 542, 164); // bP (w, cs)
+selectCodeEditor("VGAController.v", 396, 153); // bP (w, cs)
+selectCodeEditor("VGAController.v", 409, 136); // bP (w, cs)
+selectCodeEditor("VGAController.v", 420, 142); // bP (w, cs)
+selectCodeEditor("VGAController.v", 440, 158); // bP (w, cs)
+selectCodeEditor("VGAController.v", 458, 181); // bP (w, cs)
+selectCodeEditor("VGAController.v", 423, 159); // bP (w, cs)
+selectCodeEditor("VGAController.v", 429, 189); // bP (w, cs)
+selectCodeEditor("VGAController.v", 429, 180); // bP (w, cs)
+// Elapsed time: 27 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Mon Apr 19 12:55:49 2021] Launched synth_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/runme.log [Mon Apr 19 12:55:49 2021] Launched impl_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 477 seconds
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cs)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 7 seconds
+dismissDialog("Program Device"); // bz (cs)
+// Elapsed time: 19 seconds
+selectCodeEditor("VGAController.v", 363, 254); // bP (w, cs)
+selectCodeEditor("VGAController.v", 363, 190); // bP (w, cs)
+selectCodeEditor("VGAController.v", 362, 153); // bP (w, cs)
+selectCodeEditor("VGAController.v", 385, 120); // bP (w, cs)
+selectCodeEditor("VGAController.v", 365, 140); // bP (w, cs)
+selectCodeEditor("VGAController.v", 346, 132); // bP (w, cs)
+selectCodeEditor("VGAController.v", 304, 181); // bP (w, cs)
+selectCodeEditor("VGAController.v", 357, 123); // bP (w, cs)
+selectCodeEditor("VGAController.v", 353, 152); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("VGAController.v", 618, 83); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("VGAController.v", 397, 138); // bP (w, cs)
+selectCodeEditor("VGAController.v", 411, 136); // bP (w, cs)
+// Elapsed time: 180 seconds
+selectCodeEditor("VGAController.v", 337, 130); // bP (w, cs)
+selectCodeEditor("VGAController.v", 388, 140); // bP (w, cs)
+selectCodeEditor("VGAController.v", 333, 153); // bP (w, cs)
+selectCodeEditor("VGAController.v", 395, 155); // bP (w, cs)
+selectCodeEditor("VGAController.v", 338, 177); // bP (w, cs)
+selectCodeEditor("VGAController.v", 328, 177); // bP (w, cs)
+selectCodeEditor("VGAController.v", 402, 177); // bP (w, cs)
+selectCodeEditor("VGAController.v", 507, 156); // bP (w, cs)
+selectCodeEditor("VGAController.v", 467, 160); // bP (w, cs)
+selectCodeEditor("VGAController.v", 460, 198); // bP (w, cs)
+selectCodeEditor("VGAController.v", 404, 165); // bP (w, cs)
+selectCodeEditor("VGAController.v", 432, 161); // bP (w, cs)
+selectCodeEditor("VGAController.v", 448, 182); // bP (w, cs)
+selectCodeEditor("VGAController.v", 504, 180); // bP (w, cs)
+selectCodeEditor("VGAController.v", 530, 171); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: [Mon Apr 19 13:08:37 2021] Launched synth_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/runme.log [Mon Apr 19 13:08:37 2021] Launched impl_1... Run output will be captured here: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,982 MB. GUI used memory: 122 MB. Current time: 4/19/21, 1:14:00 PM EDT
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 356 seconds
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (ds, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cs): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bz (cs):  Program Device : addNotify
+dismissDialog("Program Device"); // bC (cs)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,982 MB. GUI used memory: 122 MB. Current time: 4/19/21, 1:44:02 PM EDT
+// Elapsed time: 3271 seconds
+selectCodeEditor("VGAController.v", 294, 208); // bP (w, cs)
+selectCodeEditor("VGAController.v", 181, 152); // bP (w, cs)
+selectCodeEditor("VGAController.v", 151, 107); // bP (w, cs)
+selectCodeEditor("VGAController.v", 303, 158); // bP (w, cs)
+selectCodeEditor("VGAController.v", 241, 91); // bP (w, cs)
+selectCodeEditor("VGAController.v", 241, 77); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("VGAController.v", 275, 221); // bP (w, cs)
+selectCodeEditor("VGAController.v", 299, 246); // bP (w, cs)
+// Elapsed time: 18 seconds
+selectCodeEditor("VGAController.v", 461, 131); // bP (w, cs)
+selectCodeEditor("VGAController.v", 370, 116); // bP (w, cs)
+selectCodeEditor("VGAController.v", 430, 105); // bP (w, cs)
+selectCodeEditor("VGAController.v", 408, 110); // bP (w, cs)
+// Elapsed time: 20 seconds
+selectCodeEditor("VGAController.v", 532, 351); // bP (w, cs)
+selectCodeEditor("VGAController.v", 306, 305); // bP (w, cs)
+selectCodeEditor("VGAController.v", 342, 328); // bP (w, cs)
+selectCodeEditor("VGAController.v", 391, 358); // bP (w, cs)
+selectCodeEditor("VGAController.v", 221, 324); // bP (w, cs)
+selectCodeEditor("VGAController.v", 399, 308); // bP (w, cs)
+selectCodeEditor("VGAController.v", 391, 327); // bP (w, cs)
+selectCodeEditor("VGAController.v", 376, 322); // bP (w, cs)
+selectCodeEditor("VGAController.v", 373, 326, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("VGAController.v", 386, 335); // bP (w, cs)
+// Elapsed time: 38 seconds
+selectCodeEditor("VGAController.v", 361, 78); // bP (w, cs)
+selectCodeEditor("VGAController.v", 464, 119); // bP (w, cs)
+selectCodeEditor("VGAController.v", 451, 131); // bP (w, cs)
+selectCodeEditor("VGAController.v", 534, 126); // bP (w, cs)
+selectCodeEditor("VGAController.v", 472, 172); // bP (w, cs)
+selectCodeEditor("VGAController.v", 452, 161); // bP (w, cs)
+selectCodeEditor("VGAController.v", 465, 144); // bP (w, cs)
+selectCodeEditor("VGAController.v", 429, 165); // bP (w, cs)
+selectCodeEditor("VGAController.v", 441, 193); // bP (w, cs)
+selectCodeEditor("VGAController.v", 463, 193); // bP (w, cs)
+selectCodeEditor("VGAController.v", 475, 179); // bP (w, cs)
+selectCodeEditor("VGAController.v", 417, 238); // bP (w, cs)
+selectCodeEditor("VGAController.v", 365, 285); // bP (w, cs)
+selectCodeEditor("VGAController.v", 396, 311); // bP (w, cs)
+selectCodeEditor("VGAController.v", 721, 460); // bP (w, cs)
+selectCodeEditor("VGAController.v", 607, 358); // bP (w, cs)
+selectCodeEditor("VGAController.v", 562, 352); // bP (w, cs)
+selectCodeEditor("VGAController.v", 410, 340); // bP (w, cs)
+selectCodeEditor("VGAController.v", 402, 305); // bP (w, cs)
+// Elapsed time: 72 seconds
+selectButton(PAResourceCommand.PACommandNames_PROJECT_SUMMARY, "project_summary"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SUMMARY
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_TABLE, "Table", 1); // f (E, cs)
+selectTab(PAResourceOtoP.ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED, PAResourceOtoP.ProjectSummaryUtilizationPanel_GRAPH, "Graph", 0); // f (E, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,982 MB. GUI used memory: 124 MB. Current time: 4/19/21, 2:14:01 PM EDT
