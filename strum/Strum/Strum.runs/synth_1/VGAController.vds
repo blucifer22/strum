@@ -1,0 +1,617 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Apr 19 00:31:14 2021
+# Process ID: 22064
+# Current directory: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1
+# Command line: vivado.exe -log VGAController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl
+# Log file: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/VGAController.vds
+# Journal file: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source VGAController.tcl -notrace
+Command: synth_design -top VGAController -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17160
+WARNING: [Synth 8-6901] identifier 'regA' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Wrapper.v:34]
+WARNING: [Synth 8-2254] instance name 'not_B' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:13]
+WARNING: [Synth 8-2254] instance name 'A_B_same_sign' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:22]
+WARNING: [Synth 8-2254] instance name 'A_B_match_out' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:23]
+WARNING: [Synth 8-2254] instance name 'B_pos' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:32]
+WARNING: [Synth 8-2254] instance name 'less_than_0' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:33]
+WARNING: [Synth 8-2254] instance name 'less_than_1' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:34]
+WARNING: [Synth 8-2254] instance name 'less_than_2' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:35]
+WARNING: [Synth 8-2254] instance name 'overflow_pos' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:33]
+WARNING: [Synth 8-2254] instance name 'overflow_neg' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:40]
+WARNING: [Synth 8-2254] instance name 'pos_pos' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:42]
+WARNING: [Synth 8-2254] instance name 'neg_neg' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:43]
+WARNING: [Synth 8-2254] instance name 'pos_neg' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:46]
+WARNING: [Synth 8-2254] instance name 'neg_pos' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:47]
+WARNING: [Synth 8-2254] instance name 'overflow' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:50]
+WARNING: [Synth 8-2254] instance name 'q_not' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/dffe_ref.v:32]
+WARNING: [Synth 8-2254] instance name 'inverted_multiplicand' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mult_control.v:14]
+WARNING: [Synth 8-2254] instance name 'carry_in' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mult_control.v:17]
+WARNING: [Synth 8-2254] instance name 'initial_cycle' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mult_control.v:24]
+WARNING: [Synth 8-2254] instance name 'mult_ready' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/multdiv.v:27]
+WARNING: [Synth 8-2254] instance name 'div_ready' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/multdiv.v:28]
+WARNING: [Synth 8-2254] instance name 'not_in' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/one_hot_decoder.v:8]
+WARNING: [Synth 8-2254] instance name 'XM_rd_equals_DX_rs' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:191]
+WARNING: [Synth 8-2254] instance name 'MW_rd_equals_DX_rs' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:192]
+WARNING: [Synth 8-2254] instance name 'XM_rd_equals_DX_rt' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:216]
+WARNING: [Synth 8-2254] instance name 'MW_rd_equals_DX_rt' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:217]
+WARNING: [Synth 8-2254] instance name 'XM_rd_equals_MW_rd' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:300]
+WARNING: [Synth 8-2254] instance name 'XM_rd_equals_MW_rs' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:301]
+WARNING: [Synth 8-6901] identifier 'decode_r_type' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'decode_addi' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'decode_lw' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'decode_sw' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:73]
+WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:75]
+WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:76]
+WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'DX_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:77]
+WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:78]
+WARNING: [Synth 8-6901] identifier 'DX_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:78]
+WARNING: [Synth 8-6901] identifier 'decode_r_type' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:81]
+WARNING: [Synth 8-6901] identifier 'execute_lw' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:83]
+WARNING: [Synth 8-6901] identifier 'DX_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:95]
+WARNING: [Synth 8-6901] identifier 'memory_setx' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:95]
+WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:95]
+WARNING: [Synth 8-6901] identifier 'write_setx' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:95]
+WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:95]
+WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:96]
+WARNING: [Synth 8-6901] identifier 'FD_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:102]
+WARNING: [Synth 8-6901] identifier 'DX_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:102]
+WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:102]
+WARNING: [Synth 8-6901] identifier 'memory_jal' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:102]
+WARNING: [Synth 8-6901] identifier 'memory_r_type' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:184]
+WARNING: [Synth 8-6901] identifier 'memory_addi' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:184]
+WARNING: [Synth 8-6901] identifier 'memory_lw' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:184]
+WARNING: [Synth 8-6901] identifier 'memory_setx' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:184]
+WARNING: [Synth 8-6901] identifier 'memory_rng' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:184]
+WARNING: [Synth 8-6901] identifier 'write_r_type' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:186]
+WARNING: [Synth 8-6901] identifier 'write_addi' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:186]
+WARNING: [Synth 8-6901] identifier 'write_lw' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:186]
+WARNING: [Synth 8-6901] identifier 'write_setx' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:186]
+WARNING: [Synth 8-6901] identifier 'write_rng' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:186]
+WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:191]
+WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:192]
+WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:196]
+WARNING: [Synth 8-6901] identifier 'write_jal' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:196]
+WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:197]
+WARNING: [Synth 8-6901] identifier 'memory_jal' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:197]
+WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:216]
+WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:217]
+WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:220]
+WARNING: [Synth 8-6901] identifier 'write_jal' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:220]
+WARNING: [Synth 8-6901] identifier 'XM_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:221]
+WARNING: [Synth 8-6901] identifier 'memory_jal' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:221]
+WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:300]
+WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:301]
+WARNING: [Synth 8-6901] identifier 'write_lw' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:302]
+WARNING: [Synth 8-6901] identifier 'MW_out' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:302]
+WARNING: [Synth 8-2254] instance name 'write_enable_and_decoder' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/regfile.v:25]
+WARNING: [Synth 8-2254] instance name 'output_sign' matches net/port name [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/restoring_div.v:52]
+WARNING: [Synth 8-6901] identifier 'q_8' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/rng.v:11]
+WARNING: [Synth 8-6901] identifier 'q_9' is used before its declaration [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/rng.v:11]
+WARNING: [Synth 8-992] coordToUseX is already implicitly declared earlier [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:130]
+WARNING: [Synth 8-992] coordToUseY is already implicitly declared earlier [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:131]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1013.125 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:2]
+	Parameter FILES_PATH bound to: C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/ - type: string 
+	Parameter VIDEO_WIDTH bound to: 640 - type: integer 
+	Parameter VIDEO_HEIGHT bound to: 480 - type: integer 
+	Parameter PIXEL_COUNT bound to: 307200 - type: integer 
+	Parameter PIXEL_ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
+	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
+	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGATimingGenerator.v:2]
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+	Parameter H_FRONT_PORCH bound to: 16 - type: integer 
+	Parameter H_SYNC_WIDTH bound to: 96 - type: integer 
+	Parameter H_BACK_PORCH bound to: 48 - type: integer 
+	Parameter H_SYNC_START bound to: 656 - type: integer 
+	Parameter H_SYNC_END bound to: 752 - type: integer 
+	Parameter H_LINE bound to: 800 - type: integer 
+	Parameter V_FRONT_PORCH bound to: 11 - type: integer 
+	Parameter V_SYNC_WIDTH bound to: 2 - type: integer 
+	Parameter V_BACK_PORCH bound to: 31 - type: integer 
+	Parameter V_SYNC_START bound to: 491 - type: integer 
+	Parameter V_SYNC_END bound to: 493 - type: integer 
+	Parameter V_LINE bound to: 524 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (1#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGATimingGenerator.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RAM_image' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 504'b010000110011101000101111010101010111001101100101011100100111001100101111011101110110000101110100011001010111001000101111010011110110111001100101010001000111001001101001011101100110010100101111010001000110111101100011011101010110110101100101011011100111010001110011001011110100010101000011010001010010110100110011001101010011000000101111011100110111010001110010011101010110110100101111011100110111010001110010011101010110110100101111011010010110110101100001011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/image.mem' is read successfully [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_image' (2#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_image' is unconnected for instance 'ImageData' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:105]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAM_image' has 5 connections declared, but only 4 given [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:105]
+INFO: [Synth 8-6157] synthesizing module 'RAM_image__parameterized0' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 12 - type: integer 
+	Parameter DEPTH bound to: 2500 - type: integer 
+	Parameter MEMFILE bound to: 520'b0100001100111010001011110101010101110011011001010111001001110011001011110111011101100001011101000110010101110010001011110100111101101110011001010100010001110010011010010111011001100101001011110100010001101111011000110111010101101101011001010110111001110100011100110010111101000101010000110100010100101101001100110011010100110000001011110111001101110100011100100111010101101101001011110111001101110100011100100111010101101101001011110100111101110110011001010111001001101100011000010111100100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Overlay.mem' is read successfully [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_image__parameterized0' (2#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:2]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (12) of module 'RAM_image__parameterized0' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:122]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_image' is unconnected for instance 'ImageOverlay' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:120]
+WARNING: [Synth 8-7023] instance 'ImageOverlay' of module 'RAM_image' has 5 connections declared, but only 4 given [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:120]
+INFO: [Synth 8-6157] synthesizing module 'RAM_image__parameterized1' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 512'b01000011001110100010111101010101011100110110010101110010011100110010111101110111011000010111010001100101011100100010111101001111011011100110010101000100011100100110100101110110011001010010111101000100011011110110001101110101011011010110010101101110011101000111001100101111010001010100001101000101001011010011001100110101001100000010111101110011011101000111001001110101011011010010111101110011011101000111001001110101011011010010111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/colors.mem' is read successfully [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_image__parameterized1' (2#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM_image.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_image' is unconnected for instance 'ColorPalette' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:169]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'RAM_image' has 5 connections declared, but only 4 given [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:169]
+INFO: [Synth 8-6157] synthesizing module 'ps2_rx' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/ps2_rx.v:2]
+	Parameter idle bound to: 1'b0 
+	Parameter rx bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'ps2_rx' (3#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/ps2_rx.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Wrapper.v:27]
+INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:20]
+INFO: [Synth 8-6157] synthesizing module 'csa_32_bit' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/csa_32_bit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'eight_bit_CLA' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/eight_bit_cla.v:1]
+INFO: [Synth 8-6157] synthesizing module 'gp' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/gp.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'gp' (4#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/gp.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'eight_bit_CLA' (5#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/eight_bit_cla.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mux_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2' (6#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mux_2.v:1]
+WARNING: [Synth 8-689] width (8) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/csa_32_bit.v:17]
+WARNING: [Synth 8-689] width (1) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/csa_32_bit.v:18]
+WARNING: [Synth 8-689] width (8) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/csa_32_bit.v:22]
+WARNING: [Synth 8-689] width (1) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/csa_32_bit.v:23]
+WARNING: [Synth 8-689] width (8) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/csa_32_bit.v:27]
+WARNING: [Synth 8-689] width (1) of port connection 'out' does not match port width (32) of module 'mux_2' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/csa_32_bit.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'csa_32_bit' (7#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/csa_32_bit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (8#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/dffe_ref.v:1]
+WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'PC' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:115]
+WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'FD' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:134]
+WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'DX' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:163]
+INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mux_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4' (9#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mux_4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bitwise_AND' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/bitwise_AND.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bitwise_AND' (10#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/bitwise_AND.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bitwise_OR' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/bitwise_OR.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bitwise_OR' (11#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/bitwise_OR.v:1]
+INFO: [Synth 8-6157] synthesizing module 'left_barrel_shifter' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/left_barrel_shifter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'left_barrel_shifter' (12#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/left_barrel_shifter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'right_barrel_shifter' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/right_barrel_shifter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'right_barrel_shifter' (13#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/right_barrel_shifter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_8' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mux_8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8' (14#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mux_8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (15#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'multdiv' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'booth_mult' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mult_control' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mult_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'six_bit_counter' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/six_bit_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'six_bit_counter' (16#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/six_bit_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mult_control' (17#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/mult_control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_65' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/reg_65.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_65' (18#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/reg_65.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'booth_mult' (19#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/booth_mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'restoring_div' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/restoring_div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_64' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/reg_64.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_64' (20#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/reg_64.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'restoring_div' (21#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/restoring_div.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multdiv' (22#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rng' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/rng.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rng' (23#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/rng.v:1]
+WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'XM' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:280]
+WARNING: [Synth 8-445] multiply driven output port connection 'q_not' in instance array 'MW' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:317]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (24#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/processor.v:20]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_32' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/reg_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_32' (25#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/reg_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'one_hot_decoder' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/one_hot_decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'one_hot_decoder' (26#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/one_hot_decoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tsb_32' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/tsb_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tsb_32' (27#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/tsb_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (28#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM.v:2]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 12 - type: integer 
+	Parameter DEPTH bound to: 4096 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (29#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (30#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Wrapper.v:27]
+INFO: [Synth 8-6157] synthesizing module 'PWMSerializer' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/PWMSerializer.v:8]
+	Parameter PULSE_FREQ bound to: 1 - type: integer 
+	Parameter SYS_FREQ bound to: 100 - type: integer 
+	Parameter PULSE_WINDOW bound to: 100 - type: integer 
+	Parameter PULSE_HALF bound to: 50 - type: integer 
+	Parameter PULSE_BITS bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'PWMSerializer' (31#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/PWMSerializer.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'VGAController' (32#1) [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1037.605 ; gain = 24.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1037.605 ; gain = 24.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1037.605 ; gain = 24.480
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.449 . Memory (MB): peak = 1037.605 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc]
+Finished Parsing XDC File [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGAController_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/VGAController_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1102.367 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.146 . Memory (MB): peak = 1102.367 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.367 ; gain = 89.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.367 ; gain = 89.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1102.367 ; gain = 89.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'lastDigitUpdated_reg' in module 'VGAController'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                               00 |                               00
+                 iSTATE1 |                               01 |                               01
+                 iSTATE2 |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lastDigitUpdated_reg' using encoding 'sequential' in module 'VGAController'
+WARNING: [Synth 8-327] inferring latch for variable 'colorToUse_reg' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:138]
+WARNING: [Synth 8-327] inferring latch for variable 'coordToUseX_reg' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:122]
+WARNING: [Synth 8-327] inferring latch for variable 'coordToUseY_reg' [C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/VGAController.v:122]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 1102.367 ; gain = 89.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
+	   4 Input   32 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 8     
+	   2 Input   10 Bit       Adders := 7     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      5 Bit         XORs := 7     
+	   3 Input      1 Bit         XORs := 392   
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 11    
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 1684  
++---Multipliers : 
+	               6x32  Multipliers := 1     
++---RAMs : 
+	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
+	             128K Bit	(4096 X 32 bit)          RAMs := 1     
+	              21K Bit	(2500 X 9 bit)          RAMs := 1     
+	               3K Bit	(256 X 12 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 1     
+	   2 Input   65 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 100   
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 10    
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 8     
+	   3 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 56    
+	   4 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP imgAddress, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator imgAddress is absorbed into DSP imgAddress.
+DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
+DSP Report: Generating DSP addr1, operation Mode is: A*(B:0x33).
+DSP Report: operator addr1 is absorbed into DSP addr1.
+DSP Report: Generating DSP addr0, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
+DSP Report: operator addr0 is absorbed into DSP addr0.
+DSP Report: Generating DSP addr0, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator addr0 is absorbed into DSP addr0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:09 . Memory (MB): peak = 1157.445 ; gain = 144.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++---------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAM_image:                 | MemoryArray_reg         | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM_image__parameterized0: | MemoryArray_reg         | 2 K x 9(NO_CHANGE)     | W | R |                        |   |   | Port A           | 0      | 1      | 
+|RAM_image__parameterized1: | MemoryArray_reg         | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|myCPU                      | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
++---------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping	Report (see note below)
++--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|VGAController | C+(A:0x280)*B          | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|VGAController | A*(B:0x33)             | 12     | 6      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|VGAController | PCIN+(A:0x0):B+(C:0x1) | 30     | 12     | 1      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|VGAController | PCIN+(A:0x0):B         | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:18 ; elapsed = 00:02:25 . Memory (MB): peak = 1157.445 ; gain = 144.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:02:28 . Memory (MB): peak = 1157.445 ; gain = 144.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++---------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAM_image:                 | MemoryArray_reg         | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM_image__parameterized0: | MemoryArray_reg         | 2 K x 9(NO_CHANGE)     | W | R |                        |   |   | Port A           | 0      | 1      | 
+|RAM_image__parameterized1: | MemoryArray_reg         | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|myCPU                      | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
++---------------------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageOverlay/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance myCPU/ProcMem/MemoryArray_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance myCPU/ProcMem/MemoryArray_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance myCPU/ProcMem/MemoryArray_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance myCPU/ProcMem/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:29 ; elapsed = 00:02:37 . Memory (MB): peak = 1184.863 ; gain = 171.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:39 ; elapsed = 00:02:47 . Memory (MB): peak = 1190.066 ; gain = 176.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:39 ; elapsed = 00:02:47 . Memory (MB): peak = 1190.066 ; gain = 176.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:39 ; elapsed = 00:02:47 . Memory (MB): peak = 1190.066 ; gain = 176.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:40 ; elapsed = 00:02:47 . Memory (MB): peak = 1190.066 ; gain = 176.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1190.270 ; gain = 177.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1190.270 ; gain = 177.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|VGAController | myCPU/CPU/random_number_generator/flip_flop_4/q_reg | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++--------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   407|
+|3     |DSP48E1  |     4|
+|7     |LUT1     |   194|
+|8     |LUT2     |   467|
+|9     |LUT3     |   436|
+|10    |LUT4     |   852|
+|11    |LUT5     |   821|
+|12    |LUT6     |   950|
+|13    |MUXF7    |    21|
+|14    |RAMB18E1 |     1|
+|15    |RAMB36E1 |    85|
+|24    |SRL16E   |     1|
+|25    |FDCE     |   180|
+|26    |FDRE     |   730|
+|27    |FDSE     |     5|
+|28    |LD       |    15|
+|29    |IBUF     |     4|
+|30    |OBUF     |    31|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1190.270 ; gain = 177.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:07 ; elapsed = 00:02:38 . Memory (MB): peak = 1190.270 ; gain = 112.383
+Synthesis Optimization Complete : Time (s): cpu = 00:02:40 ; elapsed = 00:02:48 . Memory (MB): peak = 1190.270 ; gain = 177.145
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1193.980 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 533 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1193.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  LD => LDCE: 15 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+134 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:54 ; elapsed = 00:03:06 . Memory (MB): peak = 1193.980 ; gain = 180.855
+INFO: [Common 17-1381] The checkpoint 'C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/Strum/Strum.runs/synth_1/VGAController.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file VGAController_utilization_synth.rpt -pb VGAController_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 19 00:34:31 2021...

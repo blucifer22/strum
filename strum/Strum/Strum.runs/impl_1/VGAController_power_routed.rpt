@@ -1,0 +1,330 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date             : Mon Apr 19 00:36:42 2021
+| Host             : AERO-15X running 64-bit major release  (build 9200)
+| Command          : report_power -file VGAController_power_routed.rpt -pb VGAController_power_summary_routed.pb -rpx VGAController_power_routed.rpx
+| Design           : VGAController
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 65.367 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 64.518                           |
+| Device Static (W)        | 0.850                            |
+| Effective TJA (C/W)      | 4.6                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic             |    12.094 |     5592 |       --- |             --- |
+|   LUT as Logic          |    11.109 |     3115 |     63400 |            4.91 |
+|   CARRY4                |     0.665 |      407 |     15850 |            2.57 |
+|   Register              |     0.293 |      807 |    126800 |            0.64 |
+|   F7/F8 Muxes           |     0.013 |       21 |     63400 |            0.03 |
+|   LUT as Shift Register |     0.008 |        1 |     19000 |           <0.01 |
+|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
+|   Others                |     0.000 |      601 |       --- |             --- |
+| Signals                 |    11.723 |     4065 |       --- |             --- |
+| Block RAM               |     2.360 |     85.5 |       135 |           63.33 |
+| DSPs                    |     1.010 |        4 |       240 |            1.67 |
+| I/O                     |    37.330 |       35 |       210 |           16.67 |
+| Static Power            |     0.850 |          |           |                 |
+| Total                   |    65.367 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |    27.586 |      26.997 |      0.589 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     1.460 |       1.367 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |    10.567 |      10.563 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.247 |       0.203 |      0.045 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| VGAController                 |    64.518 |
+|   ColorPalette                |     0.129 |
+|   Display                     |     0.730 |
+|   ImageData                   |     1.940 |
+|   ImageOverlay                |     0.203 |
+|   myCPU                       |    13.829 |
+|     CPU                       |    12.997 |
+|       ALU_operand_A_mux       |     0.405 |
+|       ALU_operand_B_mux       |     0.679 |
+|       DX[100]                 |     0.026 |
+|       DX[101]                 |     0.018 |
+|       DX[102]                 |     0.035 |
+|       DX[103]                 |     0.029 |
+|       DX[104]                 |     0.043 |
+|       DX[105]                 |     0.037 |
+|       DX[106]                 |     0.065 |
+|       DX[107]                 |     0.047 |
+|       DX[108]                 |     0.054 |
+|       DX[109]                 |     0.069 |
+|       DX[110]                 |     0.070 |
+|       DX[111]                 |     0.042 |
+|       DX[112]                 |     0.035 |
+|       DX[113]                 |     0.049 |
+|       DX[114]                 |     0.058 |
+|       DX[115]                 |     0.041 |
+|       DX[116]                 |     0.048 |
+|       DX[117]                 |     0.049 |
+|       DX[118]                 |     0.057 |
+|       DX[119]                 |     0.039 |
+|       DX[120]                 |     0.001 |
+|       DX[121]                 |     0.001 |
+|       DX[122]                 |     0.037 |
+|       DX[123]                 |     0.029 |
+|       DX[124]                 |     0.028 |
+|       DX[125]                 |     0.038 |
+|       DX[126]                 |     0.038 |
+|       DX[127]                 |     0.006 |
+|       DX[1]                   |     0.008 |
+|       DX[27]                  |     0.522 |
+|       DX[29]                  |     0.035 |
+|       DX[2]                   |     0.002 |
+|       DX[33]                  |     0.004 |
+|       DX[34]                  |     0.003 |
+|       DX[3]                   |     0.020 |
+|       DX[4]                   |     0.095 |
+|       DX[53]                  |     0.013 |
+|       DX[5]                   |     0.022 |
+|       DX[6]                   |     0.010 |
+|       DX[7]                   |     0.009 |
+|       DX[8]                   |     0.023 |
+|       DX[97]                  |     0.023 |
+|       DX[98]                  |     0.034 |
+|       DX[99]                  |     0.047 |
+|       DX[9]                   |     0.008 |
+|       FD[33]                  |     0.004 |
+|       FD[34]                  |     0.001 |
+|       FD[35]                  |     0.001 |
+|       MW[23]                  |     0.003 |
+|       MW[24]                  |     0.050 |
+|       MW[27]                  |     0.029 |
+|       MW[28]                  |     0.001 |
+|       MW[29]                  |     0.037 |
+|       MW[32]                  |     0.004 |
+|       MW[33]                  |     0.002 |
+|       MW[34]                  |     0.003 |
+|       MW[35]                  |     0.003 |
+|       MW[36]                  |     0.002 |
+|       MW[37]                  |     0.002 |
+|       MW[38]                  |     0.002 |
+|       MW[39]                  |     0.002 |
+|       MW[40]                  |     0.002 |
+|       MW[41]                  |     0.005 |
+|       MW[42]                  |     0.004 |
+|       MW[43]                  |     0.004 |
+|       MW[44]                  |     0.002 |
+|       MW[45]                  |     0.002 |
+|       MW[46]                  |     0.004 |
+|       MW[47]                  |     0.004 |
+|       MW[48]                  |     0.002 |
+|       MW[49]                  |     0.002 |
+|       MW[50]                  |     0.004 |
+|       MW[51]                  |     0.002 |
+|       MW[52]                  |     0.004 |
+|       MW[53]                  |     0.002 |
+|       MW[54]                  |     0.002 |
+|       MW[55]                  |     0.002 |
+|       MW[56]                  |     0.002 |
+|       MW[57]                  |     0.002 |
+|       MW[58]                  |     0.004 |
+|       MW[59]                  |     0.005 |
+|       MW[60]                  |     0.007 |
+|       MW[61]                  |     0.007 |
+|       MW[62]                  |     0.006 |
+|       MW[63]                  |     0.004 |
+|       MW[64]                  |     0.002 |
+|       MW[65]                  |     0.002 |
+|       MW[66]                  |     0.001 |
+|       MW[68]                  |     0.002 |
+|       MW[69]                  |     0.001 |
+|       MW[70]                  |     0.002 |
+|       MW[72]                  |     0.001 |
+|       MW[73]                  |     0.001 |
+|       MW[74]                  |     0.001 |
+|       MW[75]                  |     0.001 |
+|       MW[76]                  |     0.001 |
+|       MW[77]                  |     0.002 |
+|       MW[78]                  |     0.001 |
+|       MW[79]                  |     0.001 |
+|       MW[80]                  |     0.002 |
+|       MW[81]                  |     0.002 |
+|       MW[82]                  |     0.001 |
+|       MW[83]                  |     0.001 |
+|       MW[85]                  |     0.001 |
+|       MW[86]                  |     0.001 |
+|       MW[87]                  |     0.001 |
+|       MW[88]                  |     0.002 |
+|       MW[90]                  |     0.001 |
+|       MW[91]                  |     0.001 |
+|       MW[93]                  |     0.002 |
+|       MW[95]                  |     0.001 |
+|       PC[0]                   |     0.019 |
+|       PC[1]                   |     0.017 |
+|       PC[2]                   |     0.009 |
+|       PC[3]                   |     0.005 |
+|       PC[4]                   |     0.011 |
+|       PC[5]                   |     0.005 |
+|       PC[6]                   |     0.001 |
+|       WR_mux                  |     0.512 |
+|       XM[23]                  |     0.049 |
+|       XM[24]                  |     0.003 |
+|       XM[27]                  |     0.004 |
+|       XM[28]                  |     0.051 |
+|       XM[29]                  |     0.003 |
+|       XM[32]                  |     0.002 |
+|       XM[33]                  |     0.001 |
+|       XM[39]                  |     0.001 |
+|       XM[40]                  |     0.001 |
+|       XM[48]                  |     0.001 |
+|       XM[50]                  |     0.001 |
+|       XM[51]                  |     0.001 |
+|       XM[56]                  |     0.001 |
+|       XM[58]                  |     0.002 |
+|       XM[59]                  |     0.001 |
+|       XM[64]                  |     0.092 |
+|       XM[65]                  |     0.015 |
+|       XM[66]                  |     0.031 |
+|       XM[67]                  |     0.020 |
+|       XM[68]                  |     0.011 |
+|       XM[69]                  |     0.007 |
+|       XM[70]                  |     0.029 |
+|       XM[71]                  |     0.014 |
+|       XM[72]                  |     0.075 |
+|       XM[73]                  |     0.017 |
+|       XM[74]                  |     0.020 |
+|       XM[75]                  |     0.027 |
+|       XM[76]                  |     0.024 |
+|       XM[77]                  |     0.023 |
+|       XM[78]                  |     0.029 |
+|       XM[79]                  |     0.032 |
+|       XM[80]                  |     0.034 |
+|       XM[81]                  |     0.012 |
+|       XM[82]                  |     0.028 |
+|       XM[83]                  |     0.019 |
+|       XM[84]                  |     0.018 |
+|       XM[85]                  |     0.035 |
+|       XM[86]                  |     0.017 |
+|       XM[87]                  |     0.022 |
+|       XM[88]                  |     0.139 |
+|       XM[89]                  |     0.105 |
+|       XM[90]                  |     0.011 |
+|       XM[91]                  |     0.012 |
+|       XM[92]                  |     0.013 |
+|       XM[93]                  |     0.022 |
+|       XM[94]                  |     0.011 |
+|       XM[95]                  |     0.371 |
+|       multdiv                 |     7.542 |
+|       multdiv_status_latch    |     0.001 |
+|       random_number_generator |     0.069 |
+|     ProcMem                   |     0.725 |
+|     RegisterFile              |     0.107 |
+|       registers[1]            |     0.077 |
+|   myInterface                 |     0.042 |
+|   serializer                  |     0.162 |
++-------------------------------+-----------+
+
+
