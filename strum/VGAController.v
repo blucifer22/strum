@@ -11,23 +11,27 @@ module VGAController(
 	output audioEn,
 	inout ps2c,
 	inout ps2d,
-	output CPUDoneLight,
-	output a,
-	output s,
-	output d,
-	output f);
-	
-	assign CPUDoneLight = CPUDone;
-	assign a = (lastNotePushed == 8'h1c);
-	assign s = (lastNotePushed == 8'h1b);
-	assign d = (lastNotePushed == 8'h23);
-	assign f = (lastNotePushed == 8'h2b);
+	output CA,
+	output CB,
+	output CC,
+	output CD,
+	output CE,
+	output CF,
+	output CG,
+	output AN0,
+	output AN1,
+	output AN2,
+	output AN3,
+	output AN4,
+	output AN5,
+	output AN6,
+	output AN7);
 	
 	
 	// Lab Memory Files Location
 	//TODO: CHANGE THIS FOR EACH DEVICE
-	localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
-	//localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
+	//localparam FILES_PATH = "C:/Users/caryp/Desktop/Important Shit/ECE350/Final Project/strum/strum/";
+	localparam FILES_PATH = "C:/Users/water/OneDrive/Documents/ECE-350/strum/strum/";
 
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock
@@ -218,6 +222,8 @@ module VGAController(
     reg [7:0] lastNotePushed;
     reg rightKeyPressed = 1;
     reg noteCorrect = 1;
+    reg [9:0] curStreak;
+    reg beenCounted = 1;
     always @(posedge clk) begin
         lastNotePushed <= scan_out;
         if (screenEnd) begin
@@ -253,6 +259,7 @@ module VGAController(
         end 
         
         else if (lastNotePushed == 8'h1c) begin // A
+            beenCounted <= 0;
             needsCheckClose <= 1;
             lastInstruction <= 1;
             cyclesLeftCPU <= 6;
@@ -261,6 +268,7 @@ module VGAController(
             rightKeyPressed <= (lowestNote == 2'b00);
             keyReset <= 1'b1;
         end else if (lastNotePushed == 8'h1b) begin // S
+            beenCounted <= 0;
             needsCheckClose <= 1;
             lastInstruction <= 1;
             cyclesLeftCPU <= 6;
@@ -269,6 +277,7 @@ module VGAController(
             rightKeyPressed <= (lowestNote == 2'b01);
             keyReset <= 1'b1;
         end else if (lastNotePushed == 8'h23) begin // D
+            beenCounted <= 0;
             needsCheckClose <= 1;
             lastInstruction <= 1;
             cyclesLeftCPU <= 6;
@@ -277,6 +286,7 @@ module VGAController(
             rightKeyPressed <= (lowestNote == 2'b10);
             keyReset <= 1'b1;
         end else if (lastNotePushed == 8'h2b) begin // F
+            beenCounted <= 0;
             needsCheckClose <= 1;
             lastInstruction <= 1;
             cyclesLeftCPU <= 6;
@@ -324,14 +334,120 @@ module VGAController(
                 end
             end else if (!needsNewNote && !needsCheckClose && lastInstruction) begin
                 noteCorrect <= regVal;
+                if(regVal == 1 && rightKeyPressed && !beenCounted) begin
+                    curStreak <= curStreak + 1;
+                    beenCounted <= 1;
+                end
+                else if ((regVal == 0 || !rightKeyPressed) && !beenCounted) begin
+                    curStreak <= 0;
+                    beenCounted <= 1;
+                end
             end
         end
     end
     
+    reg [3:0] digit;
+    reg [3:0] digit1;
+    reg [3:0] digit2;
+    reg [3:0] digit3;
+    reg [1:0] lastDigitUpdated = 0;
+    reg [3:0] digitToUse = 0;
+    reg A, B, C, D, E, F, G, AN0Reg, AN1Reg, AN2Reg, AN3Reg;
+    
+    reg [1:0] ssCounter;
+    
+    reg [19:0] clockDivider;
+    reg ssClock;
+    
+    always @(posedge clk) begin
+        if(clockDivider < 50000000) begin
+            clockDivider <= clockDivider + 1;
+        end
+        else begin
+            ssClock <= ~ssClock;
+            clockDivider <= 0;
+        end
+    end
+    
+    always @(posedge clk) begin
+        digit <= (curStreak % 20) / 2;
+        digit1 <= curStreak / 20;
+        digit2 <= curStreak / 200;
+        digit3 <= curStreak / 2000;
+        if(lastDigitUpdated == 0) begin
+            digitToUse <= digit1;
+            lastDigitUpdated <= 2'b01; //lastDigitUpdate <= 2'b01;
+            AN0Reg <= 1'b1;
+            AN1Reg <= 1'b0;
+            AN2Reg <= 1'b1;
+            AN3Reg <= 1'b1;
+        end
+        else if(lastDigitUpdated == 1) begin
+            digitToUse <= digit2;
+            lastDigitUpdated <= 2'b10;
+            AN0Reg <= 1'b1;
+            AN1Reg <= 1'b1;
+            AN2Reg <= 1'b0;
+            AN3Reg <= 1'b1;
+        end
+        else if(lastDigitUpdated == 2) begin
+            digitToUse <= digit3;
+            lastDigitUpdated <= 2'b11;
+            AN0Reg <= 1'b1;
+            AN1Reg <= 1'b1;
+            AN2Reg <= 1'b1;
+            AN3Reg <= 1'b0;
+        end
+        else begin
+            digitToUse <= digit;
+            lastDigitUpdated <= 2'b00;
+            AN0Reg <= 1'b0;
+            AN1Reg <= 1'b1;
+            AN2Reg <= 1'b1;
+            AN3Reg <= 1'b1;
+        end
+
+//        digitToUse <= ssCounter;
+//        lastDigitUpdated <= ssCounter;
+//        ssCounter <= ssCounter + 1;
+        
+        A <= (digitToUse == 4 || digitToUse == 1);
+        B <= (digitToUse == 5 || digitToUse == 6);
+        C <= (digitToUse == 2);
+        D <= (digitToUse == 1 || digitToUse == 4 || digitToUse == 7);
+        E <= (digitToUse == 1 || digitToUse == 3 || digitToUse == 4 || digitToUse == 7 || digitToUse == 9);
+        F <= (digitToUse == 1 || digitToUse == 2 || digitToUse == 3 || digitToUse == 7);
+        G <= (digitToUse == 0 || digitToUse == 1 || digitToUse == 7);
+        
+        
+//        AN0Reg <= !(lastDigitUpdated == 2'b00);
+//        AN1Reg <= !(lastDigitUpdated == 2'b01);
+//        AN2Reg <= !(lastDigitUpdated == 2'b10);
+//        AN3Reg <= !(lastDigitUpdated == 3'b11);                  
+    end
+    
+    assign CA = A;
+    assign CB = B;
+    assign CC = C;
+    assign CD = D;
+    assign CE = E;
+    assign CF = F;
+    assign CG = G;
+    
+    assign AN0 = AN0Reg;
+    assign AN1 = AN1Reg;
+    assign AN2 = AN2Reg;
+    assign AN3 = AN3Reg;
+    assign AN4 = 1'b1;
+    assign AN5 = 1'b1;
+    assign AN6 = 1'b1;
+    assign AN7 = 1'b1;
+        
 	assign audioEn = 1'b1;  // Enable Audio Output    
     reg [31:0] counter = 0;
     wire [10:0] cur_freq;
     assign cur_freq = (noteCorrect && rightKeyPressed) ? ((noteToPlay + 1) * 100) : 2000;
+    
     wire[31:0] counter_limit;
     assign counter_limit = ((100000000/cur_freq) >> 1) - 1;
     reg toggle = 0;
