@@ -1,10 +1,11 @@
 # STRUM - Systematic Tonal Reference Unrhythmic Modulator
 ## By: (Marc Chmielewski)·(James Arnold)
 
-![STUM Demo GIF](https://media.giphy.com/media/SWw74s2RpgTC0JW3M7/giphy.gif)
+![STUM Demo GIF](https://media.giphy.com/media/iYIrWwT71Fpmjf1OOe/giphy.gif)
 
 ## Overview
-TLDR: A totally HDL-implemented guitar-hero-esque rhythm game where notes scroll down the screen and players must hit the correct key at the right time. 
+
+Short Version: A totally HDL-implemented guitar-hero-esque rhythm game where notes scroll down the screen and players must hit the correct key at the right time. 
 
 Long Version: STRUM is a Verilog Guitar Hero game but with none of your favorite songs!
 
@@ -20,6 +21,8 @@ And even:
 Yeah it’s just random notes that are pretty terrible sounding, but it works!
 Tracks streaks, notifies player of mistakes, and runs without a single line of code
 If you’re ever bored and want to cause a little hearing loss, try STRUM!
+
+Demo Video: [STRUM demo video](https://youtu.be/EzCkyvfQ79g)
 
 ## Setup
 Currently, STRUM is compatible with the NEXYS A7 FPGA from XILINX. Vivado configuration files for this target are included in this repository.
