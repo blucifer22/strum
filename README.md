@@ -5,24 +5,30 @@
 
 ## Overview
 
-Short Version: A totally HDL-implemented guitar-hero-esque rhythm game where notes scroll down the screen and players must hit the correct key at the right time. 
+Short Version: A 100% HDL-implemented (zero lines of assembly!!!) guitar-hero-esque rhythm game where notes scroll down the screen and players must hit the correct key at the right time. 
 
 Long Version: STRUM is a Verilog Guitar Hero game but with none of your favorite songs!
 
 Including hits like:
+
 * 
+
 *
+
 *
+
 *
 
 And even:
+
+
 *
 
 Yeah it’s just random notes that are pretty terrible sounding, but it works!
 Tracks streaks, notifies player of mistakes, and runs without a single line of code
 If you’re ever bored and want to cause a little hearing loss, try STRUM!
 
-Demo Video: [STRUM demo video](https://youtu.be/EzCkyvfQ79g)
+Demo video (with slightly less-aggressive audio) linked [here](https://youtu.be/EzCkyvfQ79g)!
 
 ## Setup
 Currently, STRUM is compatible with the NEXYS A7 FPGA from XILINX. Vivado configuration files for this target are included in this repository.
